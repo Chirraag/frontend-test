@@ -31,10 +31,11 @@ function App() {
     // Create a style element to override any other styles
     const style = document.createElement("style");
     style.textContent = `
-        html, body, #root {
-          background-color: #000a17 !important;
-        }
-      `;
+
+      html, body, #root {
+        background-color: #000a17 !important;
+      }
+    `;
     document.head.appendChild(style);
 
     return () => {
