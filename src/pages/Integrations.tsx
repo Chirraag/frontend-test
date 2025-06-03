@@ -415,9 +415,8 @@ const Integrations: React.FC = () => {
                 </div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1]">
                   <span className="text-white">
-                    Seamless Connection to Your
+                    Seamless Connection to Your{" "}
                   </span>
-                  <br />
                   <span
                     className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent"
                     style={{
