@@ -90,7 +90,7 @@ const PracticeAreas: React.FC = () => {
         "Before Kayse, we missed 35% of after-hours calls. Now our AI captures these leads and begins intake immediately. Our conversion rate increased by 41%.",
       author: "Michael T., Personal Injury Attorney",
       stats: {
-        retention: "+45%",
+        retention: "+39%",
         timeSaved: "25hrs/week",
         satisfaction: "+28 NPS",
       },
@@ -144,7 +144,7 @@ const PracticeAreas: React.FC = () => {
         "Employment cases require careful documentation. Kayse has transformed how we manage client relationships, automating updates while ensuring clients feel supported. We've reduced administrative time by 28 hours weekly.",
       author: "David L., Employment Law Partner",
       stats: {
-        retention: "+41%",
+        retention: "+37%",
         timeSaved: "28hrs/week",
         satisfaction: "+24 NPS",
       },
@@ -198,7 +198,7 @@ const PracticeAreas: React.FC = () => {
         "Workers' compensation cases involve constant communication with clients, medical providers, and insurance companies. Kayse has automated much of this process, ensuring nothing falls through the cracks.",
       author: "Robert J., Workers' Comp Attorney",
       stats: {
-        retention: "+42%",
+        retention: "+38%",
         timeSaved: "22hrs/week",
         satisfaction: "+29 NPS",
       },
@@ -225,7 +225,7 @@ const PracticeAreas: React.FC = () => {
         "Criminal cases often start with urgent calls at all hours. Kayse ensures we never miss these critical moments, while providing immediate guidance until our attorneys can engage.",
       author: "Thomas W., Criminal Defense Attorney",
       stats: {
-        retention: "+47%",
+        retention: "+36%",
         timeSaved: "24hrs/week",
         satisfaction: "+26 NPS",
       },
@@ -279,7 +279,7 @@ const PracticeAreas: React.FC = () => {
         "Bankruptcy clients are often overwhelmed by documentation requirements. Kayse has transformed our practice by automating collection and providing 24/7 support. Our preparation time decreased by 35% while improving accuracy.",
       author: "Michael R., Bankruptcy Attorney",
       stats: {
-        retention: "+41%",
+        retention: "+39%",
         timeSaved: "20hrs/week",
         satisfaction: "+22 NPS",
       },
