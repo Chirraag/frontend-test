@@ -162,35 +162,32 @@ const ObjectionAddressing: React.FC = () => {
           </Box>
 
           <TabPanel value={value} index={0}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
-              {/* Image Section - Full height to match text */}
-              <div className="w-full lg:w-1/2 lg:max-w-md mx-auto lg:mx-0 flex items-center">
-                <div className="relative mb-6 lg:mb-0 rounded-[2rem] overflow-hidden group w-full">
-                  <motion.img
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, centered vertically */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+                <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
+                  <img
                     src="/ipad5.png"
                     alt="CRM Solution"
-                    className="w-full h-auto rounded-[2rem] shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    className="w-full h-auto rounded-xl shadow-2xl"
                   />
                 </div>
               </div>
-              {/* Text Section - Enhanced with better spacing and more content */}
-              <div className="w-full lg:w-1/2 flex items-center">
-                <div className="w-full px-2 lg:px-4">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">
+              {/* Text Section - Enhanced with consistent positioning and bigger font */}
+              <div className="w-full lg:w-3/5 flex items-center pt-0">
+                <div className="w-full pl-2 lg:pl-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already call, text, and email my clients"
                   </h3>
-                  <div className="space-y-5">
-                    <p className="text-base text-gray-700 leading-relaxed">
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       The challenge isn't whether you're communicating, but
                       whether your team can maintain consistent, personalized
                       outreach when handling hundreds or thousands of clients
                       simultaneously over extended timelines.
                     </p>
-                    <div className="bg-blue-50/70 p-4 rounded-xl border border-blue-200/30">
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                    <div className="bg-blue-50/70 p-5 rounded-xl border border-blue-200/30">
+                      <p className="text-base text-gray-600 leading-relaxed">
                         <strong className="text-blue-800">
                           Key Challenge:
                         </strong>{" "}
@@ -200,15 +197,15 @@ const ObjectionAddressing: React.FC = () => {
                         stretched across hundreds of cases.
                       </p>
                     </div>
-                    <p className="text-base text-gray-700 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       Our AI-powered retention platform doesn't replace your
                       existing channels—it amplifies them. Rather than your
                       staff members spending 12-15 hours per week each on
                       routine updates, our human-like voice AI handles these
                       automatically, freeing your team for higher-value tasks.
                     </p>
-                    <div className="bg-green-50/70 p-4 rounded-xl border border-green-200/30">
-                      <p className="text-sm text-green-700 leading-relaxed">
+                    <div className="bg-green-50/70 p-5 rounded-xl border border-green-200/30">
+                      <p className="text-base text-green-700 leading-relaxed">
                         <strong className="text-green-800">
                           The Solution:
                         </strong>{" "}
@@ -223,42 +220,39 @@ const ObjectionAddressing: React.FC = () => {
           </TabPanel>
 
           <TabPanel value={value} index={1}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
-              {/* Image Section - Full height to match text */}
-              <div className="w-full lg:w-1/2 lg:max-w-md mx-auto lg:mx-0 flex items-center">
-                <div className="relative mb-6 lg:mb-0 rounded-2xl overflow-hidden group w-full">
-                  <motion.img
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, centered vertically */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+                <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
+                  <img
                     src="/ipad2.png"
                     alt="Generic CRM Solution"
-                    className="w-full h-auto rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    className="w-full h-auto rounded-xl shadow-2xl"
                   />
                 </div>
               </div>
-              {/* Text Section - Enhanced */}
-              <div className="w-full lg:w-1/2 flex items-center">
-                <div className="w-full px-2 lg:px-4">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">
+              {/* Text Section - Enhanced with consistent positioning */}
+              <div className="w-full lg:w-3/5 flex items-center pt-0">
+                <div className="w-full pl-2 lg:pl-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already have a CRM and send newsletters"
                   </h3>
-                  <div className="space-y-5">
-                    <p className="text-gray-700 leading-relaxed">
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       While newsletters are valuable for general updates, they
                       don't address the individual client's need for
                       personalized case status information or emotional
                       reassurance during lengthy proceedings.
                     </p>
-                    <div className="bg-amber-50/70 p-4 rounded-xl border border-amber-200/30">
-                      <p className="text-sm text-amber-700 leading-relaxed">
+                    <div className="bg-amber-50/70 p-5 rounded-xl border border-amber-200/30">
+                      <p className="text-base text-amber-700 leading-relaxed">
                         <strong className="text-amber-800">The Gap:</strong>{" "}
                         Generic newsletters have low engagement rates (typically
                         under 25%) because they don't speak to individual client
                         concerns or provide case-specific updates.
                       </p>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       Kayse enhances your CRM and other apps by adding
                       intelligent, automated 1:1 communications that respond to
                       each client's specific case status and emotional
@@ -267,8 +261,8 @@ const ObjectionAddressing: React.FC = () => {
                       confusion, or disengagement that typically precede client
                       attrition.
                     </p>
-                    <div className="bg-blue-50/70 p-4 rounded-xl border border-blue-200/30">
-                      <p className="text-sm text-blue-700 leading-relaxed">
+                    <div className="bg-blue-50/70 p-5 rounded-xl border border-blue-200/30">
+                      <p className="text-base text-blue-700 leading-relaxed">
                         <strong className="text-blue-800">
                           Kayse Advantage:
                         </strong>
@@ -284,41 +278,38 @@ const ObjectionAddressing: React.FC = () => {
           </TabPanel>
 
           <TabPanel value={value} index={2}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
-              {/* Image Section - Full height to match text */}
-              <div className="w-full lg:w-1/2 lg:max-w-md mx-auto lg:mx-0 flex items-center">
-                <div className="relative mb-6 lg:mb-0 rounded-2xl overflow-hidden group w-full">
-                  <motion.img
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, centered vertically */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+                <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
+                  <img
                     src="/ipad3.png"
                     alt="Salesforce Solution"
-                    className="w-full h-auto rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    className="w-full h-auto rounded-xl shadow-2xl"
                   />
                 </div>
               </div>
-              {/* Text Section - Enhanced */}
-              <div className="w-full lg:w-1/2 flex items-center">
-                <div className="w-full px-2 lg:px-4">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">
+              {/* Text Section - Enhanced with consistent positioning */}
+              <div className="w-full lg:w-3/5 flex items-center pt-0">
+                <div className="w-full pl-2 lg:pl-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already have Salesforce"
                   </h3>
-                  <div className="space-y-5">
-                    <p className="text-gray-700 leading-relaxed">
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       Unlike Salesforce, which is designed for general business
                       and sales environments, our solution is purpose-built for
                       legal client retention:
                     </p>
 
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3 p-3 bg-blue-50/50 rounded-lg border border-blue-200/30">
-                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <div className="space-y-5">
+                      <div className="flex items-start gap-4 p-4 bg-blue-50/50 rounded-lg border border-blue-200/30">
+                        <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="text-sm font-medium text-blue-900">
+                          <p className="text-base font-medium text-blue-900">
                             Legal AI Training
                           </p>
-                          <p className="text-xs text-blue-700 mt-1">
+                          <p className="text-sm text-blue-700 mt-2">
                             Our voice AI is specifically trained on legal client
                             conversations and understands discovery,
                             depositions, settlement negotiations, and trial
@@ -327,13 +318,13 @@ const ObjectionAddressing: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3 bg-green-50/50 rounded-lg border border-green-200/30">
-                        <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-4 p-4 bg-green-50/50 rounded-lg border border-green-200/30">
+                        <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="text-sm font-medium text-green-900">
+                          <p className="text-base font-medium text-green-900">
                             Legal Sentiment Analysis
                           </p>
-                          <p className="text-xs text-green-700 mt-1">
+                          <p className="text-sm text-green-700 mt-2">
                             Our sentiment analysis recognizes the unique
                             emotional patterns that precede client
                             dissatisfaction in long litigation processes.
@@ -341,13 +332,13 @@ const ObjectionAddressing: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3 p-3 bg-purple-50/50 rounded-lg border border-purple-200/30">
-                        <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-4 p-4 bg-purple-50/50 rounded-lg border border-purple-200/30">
+                        <CheckCircle2 className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="text-sm font-medium text-purple-900">
+                          <p className="text-base font-medium text-purple-900">
                             Purpose-Built Portal
                           </p>
-                          <p className="text-xs text-purple-700 mt-1">
+                          <p className="text-sm text-purple-700 mt-2">
                             Our mobile client portal achieves 70%+ adoption
                             rates because it's designed specifically for clients
                             who need simplified case tracking, not complex
@@ -357,8 +348,8 @@ const ObjectionAddressing: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="bg-green-50/70 p-4 rounded-xl border border-green-200/30">
-                      <p className="text-sm text-green-700 leading-relaxed">
+                    <div className="bg-green-50/70 p-5 rounded-xl border border-green-200/30">
+                      <p className="text-base text-green-700 leading-relaxed">
                         <strong className="text-green-800">
                           Cost Advantage:
                         </strong>{" "}

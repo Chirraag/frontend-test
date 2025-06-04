@@ -169,7 +169,7 @@ const Solutions: React.FC = () => {
                     "Natural Conversations: AI trained on legal terminology and client concerns",
                     "Case-Specific Updates: Personalized based on case status",
                     "Sentiment Detection: Identifies concerned clients during conversations",
-                    "Automatic Documentation: Records all interactions in your case system",
+                    "Automatic Documentation: Records all interactions in your legal CRM",
                     "Multilingual Support: Communicates in multiple languages",
                   ].map((item, index) => (
                     <li

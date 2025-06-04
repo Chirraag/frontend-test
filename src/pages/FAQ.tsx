@@ -82,7 +82,10 @@ const FAQ: React.FC = () => {
             </li>
             <li>Natural speech patterns, pauses, and conversational flow</li>
             <li>Clear disclosure as required by legal ethics rules</li>
-            <li>Clients often prefer the consistent, empathetic service</li>
+            <li>
+              Clients often prefer the consistent and empathetic level of
+              service from our AI
+            </li>
           </ul>
           <p>
             <a href="/contact" className="text-accent hover:underline">
@@ -185,18 +188,13 @@ const FAQ: React.FC = () => {
         <div>
           <p className="mb-4">We integrate with all major legal platforms:</p>
           <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>Clio, MyCase, Filevine, Litify</li>
-            <li>PracticePanther, Needles Ngage, TrialWorks</li>
-            <li>SmartAdvocate, CASEpeer, GrowPath</li>
-            <li>Custom integrations available for proprietary systems</li>
+            <li>Law Ruler</li>
+            <li>SmartAdvocate</li>
+            <li>
+              Zapier (Access integrations with Salesforce, Litify, Clio, MyCase,
+              Practice Panther, Filevine, CasePeer, and more)
+            </li>
           </ul>
-          <p>
-            Don't see your system?{" "}
-            <a href="/contact" className="text-accent hover:underline">
-              Contact us
-            </a>{" "}
-            - we've never met a system we couldn't integrate.
-          </p>
         </div>
       ),
     },

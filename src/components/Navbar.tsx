@@ -90,6 +90,13 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-2">
           <a
+            href="/"
+            className="px-4 py-2 rounded-lg text-white/90 hover:text-white hover:bg-white/5 transition-all"
+          >
+            Home
+          </a>
+
+          <a
             href="/solutions"
             className="px-4 py-2 rounded-lg text-white/90 hover:text-white hover:bg-white/5 transition-all"
           >
@@ -169,6 +176,13 @@ const Navbar: React.FC = () => {
             }}
           >
             <div className="container mx-auto px-6 py-6 flex flex-col space-y-3">
+              <a
+                href="/"
+                className="block px-4 py-3 rounded-lg hover:bg-white/5 text-white text-base sm:text-lg"
+              >
+                Home
+              </a>
+
               <a
                 href="/solutions"
                 className="block px-4 py-3 rounded-lg hover:bg-white/5 text-white text-base sm:text-lg"

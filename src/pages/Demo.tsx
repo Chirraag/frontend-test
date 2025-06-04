@@ -131,7 +131,7 @@ const Demo: React.FC = () => {
     },
     {
       quote:
-        "The ROI analysis they provided during the demo proved accurate. We're saving over $15,000 monthly in administrative costs while improving client satisfaction scores.",
+        "The ROI analysis they provided during the demo proved accurate. We're saving over $150,000 monthly in administrative costs while improving client satisfaction scores.",
       author: "CFO",
       firm: "Full Service Firm",
     },

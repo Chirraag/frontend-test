@@ -63,7 +63,7 @@ const PracticeAreas: React.FC = () => {
         "Handling 2,500+ Camp Lejeune cases, Kayse's Voice AI now manages 83% of inquiries. The retention improvement paid for the system within two months.",
       author: "Jennifer R., Mass Tort Manager",
       stats: {
-        retention: "+27%",
+        retention: "+40%",
         timeSaved: "30hrs/week",
         satisfaction: "+31 NPS",
       },
@@ -90,7 +90,7 @@ const PracticeAreas: React.FC = () => {
         "Before Kayse, we missed 35% of after-hours calls. Now our AI captures these leads and begins intake immediately. Our conversion rate increased by 41%.",
       author: "Michael T., Personal Injury Attorney",
       stats: {
-        retention: "+22%",
+        retention: "+45%",
         timeSaved: "25hrs/week",
         satisfaction: "+28 NPS",
       },
@@ -117,7 +117,7 @@ const PracticeAreas: React.FC = () => {
         "Our disability clients often have anxiety about their cases. Kayse's Voice AI now handles these calls with empathy while our staff focuses on advancing cases. Our satisfaction scores increased 47%.",
       author: "Sarah M., Disability Law Associate",
       stats: {
-        retention: "+34%",
+        retention: "+42%",
         timeSaved: "28hrs/week",
         satisfaction: "+47 NPS",
       },
@@ -144,7 +144,7 @@ const PracticeAreas: React.FC = () => {
         "Employment cases require careful documentation. Kayse has transformed how we manage client relationships, automating updates while ensuring clients feel supported. We've reduced administrative time by 28 hours weekly.",
       author: "David L., Employment Law Partner",
       stats: {
-        retention: "+19%",
+        retention: "+41%",
         timeSaved: "28hrs/week",
         satisfaction: "+24 NPS",
       },
@@ -171,7 +171,7 @@ const PracticeAreas: React.FC = () => {
         "Our clients come from diverse backgrounds with varying English proficiency. Kayse's multilingual capabilities have dramatically improved communication. The automated document collection alone has saved us countless hours.",
       author: "Maria G., Immigration Attorney",
       stats: {
-        retention: "+31%",
+        retention: "+41%",
         timeSaved: "35hrs/week",
         satisfaction: "+38 NPS",
       },
@@ -198,7 +198,7 @@ const PracticeAreas: React.FC = () => {
         "Workers' compensation cases involve constant communication with clients, medical providers, and insurance companies. Kayse has automated much of this process, ensuring nothing falls through the cracks.",
       author: "Robert J., Workers' Comp Attorney",
       stats: {
-        retention: "+25%",
+        retention: "+42%",
         timeSaved: "22hrs/week",
         satisfaction: "+29 NPS",
       },
@@ -225,7 +225,7 @@ const PracticeAreas: React.FC = () => {
         "Criminal cases often start with urgent calls at all hours. Kayse ensures we never miss these critical moments, while providing immediate guidance until our attorneys can engage.",
       author: "Thomas W., Criminal Defense Attorney",
       stats: {
-        retention: "+21%",
+        retention: "+47%",
         timeSaved: "24hrs/week",
         satisfaction: "+26 NPS",
       },
@@ -252,7 +252,7 @@ const PracticeAreas: React.FC = () => {
         "Family law clients often need reassurance outside business hours. Kayse provides that support while efficiently gathering documentation. Our clients feel better supported, and our team spends less time on administrative tasks.",
       author: "Jennifer P., Family Law Attorney",
       stats: {
-        retention: "+29%",
+        retention: "+42%",
         timeSaved: "26hrs/week",
         satisfaction: "+35 NPS",
       },
@@ -279,7 +279,7 @@ const PracticeAreas: React.FC = () => {
         "Bankruptcy clients are often overwhelmed by documentation requirements. Kayse has transformed our practice by automating collection and providing 24/7 support. Our preparation time decreased by 35% while improving accuracy.",
       author: "Michael R., Bankruptcy Attorney",
       stats: {
-        retention: "+18%",
+        retention: "+41%",
         timeSaved: "20hrs/week",
         satisfaction: "+22 NPS",
       },
@@ -303,10 +303,10 @@ const PracticeAreas: React.FC = () => {
         "Asset Documentation streamlines collection of property and accounts",
       ],
       testimonial:
-        "Estate planning requires building lasting relationships. Kayse helps us maintain these connections through automated check-ins and life event monitoring. Our client retention has increased 28% since implementation.",
+        "Estate planning requires building lasting relationships. Kayse helps us maintain these connections through automated check-ins and life event monitoring. Our client retention has increased 41% since implementation.",
       author: "Elizabeth T., Estate Planning Attorney",
       stats: {
-        retention: "+28%",
+        retention: "+41%",
         timeSaved: "18hrs/week",
         satisfaction: "+32 NPS",
       },
@@ -413,9 +413,7 @@ const PracticeAreas: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Capture Every Client
                   </h3>
-                  <p className="text-sm text-white/70">
-                    24/7 AI-powered intake
-                  </p>
+                  <p className="text-sm text-white/70">24/7 Voice AI Agents</p>
                 </div>
 
                 {/* tile 2 */}

@@ -297,7 +297,7 @@ const Resources: React.FC = () => {
                       engaged during multi-year cases. Our resource library
                       provides actionable strategies based on research from over{" "}
                       <span className="text-accent font-semibold">
-                        42,000 client conversations
+                        3,000,000+ client conversations
                       </span>
                       . Request our guides to learn how leading firms reduce
                       client attrition by up to{" "}

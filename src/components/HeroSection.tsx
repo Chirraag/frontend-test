@@ -65,8 +65,8 @@ const HeroSection = () => {
 
             {/* Tagline */}
             <p className="text-white/80 text-base sm:text-lg mt-8">
-              Used by leading mass tort firms handling Camp Lejeune, 3M,
-              Roundup, and more.
+              Used by leading mass tort law firms handling Camp Lejeune, Gaming
+              Addiction, Zantac, and more.
             </p>
           </div>
 

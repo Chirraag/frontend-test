@@ -197,7 +197,7 @@ const Integrations: React.FC = () => {
                     Secure Data
                   </h3>
                   <p className="text-sm text-white/70 text-center">
-                    HIPAA-ready
+                    Scope Available
                   </p>
                 </div>
 
@@ -332,11 +332,12 @@ const Integrations: React.FC = () => {
                 >
                   <p className="text-white/90 italic mb-2">
                     "We invested heavily in our CRM, but it wasn't designed for
-                    legal client management. Kayse filled those gaps perfectly
-                    while leveraging our existing infrastructure."
+                    the unique challenges of mass tort client retention. Kayse
+                    filled those gaps perfectly while leveraging our existing
+                    CRM."
                   </p>
                   <cite className="text-white/70 not-italic">
-                    — IT Director
+                    — John, IT Director, National Mass Tort Firm
                   </cite>
                 </blockquote>
 
