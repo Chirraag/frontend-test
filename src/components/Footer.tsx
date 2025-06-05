@@ -252,20 +252,7 @@ const Footer: React.FC = () => {
               © 2025 Kayse.ai | 1400 Old Country Rd, Suite 305, Westbury, NY
               11590
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a
-                href="/privacy"
-                className="text-white/50 hover:text-white text-sm transition-colors duration-300"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="text-white/50 hover:text-white text-sm transition-colors duration-300"
-              >
-                Terms of Service
-              </a>
-            </div>
+            <div className="flex flex-wrap justify-center gap-6"></div>
           </div>
         </div>
       </div>
