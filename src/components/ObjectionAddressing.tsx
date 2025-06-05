@@ -162,9 +162,9 @@ const ObjectionAddressing: React.FC = () => {
           </Box>
 
           <TabPanel value={value} index={0}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
-              {/* Image Section - Fixed width, no zoom, centered vertically */}
-              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, top aligned */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
                 <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
                   <img
                     src="/ipad5.png"
@@ -174,7 +174,7 @@ const ObjectionAddressing: React.FC = () => {
                 </div>
               </div>
               {/* Text Section - Enhanced with consistent positioning and bigger font */}
-              <div className="w-full lg:w-3/5 flex items-center pt-0">
+              <div className="w-full lg:w-3/5 pt-0">
                 <div className="w-full pl-2 lg:pl-8">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already call, text, and email my clients"
@@ -220,9 +220,9 @@ const ObjectionAddressing: React.FC = () => {
           </TabPanel>
 
           <TabPanel value={value} index={1}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
-              {/* Image Section - Fixed width, no zoom, centered vertically */}
-              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, top aligned */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
                 <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
                   <img
                     src="/ipad2.png"
@@ -232,7 +232,7 @@ const ObjectionAddressing: React.FC = () => {
                 </div>
               </div>
               {/* Text Section - Enhanced with consistent positioning */}
-              <div className="w-full lg:w-3/5 flex items-center pt-0">
+              <div className="w-full lg:w-3/5 pt-0">
                 <div className="w-full pl-2 lg:pl-8">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already have a CRM and send newsletters"
@@ -278,9 +278,9 @@ const ObjectionAddressing: React.FC = () => {
           </TabPanel>
 
           <TabPanel value={value} index={2}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
-              {/* Image Section - Fixed width, no zoom, centered vertically */}
-              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, top aligned */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
                 <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
                   <img
                     src="/ipad3.png"
@@ -290,7 +290,7 @@ const ObjectionAddressing: React.FC = () => {
                 </div>
               </div>
               {/* Text Section - Enhanced with consistent positioning */}
-              <div className="w-full lg:w-3/5 flex items-center pt-0">
+              <div className="w-full lg:w-3/5 pt-0">
                 <div className="w-full pl-2 lg:pl-8">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
                     "I already have Salesforce"
