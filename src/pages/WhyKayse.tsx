@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -32,19 +32,22 @@ function TabPanel(props: TabPanelProps) {
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
       id={`comparison-tabpanel-${index}`}
       aria-labelledby={`comparison-tab-${index}`}
       {...other}
       className="py-6"
+      style={{
+        display: value === index ? "block" : "none",
+      }}
     >
-      {value === index && <div>{children}</div>}
+      {children}
     </div>
   );
 }
 
 const WhyKayse: React.FC = () => {
   const [value, setValue] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // ROI Calculator States
   const [numStaff, setNumStaff] = useState(5);
@@ -69,6 +72,33 @@ const WhyKayse: React.FC = () => {
     roi: 0,
     paybackMonths: "N/A",
   });
+
+  // Preload images to prevent layout jumps
+  useEffect(() => {
+    const imageUrls = ["/ipad5.png", "/ipad2.png", "/ipad3.png"];
+    let loadedCount = 0;
+
+    const preloadImages = () => {
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === imageUrls.length) {
+            setImagesLoaded(true);
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount === imageUrls.length) {
+            setImagesLoaded(true);
+          }
+        };
+        img.src = url;
+      });
+    };
+
+    preloadImages();
+  }, []);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-US", {
@@ -339,6 +369,11 @@ const WhyKayse: React.FC = () => {
                         src="/ipad5.png"
                         alt="Traditional Communication Methods"
                         className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-2xl"
+                        style={{
+                          opacity: imagesLoaded ? 1 : 0,
+                          transition: "opacity 0.3s ease",
+                        }}
+                        loading="eager"
                       />
                     </div>
                   </div>
@@ -406,6 +441,11 @@ const WhyKayse: React.FC = () => {
                         src="/ipad2.png"
                         alt="Generic CRM Solution"
                         className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-2xl"
+                        style={{
+                          opacity: imagesLoaded ? 1 : 0,
+                          transition: "opacity 0.3s ease",
+                        }}
+                        loading="eager"
                       />
                     </div>
                   </div>
@@ -472,6 +512,11 @@ const WhyKayse: React.FC = () => {
                         src="/ipad3.png"
                         alt="Salesforce Solution"
                         className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-2xl"
+                        style={{
+                          opacity: imagesLoaded ? 1 : 0,
+                          transition: "opacity 0.3s ease",
+                        }}
+                        loading="eager"
                       />
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import {
   ArrowRight,
@@ -23,19 +23,49 @@ function TabPanel(props: TabPanelProps) {
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
       id={`objection-tabpanel-${index}`}
       aria-labelledby={`objection-tab-${index}`}
       {...other}
       className="py-6"
+      style={{
+        display: value === index ? "block" : "none",
+      }}
     >
-      {value === index && <Box>{children}</Box>}
+      <Box>{children}</Box>
     </div>
   );
 }
 
 const ObjectionAddressing: React.FC = () => {
   const [value, setValue] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Preload images to prevent layout jumps
+  useEffect(() => {
+    const imageUrls = ["/ipad5.png", "/ipad2.png", "/ipad3.png"];
+    let loadedCount = 0;
+
+    const preloadImages = () => {
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === imageUrls.length) {
+            setImagesLoaded(true);
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount === imageUrls.length) {
+            setImagesLoaded(true);
+          }
+        };
+        img.src = url;
+      });
+    };
+
+    preloadImages();
+  }, []);
 
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -161,6 +191,7 @@ const ObjectionAddressing: React.FC = () => {
             </Tabs>
           </Box>
 
+          {/* Render all TabPanels to prevent layout jumps */}
           <TabPanel value={value} index={0}>
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
               {/* Image Section - Fixed width, no zoom, top aligned */}
@@ -170,6 +201,11 @@ const ObjectionAddressing: React.FC = () => {
                     src="/ipad5.png"
                     alt="CRM Solution"
                     className="w-full h-auto rounded-xl shadow-2xl"
+                    style={{
+                      opacity: imagesLoaded ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                    }}
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -228,6 +264,11 @@ const ObjectionAddressing: React.FC = () => {
                     src="/ipad2.png"
                     alt="Generic CRM Solution"
                     className="w-full h-auto rounded-xl shadow-2xl"
+                    style={{
+                      opacity: imagesLoaded ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                    }}
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -286,6 +327,11 @@ const ObjectionAddressing: React.FC = () => {
                     src="/ipad3.png"
                     alt="Salesforce Solution"
                     className="w-full h-auto rounded-xl shadow-2xl"
+                    style={{
+                      opacity: imagesLoaded ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                    }}
+                    loading="eager"
                   />
                 </div>
               </div>
