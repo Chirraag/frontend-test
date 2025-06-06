@@ -5,7 +5,7 @@ import RetellWebAgentHero from "./RetellWebAgentHero";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[140svh] flex items-center pt-14 xs:pt-16 sm:pt-20 lg:pt-24 pb-32 overflow-hidden">
+    <section className="relative min-h-[140svh] flex items-center pt-14 xs:pt-16 sm:pt-20 lg:pt-8 pb-32 overflow-hidden">
       {/* Updated Background - Brighter and Lighter */}
       <div className="absolute inset-0 -z-10">
         {/* Brighter gradient background */}
@@ -27,7 +27,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start min-h-[77vh]">
           {/* Enhanced Left Side Content - Clean and Minimal */}
-          <div className="text-center lg:text-left relative z-10 space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl mx-auto lg:mx-0 pt-8 lg:pt-12">
+          <div className="text-center lg:text-left relative z-10 space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl mx-auto lg:mx-0 pt-8 lg:pt-4">
             {/* Enhanced Title - Gradient Back + Whiter Subtitle */}
             <h1 className="text-[2.2rem] xs:text-[2.75rem] sm:text-[3.4375rem] md:text-[4.125rem] lg:text-[4.84375rem] font-semibold leading-[1.1] tracking-[-0.03em]">
               The AI{" "}
@@ -71,7 +71,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Enhanced Web Agent with Proper Alignment - Moved Up */}
-          <div className="relative flex items-start justify-center pt-8 lg:pt-16 min-h-[220px] xs:min-h-[275px] sm:min-h-[330px] md:min-h-[385px] lg:min-h-[440px] xl:min-h-[495px] mt-6 xs:mt-8 lg:mt-0">
+          <div className="relative flex items-start justify-center pt-8 lg:pt-6 min-h-[220px] xs:min-h-[275px] sm:min-h-[330px] md:min-h-[385px] lg:min-h-[440px] xl:min-h-[495px] mt-6 xs:mt-8 lg:mt-0">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-accent/30 via-blue-500/10 to-purple-500/20 blur-3xl"></div>
 
