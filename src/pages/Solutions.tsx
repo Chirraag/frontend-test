@@ -110,9 +110,9 @@ const Solutions: React.FC = () => {
           </div>
         </section>
 
-        {/* Voice AI Section */}
+        {/* Voice AI Section - Desktop Version */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-24 sm:py-32 overflow-hidden hidden lg:block"
           id="voice-ai"
         >
           <div className="absolute inset-0">
@@ -250,6 +250,151 @@ const Solutions: React.FC = () => {
                     onCallEnd={() => console.log("Call ended")}
                   />
                 </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Voice AI Section - Mobile Version */}
+        <section
+          className="relative py-24 sm:py-32 overflow-hidden lg:hidden"
+          id="voice-ai-mobile"
+        >
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#002451] via-[#001e3a] to-[#001428]"></div>
+            <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.06)_0%,_transparent_60%)]"></div>
+
+            <motion.div
+              className="absolute top-1/3 right-1/4 w-[40rem] h-[40rem] bg-[#0066ff]/05 rounded-[40%] blur-[120px]"
+              animate={{
+                scale: [1, 1.15, 1],
+                opacity: [0.05, 0.08, 0.05],
+              }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+
+          <div className="container mx-auto px-4 md:px-8 relative z-10">
+            <div className="space-y-12">
+              {/* Mobile Interactive Demo - Now First */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative flex items-center justify-center"
+              >
+                {/* Background glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-transparent rounded-3xl blur-2xl scale-110 opacity-60"></div>
+
+                {/* Additional floating elements for enhanced visual appeal */}
+                <div className="absolute -top-8 -left-8 w-16 h-16 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-purple-500/10 rounded-full blur-lg animate-pulse delay-1000"></div>
+                <div className="absolute top-1/2 -right-12 w-8 h-8 bg-cyan-500/10 rounded-full blur-md animate-pulse delay-500"></div>
+
+                {/* Interactive RetellWebAgent */}
+                <div className="relative z-10 w-full max-w-md mx-auto">
+                  <RetellWebAgent
+                    onCallStart={() => console.log("Call started")}
+                    onCallEnd={() => console.log("Call ended")}
+                  />
+                </div>
+              </motion.div>
+
+              {/* Mobile Content - Now Second */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="inline-block mb-4 px-6 py-2 rounded-xl bg-gradient-to-r from-white/10 via-white/[0.07] to-transparent backdrop-blur-md border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] group hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-300">
+                  <span className="text-white font-medium">Voice AI</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1] text-white">
+                  <span className="text-white">Human-like</span>{" "}
+                  <span
+                    className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent"
+                    style={{
+                      backgroundSize: "200% 100%",
+                      backgroundPosition: "60% 0",
+                    }}
+                  >
+                    Voice AI
+                  </span>{" "}
+                  <span className="text-white">for Scaled Communication</span>
+                </h2>
+                <p className="text-lg text-white/80 mb-8 leading-relaxed font-light">
+                  The average law firm spends 12-15 hours per week per staff
+                  member on routine client communications. Kayse's Voice AI
+                  transforms client relationships with:
+                </p>
+                <ul className="space-y-4 mb-8 text-left max-w-2xl mx-auto">
+                  {[
+                    "Natural Conversations: AI trained on legal terminology and client concerns",
+                    "Case-Specific Updates: Personalized based on case status",
+                    "Sentiment Detection: Identifies concerned clients during conversations",
+                    "Automatic Documentation: Records all interactions in your legal CRM",
+                    "Multilingual Support: Communicates in multiple languages",
+                  ].map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 text-white/80"
+                    >
+                      <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-lg font-semibold text-accent mb-6">
+                  Reduce staff communication workload by 12-15 hours weekly
+                  while improving satisfaction.
+                </p>
+                <blockquote
+                  className="p-8 rounded-[2.5rem] overflow-hidden backdrop-blur-xl mb-8 relative max-w-2xl mx-auto"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(59,130,246,0.1) 50%, rgba(147,51,234,0.1) 100%)",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                    boxShadow:
+                      "0 25px 50px -12px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.1)",
+                  }}
+                >
+                  "Our paralegals used to spend 40% of their time on routine
+                  calls. Kayse's Voice AI freed them to focus on higher-value
+                  work while improving client satisfaction."
+                  <div className="flex items-center mt-4">
+                    <img
+                      src="https://api.dicebear.com/9.x/dylan/svg?seed=Sarah&backgroundColor=transparent&facialHairProbability=0&hair=shaggy&hairColor=fff500&mood=superHappy&skinColor=ffd6c0"
+                      alt="Sarah M."
+                      className="w-12 h-12 rounded-full mr-4 bg-black"
+                    />
+                    <div>
+                      <div className="font-semibold text-white">Sarah M.</div>
+                      <div className="text-white/70 text-sm">
+                        Legal Operations Director
+                      </div>
+                    </div>
+                  </div>
+                </blockquote>
+                <a
+                  href="/demo?solution=voice-ai"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-xl
+                           bg-gradient-to-r from-blue-500 to-blue-600
+                           shadow-[0_8px_32px_rgba(59,130,246,0.2)]
+                           hover:shadow-[0_12px_40px_rgba(59,130,246,0.3)]
+                           transform hover:scale-[1.02] transition-all duration-300
+                           group relative overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative text-white">See Voice AI Demo</span>
+                  <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200" />
+                </a>
               </motion.div>
             </div>
           </div>
