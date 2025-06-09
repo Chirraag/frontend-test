@@ -11,7 +11,7 @@ const RetellAgent: React.FC = () => {
 
   // Reversed text sets order
   const textSets = [
-    ["Try Kayse AI", "instantly.", "Just enter", "your number."],
+    ["Try Kayse", "instantly.", "Just enter", "your number."],
     ["Scale", "exponentially", "without", "adding staff."],
   ];
 

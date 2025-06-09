@@ -1,3 +1,3 @@
 # website-v2
-Public website for Kayse AI - Never lose clients | Never lose touch
+Public website for Kayse - Never lose clients | Never lose touch
 

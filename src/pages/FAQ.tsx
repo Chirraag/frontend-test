@@ -396,7 +396,7 @@ const FAQ: React.FC = () => {
 
   // All FAQs
   const allFAQs = [
-    { category: "About Kayse AI Technology", items: aboutKayseTech },
+    { category: "About Kayse Technology", items: aboutKayseTech },
     {
       category: "Implementation & Integration",
       items: implementationIntegration,
