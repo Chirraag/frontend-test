@@ -22,7 +22,7 @@ const TermsOfUse: React.FC = () => {
               >
                 Terms of Use
               </motion.h1>
-              <p className="text-white/60 mb-0">Last modified: June 21, 2025</p>
+              <p className="text-white/60 mb-0">Last modified: May 21, 2025</p>
             </div>
           </div>
         </section>
