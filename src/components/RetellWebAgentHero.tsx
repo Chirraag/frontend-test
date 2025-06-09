@@ -133,7 +133,7 @@ const RetellWebAgentHero: React.FC<RetellWebAgentHeroProps> = ({
             <span>Try Our Voice AI</span>
           </motion.div>
           <h3 className="text-2xl font-semibold text-white mb-3">
-            Experience Our Voice AI
+            Over 96% Of Clients Prefer It
           </h3>
           <p className="text-white/70 text-sm">
             Try a live conversation with our AI assistant to see how it can help
