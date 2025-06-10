@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,6 +7,13 @@ import Footer from "../components/Footer";
 const TermsOfUse: React.FC = () => {
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Terms of Use</title>
+        <meta
+          name="description"
+          content="Read Kayse's terms of use and software licensing agreement for our AI client retention platform."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* Hero Section */}

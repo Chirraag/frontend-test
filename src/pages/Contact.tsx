@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Clock, CheckCircle2 } from "lucide-react";
 import Navbar from "../components/Navbar";
@@ -88,6 +89,13 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Contact Us</title>
+        <meta
+          name="description"
+          content="Get in touch with Kayse's team. Contact us for demos, support, partnerships, or any questions about our AI client retention platform."
+        />
+      </Helmet>
       {/* Modal */}
       {showModal && (
         <motion.div

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, CheckCircle2, Mail } from "lucide-react";
 import Navbar from "../components/Navbar";
@@ -205,6 +206,13 @@ const Resources: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Resources</title>
+        <meta
+          name="description"
+          content="Essential resources for law firm client retention. Access our strategy guides, best practices, and insights to reduce client attrition."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* Hero Section */}

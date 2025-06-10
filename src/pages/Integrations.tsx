@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle2,
@@ -54,6 +55,13 @@ const Integrations: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Integrations</title>
+        <meta
+          name="description"
+          content="Seamless integration with your existing legal systems. Kayse works with Law Ruler, SmartAdvocate, and other practice management tools."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* ─────────────────────────── HERO SECTION ─────────────────────────── */}

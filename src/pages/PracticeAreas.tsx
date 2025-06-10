@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle2,
@@ -320,6 +321,14 @@ const PracticeAreas: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Practice Areas</title>
+        <meta
+          name="description"
+          content="Intelligent client retention solutions for every legal practice area: Mass Tort, Personal Injury, Disability Law, Family Law, and more."
+        />
+      </Helmet>
+
       <Navbar />
       <main>
         {/* Hero Section */}

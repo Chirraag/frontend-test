@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle2,
@@ -177,6 +178,13 @@ const WhyKayse: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Why Choose Kayse</title>
+        <meta
+          name="description"
+          content="Learn why Kayse is different from generic CRMs and communication tools. Purpose-built for legal client retention with proven ROI."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* Hero Section */}

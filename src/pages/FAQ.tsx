@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, Plus, Minus } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -407,6 +408,13 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | FAQ</title>
+        <meta
+          name="description"
+          content="Frequently asked questions about Kayse's AI client retention platform for law firms. Get answers about implementation, pricing, and features."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* Hero Section */}

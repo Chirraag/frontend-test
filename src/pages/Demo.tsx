@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle2,
@@ -174,6 +175,14 @@ const Demo: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Book a Demo</title>
+        <meta
+          name="description"
+          content="See Kayse's AI client retention platform in action. Book a personalized demo to learn how we can reduce client churn by up to 40%."
+        />
+      </Helmet>
+
       {/* Modal */}
       {showModal && (
         <motion.div

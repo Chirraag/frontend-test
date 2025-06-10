@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -16,6 +17,13 @@ import RetellWebAgent from "../components/RetellWebAgent";
 const Solutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Solutions</title>
+        <meta
+          name="description"
+          content="Discover Kayse's complete AI-powered client retention platform: Voice AI, Sentiment Analysis, and Mobile Client Portal for law firms."
+        />
+      </Helmet>
       <Navbar />
       <main>
         <section className="relative py-24 sm:py-32 overflow-hidden">

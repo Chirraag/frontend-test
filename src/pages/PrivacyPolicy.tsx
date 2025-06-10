@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,6 +7,13 @@ import Footer from "../components/Footer";
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-primary font-manrope">
+      <Helmet>
+        <title>Kayse | Privacy Policy</title>
+        <meta
+          name="description"
+          content="Read Kayse's privacy policy to understand how we collect, use, and protect your personal information and data."
+        />
+      </Helmet>
       <Navbar />
       <main>
         {/* Hero Section */}
