@@ -22,6 +22,7 @@ const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     practiceArea: "",
     challenge: "",
@@ -46,7 +47,7 @@ const Demo: React.FC = () => {
       const apiData = {
         full_name: formData.name,
         work_email: formData.email,
-        phone_number: "", // Note: Phone number not in current form, sending empty string
+        phone_number: formData.phone,
         law_firm_name: formData.company,
         practice_area: formData.practiceArea,
         challenge: formData.challenge,
@@ -75,6 +76,7 @@ const Demo: React.FC = () => {
         setFormData({
           name: "",
           email: "",
+          phone: "",
           company: "",
           practiceArea: "",
           challenge: "",
@@ -549,6 +551,25 @@ const Demo: React.FC = () => {
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
                         placeholder="john@example.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-white/80 mb-2 text-sm"
+                      >
+                        Phone Number*
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
+                        placeholder="(123) 456-7890"
                       />
                     </div>
 

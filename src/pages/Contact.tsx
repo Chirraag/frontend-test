@@ -11,8 +11,9 @@ const Contact: React.FC = () => {
     name: "",
     email: "",
     phone: "",
-    interest: "",
-    message: "",
+    company: "",
+    practiceArea: "",
+    challenge: "",
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -35,20 +36,23 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     try {
+      const apiData = {
+        full_name: formData.name,
+        work_email: formData.email,
+        phone_number: formData.phone,
+        law_firm_name: formData.company,
+        practice_area: formData.practiceArea,
+        challenge: formData.challenge,
+      };
+
       const response = await fetch(
-        "https://kayse-backend.replit.app/api/zapier/contact",
+        "https://kayse-backend.replit.app/api/zapier/demo",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            full_name: formData.name,
-            work_email: formData.email,
-            phone_number: formData.phone,
-            interest: formData.interest,
-            message: formData.message,
-          }),
+          body: JSON.stringify(apiData),
         },
       );
 
@@ -64,8 +68,9 @@ const Contact: React.FC = () => {
           name: "",
           email: "",
           phone: "",
-          interest: "",
-          message: "",
+          company: "",
+          practiceArea: "",
+          challenge: "",
         });
       } else {
         setModalContent({
@@ -385,15 +390,37 @@ const Contact: React.FC = () => {
 
                     <div>
                       <label
-                        htmlFor="interest"
+                        htmlFor="company"
                         className="block text-white/80 mb-2 text-sm"
                       >
-                        What Are You Interested In?*
+                        Law Firm Name*
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
+                                 bg-white/10 border border-white/20 text-white placeholder-white/50
+                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
+                                 transition-all duration-300"
+                        placeholder="Doe & Associates"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="practiceArea"
+                        className="block text-white/80 mb-2 text-sm"
+                      >
+                        Primary Practice Area*
                       </label>
                       <select
-                        id="interest"
-                        name="interest"
-                        value={formData.interest}
+                        id="practiceArea"
+                        name="practiceArea"
+                        value={formData.practiceArea}
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
@@ -402,58 +429,89 @@ const Contact: React.FC = () => {
                                  transition-all duration-300 appearance-none cursor-pointer"
                       >
                         <option value="" className="bg-primary text-white">
-                          Select an option
+                          Select Practice Area
                         </option>
                         <option
-                          value="General Inquiry"
+                          value="Mass Tort/Class Action"
                           className="bg-primary text-white"
                         >
-                          General Inquiry
+                          Mass Tort/Class Action
                         </option>
                         <option
-                          value="Partnership"
+                          value="Personal Injury"
                           className="bg-primary text-white"
                         >
-                          Partnership
+                          Personal Injury
                         </option>
                         <option
-                          value="Support"
+                          value="Disability/Social Security"
                           className="bg-primary text-white"
                         >
-                          Support
+                          Disability/Social Security
                         </option>
                         <option
-                          value="Integration"
+                          value="Family/Estate Law"
                           className="bg-primary text-white"
                         >
-                          Integration
+                          Family/Estate Law
                         </option>
-                        <option value="Media" className="bg-primary text-white">
-                          Media
+                        <option
+                          value="Other Legal Practice"
+                          className="bg-primary text-white"
+                        >
+                          Other Legal Practice
                         </option>
                       </select>
                     </div>
-                  </div>
 
-                  <div className="mb-6">
-                    <label
-                      htmlFor="message"
-                      className="block text-white/80 mb-2 text-sm"
-                    >
-                      Message/Details
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                               bg-white/10 border border-white/20 text-white placeholder-white/50
-                               focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                               transition-all duration-300 resize-none"
-                      placeholder="Tell us how we can help you..."
-                    ></textarea>
+                    <div>
+                      <label
+                        htmlFor="challenge"
+                        className="block text-white/80 mb-2 text-sm"
+                      >
+                        What's Your Biggest Challenge Managing Client
+                        Communication?*
+                      </label>
+                      <select
+                        id="challenge"
+                        name="challenge"
+                        value={formData.challenge}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
+                                 bg-white/10 border border-white/20 text-white
+                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
+                                 transition-all duration-300 appearance-none cursor-pointer"
+                      >
+                        <option value="" className="bg-primary text-white">
+                          Select Challenge
+                        </option>
+                        <option
+                          value="Too many calls"
+                          className="bg-primary text-white"
+                        >
+                          Too many calls
+                        </option>
+                        <option
+                          value="Low engagement"
+                          className="bg-primary text-white"
+                        >
+                          Low engagement
+                        </option>
+                        <option
+                          value="High attrition"
+                          className="bg-primary text-white"
+                        >
+                          High attrition
+                        </option>
+                        <option
+                          value="Poor follow-up visibility"
+                          className="bg-primary text-white"
+                        >
+                          Poor follow-up visibility
+                        </option>
+                      </select>
+                    </div>
                   </div>
 
                   <button
