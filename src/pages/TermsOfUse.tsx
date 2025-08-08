@@ -30,7 +30,7 @@ const TermsOfUse: React.FC = () => {
               >
                 Terms of Use
               </motion.h1>
-              <p className="text-white/60 mb-0">Last modified: May 21, 2025</p>
+              <p className="text-white/60 mb-0">Updated 7/30/25</p>
             </div>
           </div>
         </section>
@@ -49,13 +49,14 @@ const TermsOfUse: React.FC = () => {
                   <strong>
                     Kayse, Kayse AI, Kayse.ai, Kayse App, Kayseapp.com
                   </strong>
-                  , ("Licensor" or "KAYSE") with its principal place of business
-                  at 1400 Old Country Rd, Suite 305, Westbury, NY 11590. For
-                  purposes of this Agreement, Subscriber and Licensor each will
-                  be referred to individually as a "Party" and together as the
-                  "Parties." These Terms of Use apply to your use of the Service
-                  (defined below). The Service is intended for use only by users
-                  that are at least 18 years of age.
+                  , ("Licensor" or "KAYSE")<sup className="text-accent">1</sup>{" "}
+                  with its principal place of business at 1400 Old Country Rd,
+                  Suite 305, Westbury, NY 11590. For purposes of this Agreement,
+                  Subscriber and Licensor each will be referred to individually
+                  as a "Party" and together as the "Parties." These Terms of Use
+                  apply to your use of the Service (defined below). The Service
+                  is intended for use only by users that are at least 18 years
+                  of age.
                 </p>
 
                 <p className="text-white/80 mb-4">
@@ -71,7 +72,7 @@ const TermsOfUse: React.FC = () => {
                     href="https://www.kayse.ai"
                     className="text-accent hover:underline"
                   >
-                    https://www.kayse.ai
+                    http://www.kayse.ai
                   </a>
                   , the web application located at kayse.ai and kayseapp.com,
                   the mobile application, and all associated white label
@@ -113,9 +114,26 @@ const TermsOfUse: React.FC = () => {
                       authorized to access or use the Service
                     </strong>
                     . By accessing and using the Service, you acknowledge and
-                    agree to be bound by these Terms of Use.
+                    agree to be bound by these Terms of Use. These Terms of Use
+                    explain the terms by which you may use our online and/or
+                    mobile services, Site, and Software including all updates,
+                    enhancements, and modifications (collectively, the
+                    "Service").
                   </p>
                 </div>
+
+                <p className="text-white/80 mb-4">
+                  We may update, modify, supplement, or change these Terms of
+                  Use from time to time by providing advance notice, which may
+                  include posting the revised Terms here. If you continue to use
+                  the Service after such changes are posted, you will be bound
+                  by the updated Terms of Use. Unless otherwise indicated, any
+                  new Content added to the Service will also be subject to these
+                  Terms of Use, effective on the date of such addition. You are
+                  encouraged to review the Site and these Terms of Use
+                  periodically for any updates or changes. If you do not agree
+                  to the changes, you must stop using our Services.
+                </p>
 
                 <p className="text-white/80 mb-4">
                   WHEREAS, Subscriber is a law firm or an entity authorized to
@@ -125,15 +143,16 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  WHEREAS, KAYSE has developed the web/cloud-based KAYSE ™
+                  WHEREAS, KAYSE has developed the web/cloud-based KAYSE
+                  <sup>TM</sup>
                   legal client continuity AI platform to be used by law firms,
                   claims management firms, and related entities to enhance case
                   management, client communication, and firm efficiency.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  WHEREAS, Subscriber wishes to utilize KAYSE ™ to assist in
-                  its operations.
+                  WHEREAS, Subscriber wishes to utilize KAYSE<sup>TM</sup> to
+                  assist in its operations.
                 </p>
 
                 <p className="text-white/80 mb-8">
@@ -156,15 +175,15 @@ const TermsOfUse: React.FC = () => {
                   non-exclusive and non-transferable license, without right of
                   sublicense, during the Term to access and display on
                   Subscriber's Display Devices within the United States, Canada,
-                  and other countries approved by KAYSE, KAYSE ™, and to permit
-                  Authorized Users to use the Service for their internal
-                  operations, subject to the terms and conditions of this
-                  Agreement. All rights in the Service not expressly granted
-                  hereunder are expressly reserved to Licensor. The Software and
-                  Services are licensed, not sold. Licensor retains all right,
-                  title, and interest, including all intellectual property
-                  rights, in and to the Software and Services. Subscriber
-                  acknowledges and agrees that this is a{" "}
+                  and other countries approved by KAYSE, KAYSE<sup>TM</sup>, and
+                  to permit Authorized Users to use the Service for their
+                  internal operations, subject to the terms and conditions of
+                  this Agreement. All rights in the Service not expressly
+                  granted hereunder are expressly reserved to Licensor. The
+                  Software and Services are licensed, not sold. Licensor retains
+                  all right, title, and interest, including all intellectual
+                  property rights, in and to the Software and Services.
+                  Subscriber acknowledges and agrees that this is a{" "}
                   <strong>non-exclusive</strong> license, and the Licensor may
                   grant similar licenses to other parties.
                 </p>
@@ -342,19 +361,19 @@ const TermsOfUse: React.FC = () => {
                   made for mid-term changes in case or client numbers. All fees
                   paid are non-refundable. You authorize KAYSE, along with our
                   payment affiliates or service providers, to process and store
-                  your payment card and ACH banking information. By subscribing
-                  to and using the Application, you acknowledge and agree to the
-                  pricing terms applicable to your subscription, as made
-                  available and clearly disclosed within the Application
-                  interface upon sign-in. These pricing terms may include
-                  subscription and usage fees, billing cycles, renewal terms,
-                  any other amounts due under this Agreement, and any applicable
-                  taxes or charges. Your continued use of the Application after
-                  sign-in constitutes your acceptance of then-current pricing
-                  terms. KAYSE reserves the right to update pricing from time to
-                  time, and any such changes will be communicated within the
-                  Application and will take effect upon your next billing cycle
-                  unless otherwise stated.
+                  your payment card information. By subscribing to and using the
+                  Application, you acknowledge and agree to the pricing terms
+                  applicable to your subscription, as made available and clearly
+                  disclosed within the Application interface upon sign-in. These
+                  pricing terms may include subscription and usage fees, billing
+                  cycles, renewal terms, any other amounts due under this
+                  Agreement, and any applicable taxes or charges. Your continued
+                  use of the Application after sign-in constitutes your
+                  acceptance of then-current pricing terms. KAYSE reserves the
+                  right to update pricing from time to time, and any such
+                  changes will be communicated within the Application and will
+                  take effect upon your next billing cycle unless otherwise
+                  stated.
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -450,68 +469,100 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  2.8. Deferred Payments and Security Interest
+                  2.8. Deferred Payments and Security Interest (Firm-Level
+                  Blanket Deferral)
                 </h3>
+                <p className="text-white/80 mb-4">
+                  In some cases, and in KAYSE's sole and absolute discretion,
+                  KAYSE may offer a deferred payment arrangement (a "Deferral")
+                  to a Subscriber law firm under which Subscriber may onboard an
+                  unlimited number of client matters, including but not limited
+                  to mass tort or other qualified practice areas, without
+                  immediate payment for Services. Under such a Deferral,
+                  Subscriber shall not be required to pay fees for Services
+                  rendered until the occurrence of one or more resolution events
+                  related to those client matters, including but not limited to
+                  settlement, judgment, or other monetary recovery (each, a
+                  "Settlement Event").
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  Upon the occurrence of any Settlement Event related to any
+                  client matters covered by the Deferral, Subscriber shall
+                  promptly, and in any case within five (5) days of receipt of
+                  any funds related to such Settlement Event, remit full payment
+                  to KAYSE for all outstanding fees and costs associated with
+                  Services rendered. Notwithstanding the timing or outcome of
+                  any Settlement Event, Subscriber unconditionally guarantees
+                  full payment for all Services rendered by KAYSE under this
+                  Agreement. This obligation is absolute, irrevocable, and
+                  independent of the success or resolution of any particular
+                  claim or case.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  If no Settlement Event occurs within twenty-four (24) months
+                  from the execution of this Agreement, Subscriber shall remit
+                  full payment of all outstanding fees within thirty (30) days
+                  of the expiration of such period, unless otherwise agreed in
+                  writing by KAYSE.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  To secure Subscriber's payment obligations under this
+                  Agreement, Subscriber hereby grants to KAYSE a continuing
+                  security interest and lien in all rights to payment arising
+                  from legal or other services provided by Subscriber to its
+                  clients in the underlying cases covered by the Deferral
+                  (collectively, a "Recovery"), whether existing now or arising
+                  in the future, including any attorney fees, costs, or related
+                  amounts payable to Subscriber. This security interest includes
+                  all proceeds and collections thereof (collectively, the
+                  "Lien"). Subscriber shall not disburse or allow any Recovery
+                  to be diminished unless and until KAYSE acknowledges in
+                  writing that the Lien has been satisfied in full.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  Subscriber represents and warrants that it has the authority
+                  to grant this security interest and agrees to execute further
+                  documents and take any steps KAYSE reasonably requires to
+                  perfect and enforce its rights, including filing financing
+                  statements under the Uniform Commercial Code. Where required
+                  by law or ethical obligations, Subscriber shall obtain any
+                  client consents necessary to grant this security interest and
+                  waives any claim, argument, or defense based on a failure to
+                  do so.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  If Subscriber fails to pay KAYSE following any Settlement
+                  Event, as required herein, KAYSE shall be entitled to final
+                  judgment against Subscriber pursuant to the dispute resolution
+                  procedures set forth in this Agreement. Subscriber waives any
+                  and all defenses to such judgment except for proof of full and
+                  timely payment.
+                </p>
+
                 <p className="text-white/80 mb-8">
-                  In some cases, in KAYSE's sole and absolute discretion, KAYSE
-                  may defer payment for services rendered under this Agreement
-                  to KAYSE until resolution of the underlying mass tort cases (a
-                  "Deferral"), including but not limited to settlement,
-                  judgment, or any other monetary recovery ("Settlement Event").
-                  Upon the occurrence of a Settlement Event, Subscriber shall
-                  promptly, but in all cases within five (5) days of receipt of
-                  such funds, remit full payment to KAYSE for all outstanding
-                  fees and costs associated with the Services provided.
-                  Notwithstanding the timing or outcome of any Settlement Event,
-                  Subscriber unconditionally guarantees payment in full for all
-                  services rendered by KAYSE under this Agreement. This
-                  obligation is absolute, irrevocable, and independent of the
-                  success of any particular claim or case. In the event that no
-                  Settlement Event occurs within twenty-four (24) months from
-                  the execution of this Agreement, Subscriber shall pay all
-                  outstanding fees in full no later than thirty (30) days after
-                  the expiration of this period, unless otherwise agreed in
-                  writing by KAYSE. To secure the Subscriber's payment
-                  obligations under this Agreement, Subscriber hereby grants
-                  KAYSE a continuing security interest and lien in all rights to
-                  payment to Subscriber arising from the legal or other services
-                  provided by Subscriber to its clients in connection with the
-                  underlying mass tort (or other) cases (any such amounts due to
-                  Subscriber, a "Recovery"), whether now existing or hereafter
-                  arising, together with all proceeds and collections thereof,
-                  including without limitation, any attorney fees or costs
-                  recovered (collectively, a "Lien"). Subscriber shall not
-                  disburse or otherwise allow the Recovery to diminish unless
-                  and until KAYSE acknowledges in writing that the Lien has been
-                  fully satisfied. Subscriber represents and warrants that it
-                  has the authority to grant such a security interest and agrees
-                  to execute such further documents and take such further
-                  actions as KAYSE may reasonably request to perfect and enforce
-                  its security interest, including but not limited to the filing
-                  of financing statements under the Uniform Commercial Code. To
-                  the extent Subscriber may be required by applicable law and/or
-                  ethical rules to obtain Subscriber's client's consent in order
-                  for Subscriber to agree to any or all of the terms and
-                  conditions of this Agreement, including without limitation
-                  Subscriber's grant of a security interest in or against a
-                  Recovery or any portion thereof, Subscriber shall obtain such
-                  consent, and waives any claim, argument, or defense that
-                  Subscriber's failure to obtain such consent relieves
-                  Subscriber from any obligations under this Agreement.
-                  Subscriber further agrees that, in the event Subscriber fails
-                  to pay KAYSE upon the occurrence of a Settlement Event as
-                  required by this Agreement, KAYSE shall, pursuant to the
-                  dispute resolution procedures herein, be entitled to entry of
-                  a final judgment against Subscriber, and Subscriber further
-                  waives any and all defenses to same except full and timely
-                  payment.
+                  <strong>
+                    For the avoidance of doubt, any Deferral granted under this
+                    Section shall apply broadly to all qualifying client matters
+                    Subscriber chooses to onboard during the covered term.
+                    However, the granting of a Deferral shall not constitute a
+                    course of dealing or create any obligation for KAYSE to
+                    offer such Deferral in the future. Each Deferral must be
+                    expressly agreed to in writing. This provision, and all
+                    related obligations, shall survive the termination or
+                    expiration of this Agreement.
+                  </strong>
                 </p>
 
                 {/* Service Description */}
                 <h2 className="text-2xl font-semibold text-white mb-4">
                   3. SERVICE DESCRIPTION, DELIVERY AND ACCEPTANCE
                 </h2>
-                <p className="text-white/80 mb-8">
+                <p className="text-white/80 mb-4">
                   If the Service is delivered to Subscriber via a Display
                   Device, KAYSE will make the Service available to the
                   Subscriber upon successful sign-up and completion of the
@@ -603,7 +654,7 @@ const TermsOfUse: React.FC = () => {
                 <p className="text-white/80 mb-4">
                   The term of this Agreement will commence on the Effective Date
                   and will remain in effect for twelve months, whereupon this
-                  Agreement shall automatically extend for successive 12- month
+                  Agreement shall automatically extend for successive 12-month
                   terms unless this Agreement is terminated earlier by either
                   party in accordance with Section 4(b).
                 </p>
@@ -1573,7 +1624,7 @@ const TermsOfUse: React.FC = () => {
                   scheduled maintenance time. Scheduled maintenance time will
                   not exceed ten (10) hours a month and will take place during
                   Non-Peak Hours whenever possible. "Non-Peak Hours" will be the
-                  hours between 12:00 AM and 8:00 AM EST.
+                  hours between 12:00 AM and 7:00 AM EST.
                 </p>
                 <p className="text-white/80 mb-4">
                   In the event that scheduled maintenance exceeds the
@@ -1620,6 +1671,14 @@ const TermsOfUse: React.FC = () => {
                   </a>
                   .
                 </p>
+
+                {/* Footnote */}
+                <div className="border-t border-white/20 pt-4">
+                  <p className="text-white/60 text-sm">
+                    <sup className="text-accent">1</sup> KAYSE is a registered
+                    trademark of Case Connect.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
