@@ -30,7 +30,7 @@ const TermsOfUse: React.FC = () => {
               >
                 Terms of Use
               </motion.h1>
-              <p className="text-white/60 mb-0">Updated 7/30/25</p>
+              <p className="text-white/60 mb-0">Updated 9/8/25</p>
             </div>
           </div>
         </section>
@@ -144,10 +144,10 @@ const TermsOfUse: React.FC = () => {
 
                 <p className="text-white/80 mb-4">
                   WHEREAS, KAYSE has developed the web/cloud-based KAYSE
-                  <sup>TM</sup>
-                  legal client continuity AI platform to be used by law firms,
-                  claims management firms, and related entities to enhance case
-                  management, client communication, and firm efficiency.
+                  <sup>TM</sup> legal client continuity AI platform to be used
+                  by law firms, claims management firms, and related entities to
+                  enhance case management, client communication, and firm
+                  efficiency.
                 </p>
 
                 <p className="text-white/80 mb-4">
@@ -469,9 +469,81 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  2.8. Deferred Payments and Security Interest (Firm-Level
-                  Blanket Deferral)
+                  2.8. Pay-As-You-Go (PAYG) Pricing (Default Option. Does Not
+                  Apply to Deferred Pricing)
                 </h3>
+                <p className="text-white/80 mb-4">
+                  Subscriber acknowledges that the default pricing model under
+                  this Agreement is the Pay-As-You-Go ("PAYG") pricing option.
+                </p>
+                <ol className="list-decimal list-inside text-white/80 mb-4 ml-4">
+                  <li className="mb-3">
+                    <strong>Scope and Pricing:</strong> PAYG pricing is
+                    all-inclusive, incorporating both subscription and usage
+                    fees as set forth in the Pricing Exhibit attached hereto.
+                    All fees are subject to the terms and conditions of this
+                    Agreement.
+                  </li>
+                  <li className="mb-3">
+                    <strong>Payment:</strong> PAYG requires monthly payment via
+                    credit card or ACH authorization, which must be completed
+                    before the Service is activated.
+                  </li>
+                  <li className="mb-3">
+                    <strong>Subscription Term:</strong> PAYG subscriptions are
+                    for the term outlined in Section 5 and renew automatically
+                    in accordance with Section 5 unless terminated earlier
+                    pursuant to this Agreement.
+                  </li>
+                  <li className="mb-3">
+                    <strong>Active and Inactive Cases:</strong>
+                    <ul className="list-disc list-inside mt-2 ml-4">
+                      <li>
+                        Subscriber will be billed monthly for each Active Case
+                        (as defined in Section 1.5) unless such case is marked
+                        inactive within the Kayse dashboard.
+                      </li>
+                      <li>
+                        Inactive cases will not accrue additional monthly
+                        subscription fees, but associated clients will continue
+                        to have access to the Kayse mobile client portal app,
+                        enabling ongoing communication, stronger retention, and
+                        potential remarketing of new cases.
+                      </li>
+                      <li>
+                        Inactive cases will still count toward the Subscriber's
+                        minimum monthly subscription fee unless reactivated as
+                        Active Cases.
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="mb-3">
+                    <strong>Flexibility:</strong> PAYG provides Subscriber with
+                    the ability to control costs by designating which cases are
+                    active or inactive.
+                  </li>
+                  <li>
+                    <strong>Deferred Eligibility:</strong> Subscriber law firms
+                    managing more than 2,000 Active Cases under PAYG may apply
+                    for the Deferred Payment option described in Section 2.9.
+                    Approval of such option is at Kayse's sole discretion and
+                    requires a written, exclusive invitation from Kayse.
+                  </li>
+                </ol>
+
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  2.9. Deferred Payments and Security Interest (Exclusive
+                  Option)
+                </h3>
+                <p className="text-white/80 mb-4">
+                  The Deferred Payment arrangement ("Deferral") described herein
+                  is not generally available and shall only apply if Subscriber
+                  receives a written, exclusive invitation from Kayse, subject
+                  to review and approval. Unless such invitation is extended and
+                  accepted in writing, all Subscribers shall remain on the
+                  default PAYG pricing option under Section 2.8.
+                </p>
+
                 <p className="text-white/80 mb-4">
                   In some cases, and in KAYSE's sole and absolute discretion,
                   KAYSE may offer a deferred payment arrangement (a "Deferral")
