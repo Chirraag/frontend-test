@@ -6,6 +6,7 @@ import {
   Clock,
   DollarSign,
   TrendingUp,
+  Percent,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import CallHalo from "./CallHalo";
@@ -92,6 +93,25 @@ const StatCounter: React.FC<StatProps> = ({ value, suffix, label, icon }) => {
 };
 
 const ResultsSection: React.FC = () => {
+  const keyResults = [
+    {
+      icon: <Percent className="w-6 h-6 text-accent" />,
+      text: "70%+ success rate for recently active clients",
+    },
+    {
+      icon: <UserCheck className="w-6 h-6 text-accent" />,
+      text: "40%+ revival rate for dormant clients (4+ years inactive)",
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-accent" />,
+      text: "Zero extra headcount required",
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-accent" />,
+      text: "All-inclusive pricing",
+    },
+  ];
+
   return (
     <section
       className="relative py-24 sm:py-32 overflow-hidden"
@@ -135,6 +155,44 @@ const ResultsSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Key Results Grid - from ProvenResults */}
+        <motion.div
+          className="max-w-4xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+            {keyResults.map((result, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-4 p-5 rounded-xl backdrop-blur-sm
+                         bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                         border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]
+                         hover:from-white/15 hover:via-white/10 hover:border-white/30 
+                         hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(0,127,255,0.1)]
+                         transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div
+                  className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center
+                              group-hover:bg-accent/30 transition-colors duration-300"
+                >
+                  {result.icon}
+                </div>
+                <p className="text-white/90 text-lg leading-relaxed">
+                  {result.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Stats Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="card-glass p-6 rounded-xl">
             <StatCounter

@@ -10,8 +10,9 @@ import {
   Calendar,
   FolderSync,
 } from "lucide-react";
+import CallHalo from "./CallHalo";
 
-const ZapierWorkflow: React.FC = () => {
+const ZapierIntegration: React.FC = () => {
   const useCases = [
     {
       icon: <FileText className="w-5 h-5" />,
@@ -51,13 +52,18 @@ const ZapierWorkflow: React.FC = () => {
   return (
     <section className="relative py-20 sm:py-24 overflow-hidden">
       <div className="absolute inset-0">
-        {/* Background gradients */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#001028] to-[#000a17]"></div>
-        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(99,102,241,0.08)_0%,_transparent_70%)]"></div>
+        {/* Background gradients - matching the flow from CaseAdvancementEngine */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000814] to-[#001028]"></div>
+        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.12)_0%,_transparent_70%)]"></div>
 
-        {/* Animated background elements */}
+        {/* CallHalo for consistency */}
+        <div className="absolute inset-0 opacity-30">
+          <CallHalo isRinging={false} isCallActive={false} />
+        </div>
+
+        {/* Animated background elements - using blue theme */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px]"
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px]"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -69,7 +75,7 @@ const ZapierWorkflow: React.FC = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px]"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/15 rounded-full blur-[100px]"
           animate={{
             scale: [1.1, 1, 1.1],
             opacity: [0.2, 0.3, 0.2],
@@ -93,9 +99,9 @@ const ZapierWorkflow: React.FC = () => {
         >
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-400/30">
-              <Zap className="w-5 h-5 text-purple-300" />
-              <span className="text-purple-200 font-medium">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-accent/20 border border-accent/30">
+              <Zap className="w-5 h-5 text-accent" />
+              <span className="text-white font-medium">
                 Zapier Integration Partner
               </span>
             </div>
@@ -106,10 +112,10 @@ const ZapierWorkflow: React.FC = () => {
               </span>
               <br />
               <span
-                className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-white via-[#3e9dff] to-white bg-clip-text text-transparent"
                 style={{
                   backgroundSize: "200% 100%",
-                  backgroundPosition: "0% 0",
+                  backgroundPosition: "60% 0",
                 }}
               >
                 8,000+ App Integrations
@@ -128,16 +134,16 @@ const ZapierWorkflow: React.FC = () => {
             {/* Left Column - No-Code Builder */}
             <motion.div
               className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                       bg-gradient-to-br from-purple-500/10 via-blue-500/5 to-transparent
-                       border border-white/10 shadow-[0_0_20px_rgba(139,92,246,0.2)]"
+                       bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                       border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                  <Code2 className="w-6 h-6 text-purple-300" />
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                  <Code2 className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white">
                   No-Code Workflow Builder
@@ -165,7 +171,7 @@ const ZapierWorkflow: React.FC = () => {
                   >
                     <div
                       className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center
-                                  group-hover:bg-white/20 transition-colors duration-300 mt-0.5"
+                                  group-hover:bg-white/20 transition-colors duration-300 mt-0.5 text-accent"
                     >
                       {useCase.icon}
                     </div>
@@ -180,8 +186,8 @@ const ZapierWorkflow: React.FC = () => {
             {/* Right Column - Integrations */}
             <motion.div
               className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                       bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent
-                       border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+                       bg-gradient-to-br from-accent/10 via-white/[0.05] to-transparent
+                       border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -222,8 +228,8 @@ const ZapierWorkflow: React.FC = () => {
                     </motion.span>
                   ))}
                   <motion.span
-                    className="px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20
-                             text-white text-sm border border-white/30 font-medium"
+                    className="px-3 py-1.5 rounded-full bg-gradient-to-r from-accent/20 to-blue-500/20
+                             text-white text-sm border border-accent/30 font-medium"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -235,7 +241,7 @@ const ZapierWorkflow: React.FC = () => {
               </div>
 
               <div
-                className="p-4 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 
+                className="p-4 rounded-xl bg-gradient-to-r from-accent/10 to-blue-500/10 
                             border border-white/10"
               >
                 <p className="text-sm text-white/80 italic">
@@ -260,9 +266,9 @@ const ZapierWorkflow: React.FC = () => {
             <a
               href="/integrations"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
-                       bg-gradient-to-r from-purple-500 to-blue-500
-                       shadow-[0_8px_32px_rgba(139,92,246,0.3)]
-                       hover:shadow-[0_12px_40px_rgba(139,92,246,0.4)]
+                       bg-gradient-to-r from-blue-500 to-blue-600
+                       shadow-[0_8px_32px_rgba(59,130,246,0.3)]
+                       hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)]
                        transform hover:scale-[1.02] transition-all duration-300
                        group relative overflow-hidden"
             >
@@ -279,4 +285,4 @@ const ZapierWorkflow: React.FC = () => {
   );
 };
 
-export default ZapierWorkflow;
+export default ZapierIntegration;

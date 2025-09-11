@@ -88,7 +88,6 @@ function App() {
                     <ProblemStatement />
                     <SolutionOverview />
                     <ObjectionAddressing />
-                    <ProvenResults />
                     <ResultsSection />
                     <FinalCTA />
                   </main>

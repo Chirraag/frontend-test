@@ -25,9 +25,42 @@ const ProvenResults: React.FC = () => {
   return (
     <section className="relative py-16 sm:py-20 overflow-hidden">
       <div className="absolute inset-0">
-        {/* Background gradients */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000814] to-[#000a17]"></div>
-        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.06)_0%,_transparent_70%)]"></div>
+        {/* Background gradients - transitioning from ObjectionAddressing light blue to ResultsSection dark blue */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e40af] via-[#1e2847] to-[#0a1628]"></div>
+
+        {/* Enhanced radial gradients for visual interest */}
+        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.15)_0%,_transparent_70%)]"></div>
+        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_100%_50%_at_20%_60%,_rgba(147,197,253,0.1)_0%,_transparent_50%)]"></div>
+        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_100%_50%_at_80%_40%,_rgba(99,102,241,0.1)_0%,_transparent_50%)]"></div>
+
+        {/* Animated gradient orbs */}
+        <motion.div
+          className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.3, 0.2],
+            x: [0, 50, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-accent/15 rounded-full blur-[120px]"
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.15, 0.25, 0.15],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -55,8 +88,12 @@ const ProvenResults: React.FC = () => {
             {results.map((result, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-4 p-5 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10
-                         hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 rounded-xl backdrop-blur-sm
+                         bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                         border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]
+                         hover:from-white/15 hover:via-white/10 hover:border-white/30 
+                         hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(0,127,255,0.1)]
+                         transition-all duration-300 group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
