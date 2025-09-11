@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ProblemStatement from "./components/ProblemStatement";
@@ -13,6 +14,7 @@ import ObjectionAddressing from "./components/ObjectionAddressing";
 import ResultsSection from "./components/ResultsSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
+import CaseAdvancementEngine from "./components/CaseAdvancementEngine";
 import Solutions from "./pages/Solutions";
 import PracticeAreas from "./pages/PracticeAreas";
 import Integrations from "./pages/Integrations";
@@ -63,9 +65,23 @@ function App() {
               path="/"
               element={
                 <>
+                  <Helmet>
+                    <title>
+                      Kayse | The First Legal Case Advancement Engine
+                    </title>
+                    <meta
+                      name="description"
+                      content="Kayse helps law firms keep clients engaged and cases moving with always-on AI, without adding to headcount. Scale without adding staff. Automate communication in a highly personalized way at scale, collect documents, fill gaps in cases, and revive dormant cases. Kayse connects to 8,000+ apps like Clio, Microsoft 365, Google, Facebook, Dropbox, and more. Use our built-in Workflow Builder to automate client tasks, follow-ups, and document collection with no code."
+                    />
+                    <meta
+                      name="keywords"
+                      content="legal tech, client engagement, legal automation, case advancement, CRM integration, legal client retention software, law firm client retention software, Legal Client Engagement Software, Legal Client Engagement Software Portal for Law Firms, kayse integrations, zapier legal tech, legal automation, case management integrations, law firm"
+                    />
+                  </Helmet>
                   <Navbar />
                   <main>
                     <HeroSection />
+                    <CaseAdvancementEngine />
                     <ProblemStatement />
                     <SolutionOverview />
                     <ObjectionAddressing />
