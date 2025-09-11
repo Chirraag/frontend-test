@@ -8,6 +8,7 @@ import {
   Users,
   CheckCircle2,
   AlertCircle,
+  Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -42,7 +43,7 @@ const ObjectionAddressing: React.FC = () => {
 
   // Preload images to prevent layout jumps
   useEffect(() => {
-    const imageUrls = ["/ipad5.png", "/ipad2.png", "/ipad3.png"];
+    const imageUrls = ["/ipad5.png", "/ipad2.png", "/ipad3.png", "/phone1.png"];
     let loadedCount = 0;
 
     const preloadImages = () => {
@@ -179,6 +180,11 @@ const ObjectionAddressing: React.FC = () => {
                 iconPosition="start"
               />
               <Tab
+                label="Beyond Call Centers"
+                icon={<Headphones size={22} />}
+                iconPosition="start"
+              />
+              <Tab
                 label="Beyond Generic CRMs"
                 icon={<Database size={22} />}
                 iconPosition="start"
@@ -261,6 +267,114 @@ const ObjectionAddressing: React.FC = () => {
               <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
                 <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
                   <img
+                    src="/phone1.png"
+                    alt="Beyond Call Centers"
+                    className="w-full h-auto rounded-xl shadow-2xl"
+                    style={{
+                      opacity: imagesLoaded ? 1 : 0,
+                      transition: "opacity 0.3s ease",
+                    }}
+                    loading="eager"
+                  />
+                </div>
+              </div>
+              {/* Text Section - Enhanced with consistent positioning */}
+              <div className="w-full lg:w-3/5 pt-0">
+                <div className="w-full pl-2 lg:pl-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
+                    "We already use a call center for client outreach"
+                  </h3>
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      Traditional call centers operate on short-term campaigns
+                      (typically 2-4 weeks), but legal cases require years of
+                      consistent client engagement. Here's why Kayse's approach
+                      is fundamentally different:
+                    </p>
+
+                    {/* Comparison Table */}
+                    <div className="relative overflow-x-auto rounded-xl border border-gray-200/50">
+                      <table className="w-full text-sm text-left">
+                        <thead className="text-xs uppercase bg-blue-50/50 text-gray-700">
+                          <tr>
+                            <th className="px-4 py-3 font-semibold">Feature</th>
+                            <th className="px-4 py-3 font-semibold">Kayse</th>
+                            <th className="px-4 py-3 font-semibold">
+                              Call Centers
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="bg-white/50 border-b border-gray-200/30">
+                            <td className="px-4 py-3 font-medium">
+                              Client Retention
+                            </td>
+                            <td className="px-4 py-3 text-green-600">
+                              ✅ Lifetime engagement
+                            </td>
+                            <td className="px-4 py-3 text-red-600">
+                              ❌ Limited campaigns
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50/30 border-b border-gray-200/30">
+                            <td className="px-4 py-3 font-medium">
+                              Cost Model
+                            </td>
+                            <td className="px-4 py-3 text-green-600">
+                              ✅ All-inclusive pricing
+                            </td>
+                            <td className="px-4 py-3 text-red-600">
+                              ❌ Setup + usage fees
+                            </td>
+                          </tr>
+                          <tr className="bg-white/50 border-b border-gray-200/30">
+                            <td className="px-4 py-3 font-medium">
+                              Success Rates
+                            </td>
+                            <td className="px-4 py-3 text-green-600">
+                              ✅ 40%+ dormant revival
+                            </td>
+                            <td className="px-4 py-3 text-red-600">
+                              ❌ No long-term tracking
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50/30 border-b border-gray-200/30">
+                            <td className="px-4 py-3 font-medium">
+                              AI Capability
+                            </td>
+                            <td className="px-4 py-3 text-green-600">
+                              ✅ Built-in intelligence
+                            </td>
+                            <td className="px-4 py-3 text-red-600">
+                              ❌ Manual scripts only
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div className="bg-blue-50/70 p-5 rounded-xl border border-blue-200/30">
+                      <p className="text-base text-blue-700 leading-relaxed">
+                        <strong className="text-blue-800">
+                          Key Difference:
+                        </strong>{" "}
+                        Call centers are built for short campaigns. Kayse is
+                        built for the entire client lifecycle—from intake
+                        through resolution.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabPanel>
+
+          <TabPanel value={value} index={2}>
+            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
+              {/* Image Section - Fixed width, no zoom, top aligned */}
+              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
+                <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
+                  <img
                     src="/ipad2.png"
                     alt="Generic CRM Solution"
                     className="w-full h-auto rounded-xl shadow-2xl"
@@ -318,7 +432,7 @@ const ObjectionAddressing: React.FC = () => {
             </div>
           </TabPanel>
 
-          <TabPanel value={value} index={2}>
+          <TabPanel value={value} index={3}>
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
               {/* Image Section - Fixed width, no zoom, top aligned */}
               <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
@@ -394,14 +508,17 @@ const ObjectionAddressing: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="bg-green-50/70 p-5 rounded-xl border border-green-200/30">
+                    <div
+                      className="mb-8 p-5 rounded-xl backdrop-blur-xl
+                                bg-gradient-to-br from-green-50/70 to-green-50/50 border border-green-200/30"
+                    >
                       <p className="text-base text-green-700 leading-relaxed">
                         <strong className="text-green-800">
                           Cost Advantage:
                         </strong>{" "}
-                        Unlike Salesforce's implementation costs that aren't
-                        recoverable, Kayse is billable as a case expense to each
-                        client file for injury firms—making it cost-neutral in
+                        Unlike Salesforce and other CRMs, Kayse can potentially
+                        be billed as a recoverable case expense for high-volume
+                        contingency firms, making the investment cost-neutral in
                         many cases.
                       </p>
                     </div>
