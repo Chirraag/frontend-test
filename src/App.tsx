@@ -25,6 +25,8 @@ import FAQ from "./pages/FAQ";
 import Demo from "./pages/Demo";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import ProvenResults from "./components/ProvenResults";
+import ZapierIntegration from "./components/ZapierIntegration";
 
 function App() {
   // Ensure background is always set
@@ -82,9 +84,11 @@ function App() {
                   <main>
                     <HeroSection />
                     <CaseAdvancementEngine />
+                    <ZapierIntegration />
                     <ProblemStatement />
                     <SolutionOverview />
                     <ObjectionAddressing />
+                    <ProvenResults />
                     <ResultsSection />
                     <FinalCTA />
                   </main>
