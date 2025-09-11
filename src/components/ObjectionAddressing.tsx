@@ -196,7 +196,6 @@ const ObjectionAddressing: React.FC = () => {
               />
             </Tabs>
           </Box>
-
           {/* Render all TabPanels to prevent layout jumps */}
           <TabPanel value={value} index={0}>
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
@@ -292,70 +291,122 @@ const ObjectionAddressing: React.FC = () => {
                       is fundamentally different:
                     </p>
 
-                    {/* Comparison Table */}
-                    <div className="relative overflow-x-auto rounded-xl border border-gray-200/50">
-                      <table className="w-full text-sm text-left">
-                        <thead className="text-xs uppercase bg-blue-50/50 text-gray-700">
+                    {/* Enhanced Comparison Table with better visibility */}
+                    <div className="relative overflow-x-auto rounded-xl border border-gray-300 shadow-sm">
+                      <table className="w-full text-base">
+                        <thead className="bg-blue-100 border-b border-gray-300">
                           <tr>
-                            <th className="px-4 py-3 font-semibold">Feature</th>
-                            <th className="px-4 py-3 font-semibold">Kayse</th>
-                            <th className="px-4 py-3 font-semibold">
+                            <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
+                              Feature
+                            </th>
+                            <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
+                              Kayse
+                            </th>
+                            <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
                               Call Centers
                             </th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr className="bg-white/50 border-b border-gray-200/30">
-                            <td className="px-4 py-3 font-medium">
+                        <tbody className="divide-y divide-gray-200">
+                          <tr className="bg-white hover:bg-gray-50 transition-colors">
+                            <td className="px-6 py-4 font-medium text-gray-900">
                               Client Retention
                             </td>
-                            <td className="px-4 py-3 text-green-600">
-                              ✅ Lifetime engagement
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-green-600 text-xl">
+                                  ✓
+                                </span>
+                                <span className="text-gray-700">
+                                  Lifetime engagement
+                                </span>
+                              </div>
                             </td>
-                            <td className="px-4 py-3 text-red-600">
-                              ❌ Limited campaigns
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-red-600 text-xl">✗</span>
+                                <span className="text-gray-700">
+                                  Limited campaigns
+                                </span>
+                              </div>
                             </td>
                           </tr>
-                          <tr className="bg-gray-50/30 border-b border-gray-200/30">
-                            <td className="px-4 py-3 font-medium">
+                          <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
+                            <td className="px-6 py-4 font-medium text-gray-900">
                               Cost Model
                             </td>
-                            <td className="px-4 py-3 text-green-600">
-                              ✅ All-inclusive pricing
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-green-600 text-xl">
+                                  ✓
+                                </span>
+                                <span className="text-gray-700">
+                                  All-inclusive pricing
+                                </span>
+                              </div>
                             </td>
-                            <td className="px-4 py-3 text-red-600">
-                              ❌ Setup + usage fees
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-red-600 text-xl">✗</span>
+                                <span className="text-gray-700">
+                                  Setup + usage fees
+                                </span>
+                              </div>
                             </td>
                           </tr>
-                          <tr className="bg-white/50 border-b border-gray-200/30">
-                            <td className="px-4 py-3 font-medium">
+                          <tr className="bg-white hover:bg-gray-50 transition-colors">
+                            <td className="px-6 py-4 font-medium text-gray-900">
                               Success Rates
                             </td>
-                            <td className="px-4 py-3 text-green-600">
-                              ✅ 40%+ dormant revival
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-green-600 text-xl">
+                                  ✓
+                                </span>
+                                <span className="text-gray-700">
+                                  40%+ dormant revival
+                                </span>
+                              </div>
                             </td>
-                            <td className="px-4 py-3 text-red-600">
-                              ❌ No long-term tracking
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-red-600 text-xl">✗</span>
+                                <span className="text-gray-700">
+                                  No long-term tracking
+                                </span>
+                              </div>
                             </td>
                           </tr>
-                          <tr className="bg-gray-50/30 border-b border-gray-200/30">
-                            <td className="px-4 py-3 font-medium">
+                          <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
+                            <td className="px-6 py-4 font-medium text-gray-900">
                               AI Capability
                             </td>
-                            <td className="px-4 py-3 text-green-600">
-                              ✅ Built-in intelligence
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-green-600 text-xl">
+                                  ✓
+                                </span>
+                                <span className="text-gray-700">
+                                  Built-in intelligence
+                                </span>
+                              </div>
                             </td>
-                            <td className="px-4 py-3 text-red-600">
-                              ❌ Manual scripts only
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-2">
+                                <span className="text-red-600 text-xl">✗</span>
+                                <span className="text-gray-700">
+                                  Manual scripts only
+                                </span>
+                              </div>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
 
-                    <div className="bg-blue-50/70 p-5 rounded-xl border border-blue-200/30">
-                      <p className="text-base text-blue-700 leading-relaxed">
-                        <strong className="text-blue-800">
+                    <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                      <p className="text-base text-gray-700 leading-relaxed">
+                        <strong className="text-blue-900 font-semibold">
                           Key Difference:
                         </strong>{" "}
                         Call centers are built for short campaigns. Kayse is
@@ -368,7 +419,6 @@ const ObjectionAddressing: React.FC = () => {
               </div>
             </div>
           </TabPanel>
-
           <TabPanel value={value} index={2}>
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
               {/* Image Section - Fixed width, no zoom, top aligned */}
@@ -431,7 +481,6 @@ const ObjectionAddressing: React.FC = () => {
               </div>
             </div>
           </TabPanel>
-
           <TabPanel value={value} index={3}>
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
               {/* Image Section - Fixed width, no zoom, top aligned */}
