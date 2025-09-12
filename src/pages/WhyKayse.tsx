@@ -613,7 +613,7 @@ const WhyKayse: React.FC = () => {
 </TabPanel>
 
 
-              <TabPanel value={value} index={1}>
+              <TabPanel value={value} index={2}>
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
                   {/* Image Section - Fixed sizing, no zoom, centered vertically */}
                   <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
