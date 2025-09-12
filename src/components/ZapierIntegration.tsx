@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import {
   Zap,
   Code2,
-  Cloud,
-  RefreshCw,
   FileText,
   Bell,
-  Calendar,
+  RefreshCw,
   FolderSync,
+  ArrowRight,
 } from "lucide-react";
 import CallHalo from "./CallHalo";
 
@@ -53,8 +52,11 @@ const ZapierIntegration: React.FC = () => {
     <section className="relative py-20 sm:py-24 overflow-hidden">
       <div className="absolute inset-0">
         {/* Background gradients - matching the flow from CaseAdvancementEngine */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000814] to-[#001028]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000814] to-[#000a17]"></div>
         <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.12)_0%,_transparent_70%)]"></div>
+
+        {/* Bottom transition gradient to ProblemStatement */}
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-[#000f2a] to-[#001e45]"></div>
 
         {/* CallHalo for consistency */}
         <div className="absolute inset-0 opacity-30">
@@ -97,7 +99,7 @@ const ZapierIntegration: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Header */}
+          {/* Header with Zapier badge */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-accent/20 border border-accent/30">
               <Zap className="w-5 h-5 text-accent" />
@@ -109,8 +111,7 @@ const ZapierIntegration: React.FC = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-[-0.03em] leading-[1.1] mb-6">
               <span className="text-white">
                 Supercharge Your Workflows with
-              </span>
-              <br />
+              </span>{" "}
               <span
                 className="bg-gradient-to-r from-white via-[#3e9dff] to-white bg-clip-text text-transparent"
                 style={{
@@ -122,44 +123,45 @@ const ZapierIntegration: React.FC = () => {
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-6">
               Kayse is now an approved Zapier integration partner, empowering
               your firm to connect with over 8,000 applications — including top
               legal CRMs, productivity tools, and cloud platforms.
             </p>
           </div>
 
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
-            {/* Left Column - No-Code Builder */}
-            <motion.div
-              className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                       bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
-                       border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
-                  <Code2 className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white">
-                  No-Code Workflow Builder
-                </h3>
-              </div>
-
-              <p className="text-white/80 mb-6">
+          {/* Main Content */}
+          <div className="space-y-8">
+            {/* Body Text */}
+            <div className="text-center max-w-4xl mx-auto">
+              <p className="text-lg text-white/80 mb-6">
+                Kayse connects with Clio, Filevine, Salesforce, SmartAdvocate,
+                Neos, CasePeer, HubSpot, Zoho, Microsoft 365, Gmail, Dropbox,
+                Slack, Google Sheets, Calendly, and more.
+              </p>
+              <p className="text-lg text-white/80">
                 With Kayse's built-in no-code Workflow Builder, you can create
                 powerful automations based on client activity, messaging events,
                 or case progress — no developers required.
               </p>
+            </div>
 
-              <div className="space-y-3">
-                <h4 className="text-lg font-medium text-white mb-3">
-                  Common Use Cases:
-                </h4>
+            {/* Common Use Cases */}
+            <motion.div
+              className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
+                       bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                       border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
+                <Code2 className="w-6 h-6 text-accent" />
+                Common use cases:
+              </h3>
+
+              <div className="space-y-4">
                 {useCases.map((useCase, index) => (
                   <motion.div
                     key={index}
@@ -167,7 +169,7 @@ const ZapierIntegration: React.FC = () => {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                    transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                   >
                     <div
                       className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center
@@ -176,81 +178,50 @@ const ZapierIntegration: React.FC = () => {
                       {useCase.icon}
                     </div>
                     <p className="text-white/80 group-hover:text-white transition-colors duration-300">
-                      {useCase.text}
+                      • {useCase.text}
                     </p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Right Column - Integrations */}
+            {/* Integration Logos Grid */}
             <motion.div
-              className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                       bg-gradient-to-br from-accent/10 via-white/[0.05] to-transparent
-                       border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
-                  <Cloud className="w-6 h-6 text-blue-300" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white">
-                  Connect Your Entire Tech Stack
-                </h3>
-              </div>
-
-              <p className="text-white/80 mb-6">
-                Kayse connects seamlessly with the tools you already use,
-                creating a unified workflow that saves time and reduces errors.
-              </p>
-
-              <div className="mb-6">
-                <h4 className="text-lg font-medium text-white mb-4">
-                  Popular Integrations:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {integrations.map((app, index) => (
-                    <motion.span
-                      key={index}
-                      className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm
+              <h4 className="text-lg font-medium text-white mb-6">
+                Popular Integrations Include:
+              </h4>
+              <div className="flex flex-wrap gap-2 justify-center mb-8">
+                {integrations.map((app, index) => (
+                  <motion.span
+                    key={index}
+                    className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm
                                border border-white/20 hover:bg-white/20 hover:text-white
                                transition-all duration-300 cursor-pointer"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.5 + index * 0.02 }}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {app}
-                    </motion.span>
-                  ))}
-                  <motion.span
-                    className="px-3 py-1.5 rounded-full bg-gradient-to-r from-accent/20 to-blue-500/20
-                             text-white text-sm border border-accent/30 font-medium"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.8 }}
+                    transition={{ duration: 0.3, delay: 0.05 + index * 0.02 }}
+                    whileHover={{ scale: 1.05 }}
                   >
-                    + 8,000 more
+                    {app}
                   </motion.span>
-                </div>
-              </div>
-
-              <div
-                className="p-4 rounded-xl bg-gradient-to-r from-accent/10 to-blue-500/10 
-                            border border-white/10"
-              >
-                <p className="text-sm text-white/80 italic">
-                  "The Zapier integration changed everything. We automated our
-                  entire follow-up process and saved 15 hours per week."
-                </p>
-                <p className="text-sm text-white/60 mt-2">
-                  — Sarah M., Operations Director
-                </p>
+                ))}
+                <motion.span
+                  className="px-3 py-1.5 rounded-full bg-gradient-to-r from-accent/20 to-blue-500/20
+                             text-white text-sm border border-accent/30 font-medium"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.3 }}
+                >
+                  + 8,000 more
+                </motion.span>
               </div>
             </motion.div>
           </div>
@@ -261,7 +232,7 @@ const ZapierIntegration: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
             <a
               href="/integrations"
@@ -276,7 +247,7 @@ const ZapierIntegration: React.FC = () => {
               <span className="relative text-white">
                 Explore All Integrations
               </span>
-              <Zap className="w-5 h-5 text-white" />
+              <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </motion.div>
         </motion.div>
