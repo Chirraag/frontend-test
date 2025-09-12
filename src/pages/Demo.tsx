@@ -692,7 +692,7 @@ const Demo: React.FC = () => {
                       </select>
                     </div>
                   </div>
-                  <div>
+                  
                   <div>
                     <label
                       htmlFor="activeCases"
