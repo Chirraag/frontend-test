@@ -15,6 +15,7 @@ import {
   Phone,
   FileText,
   Calculator,
+  Headphones,
 } from "lucide-react";
 // Removed MUI imports - using custom implementation
 import Navbar from "../components/Navbar";
