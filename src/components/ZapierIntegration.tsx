@@ -56,7 +56,7 @@ const ZapierIntegration: React.FC = () => {
         <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.12)_0%,_transparent_70%)]"></div>
 
         {/* Bottom transition gradient to ProblemStatement */}
-        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-[#000f2a] to-[#001e45]"></div>
+        <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-b from-transparent via-[#000f2a] via-60% to-[#001e45] to-100%"></div>
 
         {/* CallHalo for consistency */}
         <div className="absolute inset-0 opacity-30">
@@ -252,6 +252,9 @@ const ZapierIntegration: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      {/* Extended bottom transition for smoother flow */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#001e45] z-20"></div>
     </section>
   );
 };
