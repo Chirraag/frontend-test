@@ -60,7 +60,7 @@ const SolutionOverview: React.FC = () => {
     >
       <div className="absolute inset-0">
         {/* Main background gradient - starts black and transitions smoothly */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black via-50% to-black"></div>
 
         {/* Radial blue glow - now blends smoothly with black */}
         <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.1)_0%,_rgba(0,127,255,0.05)_30%,_transparent_60%)]"></div>

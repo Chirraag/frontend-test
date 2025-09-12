@@ -120,7 +120,7 @@ const ProblemStatement: React.FC = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Smooth transition from ZapierIntegration */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] from-0% via-[#001e45] via-10% to-[#003c8f] to-100%"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] from-0% via-[#001e45] via-10% to-black to-100%"></div>
       </div>
       
       {/* Content container with rounded corners */}
