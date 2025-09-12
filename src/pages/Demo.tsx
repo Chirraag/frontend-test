@@ -82,7 +82,7 @@ const Demo: React.FC = () => {
           company: "",
           practiceArea: "",
           challenge: "",
-           activeCases: "",
+          activeCases: "",
         });
       } else {
         setModalContent({
