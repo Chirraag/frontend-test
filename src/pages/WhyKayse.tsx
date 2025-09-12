@@ -569,10 +569,7 @@ const WhyKayse: React.FC = () => {
                               Case expense recoverability advantage
                             </strong>
                             <p className="text-gray-700 mt-3 text-base leading-relaxed">
-                              Unlike Salesforce, Kayse can potentially be billed
-                              as a recoverable case expense for PI firms, making
-                              the investment cost-neutral in many cases while
-                              also increasing client satisfaction.
+                              Unlike Salesforce and other CRMs, Kayse can potentially be billed as a recoverable case expense for high-volume contingency firms, making the investment cost-neutral in many cases while also increasing client satisfaction.
                             </p>
                           </div>
                         </li>
