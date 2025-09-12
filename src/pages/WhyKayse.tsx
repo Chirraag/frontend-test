@@ -356,7 +356,7 @@ const WhyKayse: React.FC = () => {
                     Call Centers
                   </button>
                   <button
-                    onClick={() => setValue(1)}
+                    onClick={() => setValue(2)}
                     className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
                       value === 1
                         ? "bg-blue-500/15 text-blue-600 font-semibold"
@@ -367,7 +367,7 @@ const WhyKayse: React.FC = () => {
                     Generic CRMs with Newsletter
                   </button>
                   <button
-                    onClick={() => setValue(2)}
+                    onClick={() => setValue(3)}
                     className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
                       value === 2
                         ? "bg-blue-500/15 text-blue-600 font-semibold"
