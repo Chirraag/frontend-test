@@ -26,6 +26,7 @@ const Demo: React.FC = () => {
     company: "",
     practiceArea: "",
     challenge: "",
+    activeCases: "",
   });
 
   const [expandedFaq, setExpandedFaq] = useState(null);
