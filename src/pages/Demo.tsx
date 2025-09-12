@@ -693,7 +693,8 @@ const Demo: React.FC = () => {
                     </div>
                   </div>
                   <div>
-  <label
+    <div>
+                    <label
     htmlFor="activeCases"
     className="block text-white/80 mb-2 text-sm"
   >
@@ -748,6 +749,7 @@ const Demo: React.FC = () => {
     </option>
   </select>
 </div>
+                    </div>
 
 
                   <button
