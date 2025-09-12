@@ -124,16 +124,11 @@ const ProblemStatement: React.FC = () => {
         
         {/* Smooth transition to SolutionOverview (black) at the bottom */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black"></div>
-      </div>
-      
-      {/* Content container with rounded corners */}
-      <div className="absolute left-[2%] right-[2%] top-16 bottom-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] via-[#001e45] via-20% to-[#003c8f] to-100% rounded-[2.5rem]"></div>
+        
+        {/* Radial gradient overlay */}
         <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.15)_0%,_transparent_70%)]"></div>
-      </div>
-
-      {/* Animated background shapes */}
-      <div className="absolute left-[2%] right-[2%] top-0 bottom-0 overflow-hidden rounded-[2.5rem]">
+        
+        {/* Animated background shapes */}
         <motion.div
           className="absolute top-0 left-1/4 w-[40rem] h-[40rem] bg-[#0066ff]/10 rounded-[40%] blur-[100px]"
           animate={{
