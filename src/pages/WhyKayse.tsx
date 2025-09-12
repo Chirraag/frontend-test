@@ -345,6 +345,17 @@ const WhyKayse: React.FC = () => {
                     Traditional Communication Methods
                   </button>
                   <button
+  onClick={() => setValue(1)}
+  className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
+    value === 1
+      ? "bg-blue-500/15 text-blue-600 font-semibold"
+      : "bg-blue-500/8 text-gray-600 hover:bg-blue-500/12"
+  }`}
+>
+  <Headphones size={22} />
+  Call Centers
+</button>
+                  <button
                     onClick={() => setValue(1)}
                     className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
                       value === 1
