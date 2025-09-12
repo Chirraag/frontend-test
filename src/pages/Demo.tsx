@@ -691,7 +691,6 @@ const Demo: React.FC = () => {
                         </option>
                       </select>
                     </div>
-                  </div>
                   
                   <div>
                     <label
