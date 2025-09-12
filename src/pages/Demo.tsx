@@ -51,6 +51,7 @@ const Demo: React.FC = () => {
         law_firm_name: formData.company,
         practice_area: formData.practiceArea,
         challenge: formData.challenge,
+        case_volume: formData.caseVolume,
       };
 
       const response = await fetch(
@@ -80,6 +81,7 @@ const Demo: React.FC = () => {
           company: "",
           practiceArea: "",
           challenge: "",
+          caseVolume: "",
         });
       } else {
         setModalContent({
@@ -685,6 +687,63 @@ const Demo: React.FC = () => {
                           className="bg-primary text-white"
                         >
                           Poor follow-up visibility
+                        </option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="caseVolume"
+                        className="block text-white/80 mb-2 text-sm"
+                      >
+                        Average Monthly Ongoing Active Cases*
+                      </label>
+                      <select
+                        id="caseVolume"
+                        name="caseVolume"
+                        value={formData.caseVolume}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
+                      >
+                        <option value="" className="bg-primary text-white">
+                          Select Case Volume
+                        </option>
+                        <option
+                          value="Under 100"
+                          className="bg-primary text-white"
+                        >
+                          Under 100
+                        </option>
+                        <option
+                          value="100 - 499"
+                          className="bg-primary text-white"
+                        >
+                          100 - 499
+                        </option>
+                        <option
+                          value="500 - 1,999"
+                          className="bg-primary text-white"
+                        >
+                          500 - 1,999
+                        </option>
+                        <option
+                          value="2,000 - 4,999"
+                          className="bg-primary text-white"
+                        >
+                          2,000 - 4,999
+                        </option>
+                        <option
+                          value="5,000 - 9,999"
+                          className="bg-primary text-white"
+                        >
+                          5,000 - 9,999
+                        </option>
+                        <option
+                          value="10,000+"
+                          className="bg-primary text-white"
+                        >
+                          10,000+
                         </option>
                       </select>
                     </div>

@@ -563,12 +563,12 @@ const ObjectionAddressing: React.FC = () => {
                     >
                       <p className="text-base text-green-700 leading-relaxed">
                         <strong className="text-green-800">
-                          Cost Advantage:
+                          Case expense recoverability advantage:
                         </strong>{" "}
                         Unlike Salesforce and other CRMs, Kayse can potentially
                         be billed as a recoverable case expense for high-volume
                         contingency firms, making the investment cost-neutral in
-                        many cases.
+                        many cases while also increasing client satisfaction.
                       </p>
                     </div>
                   </div>
