@@ -121,6 +121,9 @@ const ProblemStatement: React.FC = () => {
       <div className="absolute inset-0">
         {/* Smooth transition from ZapierIntegration */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] from-0% via-[#001e45] via-10% to-[#003c8f] to-100%"></div>
+        
+        {/* Smooth transition to SolutionOverview (black) at the bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black"></div>
       </div>
       
       {/* Content container with rounded corners */}
