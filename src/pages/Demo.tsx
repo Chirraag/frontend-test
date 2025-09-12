@@ -52,6 +52,7 @@ const Demo: React.FC = () => {
         law_firm_name: formData.company,
         practice_area: formData.practiceArea,
         challenge: formData.challenge,
+        average_monthly_active_cases: formData.activeCases,
       };
 
       const response = await fetch(
