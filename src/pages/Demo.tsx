@@ -749,6 +749,7 @@ const Demo: React.FC = () => {
                       </option>
                     </select>
                   </div>
+                </div>
                   <button
                     onClick={handleSubmit}
                     className="w-full mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
