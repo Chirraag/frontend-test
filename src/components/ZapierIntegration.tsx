@@ -147,7 +147,7 @@ const ZapierIntegration: React.FC = () => {
             </div>
 
             {/* Common Use Cases */}
-            <motion.div
+            {/* <motion.div
               className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
                        bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
                        border border-white/10 shadow-[0_0_20px_rgba(0,127,255,0.2)]"
@@ -183,7 +183,7 @@ const ZapierIntegration: React.FC = () => {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Integration Logos Grid */}
             <motion.div
@@ -252,7 +252,7 @@ const ZapierIntegration: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Extended bottom transition for smoother flow */}
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#001e45] z-20"></div>
     </section>
