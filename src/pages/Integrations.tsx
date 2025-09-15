@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Phone,
   FileText,
+  Users,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -607,6 +608,411 @@ const Integrations: React.FC = () => {
                   alt="Communication Systems Integration"
                   className="w-full h-auto transform scale-90 group-hover:scale-95 transition-transform duration-500"
                 />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Zapier Integration Section */}
+        <section
+          className="relative py-24 sm:py-32 overflow-hidden"
+          id="zapier-integration"
+        >
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#001020] to-[#000a17]"></div>
+            <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.1)_0%,_rgba(0,127,255,0.05)_30%,_transparent_60%)]"></div>
+            <div className="absolute inset-0 opacity-20">
+              <CallHalo isRinging={false} isCallActive={false} />
+            </div>
+          </div>
+
+          <div className="container mx-auto px-4 md:px-8 relative z-10">
+            <div className="max-w-6xl mx-auto">
+              {/* Header */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-accent/20 border border-accent/30">
+                  <svg
+                    className="w-5 h-5 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
+                  </svg>
+                  <span className="text-white font-medium">
+                    Zapier Integration Partner
+                  </span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1]">
+                  <span className="text-white">Connect with</span>
+                  <span
+                    className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
+                    style={{
+                      backgroundSize: "200% 100%",
+                      backgroundPosition: "60% 0",
+                    }}
+                  >
+                    8,000+ Applications
+                  </span>
+                </h2>
+                <p className="text-lg text-white/80 leading-relaxed font-light max-w-3xl mx-auto">
+                  As an approved Zapier integration partner, Kayse connects with
+                  virtually any application your firm uses
+                </p>
+              </motion.div>
+
+              {/* Popular Integrations Grid */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-16"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-8 text-center">
+                  Popular Legal Tech Integrations
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                  {[
+                    "Clio",
+                    "Filevine",
+                    "Salesforce",
+                    "SmartAdvocate",
+                    "Neos",
+                    "CasePeer",
+                    "HubSpot",
+                    "Zoho",
+                    "Microsoft 365",
+                    "Gmail",
+                    "Dropbox",
+                    "Slack",
+                    "Google Sheets",
+                    "Calendly",
+                  ].map((app, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                      className="relative p-4 rounded-[1.5rem] overflow-hidden backdrop-blur-xl
+                               bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                               border border-white/10
+                               shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]
+                               group transform-gpu transition-all duration-500 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_30px_rgba(0,0,0,0.2)]
+                               hover:scale-[1.02] text-center"
+                    >
+                      <span className="text-white/90 font-medium text-sm">
+                        {app}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="text-center mt-6">
+                  <span
+                    className="px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-blue-500/20
+                                 text-white text-sm border border-accent/30 font-medium"
+                  >
+                    + 8,000 more applications
+                  </span>
+                </div>
+              </motion.div>
+
+              {/* Workflow Builder + Zapier Integration Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-16"
+              >
+                <h3 className="text-3xl md:text-4xl font-semibold mb-8 tracking-[-0.03em] leading-[1.1] text-center">
+                  <span className="text-white">Workflow Builder +</span>
+                  <span
+                    className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
+                    style={{
+                      backgroundSize: "200% 100%",
+                      backgroundPosition: "60% 0",
+                    }}
+                  >
+                    Zapier Integration
+                  </span>
+                </h3>
+
+                <div
+                  className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
+                             bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                             border border-white/10
+                             shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]"
+                >
+                  {/* Table */}
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-white/20">
+                          <th className="text-left py-4 px-6 text-white font-semibold text-lg">
+                            Feature
+                          </th>
+                          <th className="text-left py-4 px-6 text-white font-semibold text-lg">
+                            Description
+                          </th>
+                          <th className="text-left py-4 px-6 text-white font-semibold text-lg">
+                            Example
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-white/10">
+                        <tr className="hover:bg-white/5 transition-colors">
+                          <td className="py-4 px-6 text-white font-medium">
+                            Zapier Integration
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Securely connect with 8,000+ apps
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Push client doc updates to Salesforce or Clio
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-white/5 transition-colors">
+                          <td className="py-4 px-6 text-white font-medium">
+                            Workflow Builder
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            No-code automation designer
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Trigger human-like AI calls, messages, and reminders
+                            when case deadlines approach
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-white/5 transition-colors">
+                          <td className="py-4 px-6 text-white font-medium">
+                            Event-Based Triggers
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Automate based on client/case events
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Send alerts when a client hasn't replied in 7 days
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-white/5 transition-colors">
+                          <td className="py-4 px-6 text-white font-medium">
+                            App Compatibility
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Legal & productivity tools supported
+                          </td>
+                          <td className="py-4 px-6 text-white/80">
+                            Syncs with Clio, Salesforce, Dropbox, Google Drive,
+                            Outlook, Slack and more
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </motion.div>
+              {/* Workflow Builder Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="grid lg:grid-cols-2 gap-12 items-center mb-16"
+              >
+                {/* Left Content */}
+                <div className="text-center lg:text-left">
+                  <div className="inline-block mb-4 px-6 py-2 rounded-xl bg-gradient-to-r from-white/10 via-white/[0.07] to-transparent backdrop-blur-md border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] group hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-300">
+                    <span className="text-white font-medium">
+                      No-Code Workflow Builder
+                    </span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1]">
+                    <span className="text-white">
+                      Automate Client Tasks with
+                    </span>
+                    <span
+                      className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
+                      style={{
+                        backgroundSize: "200% 100%",
+                        backgroundPosition: "60% 0",
+                      }}
+                    >
+                      Zero Code
+                    </span>
+                  </h3>
+                  <p className="text-lg text-white/80 mb-8 leading-relaxed font-light">
+                    Create powerful automations based on client activity,
+                    messaging events, or case progress using our built-in
+                    workflow builder
+                  </p>
+
+                  {/* Common Use Cases */}
+                  <div className="space-y-4 mb-8">
+                    {[
+                      "Update your CRM when a client uploads a document via Kayse",
+                      "Auto-send Slack or Teams alerts for urgent case events",
+                      "Trigger outbound AI calls for document signature follow-ups",
+                      "Sync client activity to Google Sheets or Dropbox folders",
+                    ].map((useCase, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-white/80">{useCase}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href="/contact?topic=zapier-workflows"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
+                             bg-gradient-to-r from-blue-500 to-blue-600
+                             shadow-[0_8px_32px_rgba(59,130,246,0.3)]
+                             hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)]
+                             transform hover:scale-[1.02] transition-all duration-300
+                             group relative overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="relative text-white">
+                      Explore Workflow Builder
+                    </span>
+                    <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200 relative" />
+                  </a>
+                </div>
+
+                {/* Right Visual - Workflow Diagram */}
+                <div className="relative">
+                  <div
+                    className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
+                                bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                                border border-white/10
+                                shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]"
+                  >
+                    <h4 className="text-xl font-semibold text-white mb-6 text-center">
+                      Example Workflow
+                    </h4>
+                    <div className="space-y-4">
+                      {/* Workflow Steps */}
+                      <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                          1
+                        </div>
+                        <span className="text-white/90 text-sm">
+                          Client uploads document in Kayse portal
+                        </span>
+                      </div>
+                      <div className="flex justify-center">
+                        <ArrowRight className="w-5 h-5 text-accent rotate-90" />
+                      </div>
+                      <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                          2
+                        </div>
+                        <span className="text-white/90 text-sm">
+                          Zapier automatically updates case status in Clio
+                        </span>
+                      </div>
+                      <div className="flex justify-center">
+                        <ArrowRight className="w-5 h-5 text-accent rotate-90" />
+                      </div>
+                      <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                          3
+                        </div>
+                        <span className="text-white/90 text-sm">
+                          Slack notification sent to legal team
+                        </span>
+                      </div>
+                      <div className="flex justify-center">
+                        <ArrowRight className="w-5 h-5 text-accent rotate-90" />
+                      </div>
+                      <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-sm">
+                          4
+                        </div>
+                        <span className="text-white/90 text-sm">
+                          AI calls client to confirm receipt and next steps
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Benefits Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-center"
+              >
+                <h3 className="text-2xl md:text-3xl font-semibold mb-8 tracking-[-0.03em] leading-[1.1]">
+                  <span className="text-white">Why Choose Kayse's</span>
+                  <span
+                    className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
+                    style={{
+                      backgroundSize: "200% 100%",
+                      backgroundPosition: "60% 0",
+                    }}
+                  >
+                    Zapier Integration?
+                  </span>
+                </h3>
+
+                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                  {[
+                    {
+                      title: "Legal-Specific Triggers",
+                      description:
+                        "Workflows designed for legal processes like document collection, case milestones, and client sentiment changes",
+                      icon: <CheckCircle2 className="w-6 h-6 text-accent" />,
+                    },
+                    {
+                      title: "No Technical Skills Required",
+                      description:
+                        "Visual workflow builder that anyone on your team can use to create powerful automations",
+                      icon: <Users className="w-6 h-6 text-accent" />,
+                    },
+                    {
+                      title: "Unlimited Connections",
+                      description:
+                        "Connect to as many applications as needed without additional per-connection fees",
+                      icon: <Database className="w-6 h-6 text-accent" />,
+                    },
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 + 0.7 }}
+                      className="relative p-6 rounded-[2rem] overflow-hidden backdrop-blur-xl
+                               bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
+                               border border-white/10
+                               shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]
+                               group transform-gpu transition-all duration-500 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_30px_rgba(0,0,0,0.2)]"
+                    >
+                      <div className="flex justify-center mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                          {benefit.icon}
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-semibold text-white mb-3">
+                        {benefit.title}
+                      </h4>
+                      <p className="text-white/80 text-sm">
+                        {benefit.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>
