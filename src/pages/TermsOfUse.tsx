@@ -30,7 +30,7 @@ const TermsOfUse: React.FC = () => {
               >
                 Terms of Use
               </motion.h1>
-              <p className="text-white/60 mb-0">Updated 9/8/25</p>
+              <p className="text-white/60 mb-0">Updated 9/16/25</p>
             </div>
           </div>
         </section>
@@ -49,41 +49,26 @@ const TermsOfUse: React.FC = () => {
                   <strong>
                     Kayse, Kayse AI, Kayse.ai, Kayse App, Kayseapp.com
                   </strong>
-                  , ("Licensor" or "KAYSE")<sup className="text-accent">1</sup>{" "}
-                  with its principal place of business at 1400 Old Country Rd,
-                  Suite 305, Westbury, NY 11590. For purposes of this Agreement,
-                  Subscriber and Licensor each will be referred to individually
-                  as a "Party" and together as the "Parties." These Terms of Use
-                  apply to your use of the Service (defined below). The Service
-                  is intended for use only by users that are at least 18 years
-                  of age.
+                  , ("Licensor" or "KAYSE") with its principal place of business
+                  at 1400 Old Country Rd, Suite 305, Westbury, NY 11590. For
+                  purposes of this Agreement, Subscriber and Licensor each will
+                  be referred to individually as a "Party" and together as the
+                  "Parties." These Terms of Use apply to your use of the Service
+                  (defined below). The Service is intended for use only by users
+                  that are at least 18 years of age.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  "Site" refers to{" "}
-                  <a
-                    href="https://www.kayseapp.com"
-                    className="text-accent hover:underline"
-                  >
-                    https://www.kayseapp.com
-                  </a>{" "}
-                  and{" "}
-                  <a
-                    href="https://www.kayse.ai"
-                    className="text-accent hover:underline"
-                  >
-                    http://www.kayse.ai
-                  </a>
-                  , the web application located at kayse.ai and kayseapp.com,
-                  the mobile application, and all associated white label
-                  accounts. The Site contains text, pictures, graphics, videos,
-                  logos, images, works of authorship, computer code, design
-                  elements, trade dress, technical information, and other
-                  content, as well as available features or services discussed,
-                  referenced, provided, or offered through or on the Site
-                  (collectively with all information and material about KAYSE
-                  and its Services, the "Content"). For the purposes of these
-                  Terms of Use, the term "Site" also includes the Content,
+                  "Site" refers to and , the web application located at kayse.ai
+                  and kayseapp.com, the mobile application, and all associated
+                  white label accounts. The Site contains text, pictures,
+                  graphics, videos, logos, images, works of authorship, computer
+                  code, design elements, trade dress, technical information, and
+                  other content, as well as available features or services
+                  discussed, referenced, provided, or offered through or on the
+                  Site (collectively with all information and material about
+                  KAYSE and its Services, the "Content"). For the purposes of
+                  these Terms of Use, the term "Site" also includes the Content,
                   except where the context specifically indicates otherwise.
                 </p>
 
@@ -143,16 +128,15 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  WHEREAS, KAYSE has developed the web/cloud-based KAYSE
-                  <sup>TM</sup> legal client continuity AI platform to be used
-                  by law firms, claims management firms, and related entities to
-                  enhance case management, client communication, and firm
-                  efficiency.
+                  WHEREAS, KAYSE has developed the web/cloud-based KAYSE TM
+                  legal client continuity AI platform to be used by law firms,
+                  claims management firms, and related entities to enhance case
+                  management, client communication, and firm efficiency.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  WHEREAS, Subscriber wishes to utilize KAYSE<sup>TM</sup> to
-                  assist in its operations.
+                  WHEREAS, Subscriber wishes to utilize KAYSE TM to assist in
+                  its operations.
                 </p>
 
                 <p className="text-white/80 mb-8">
@@ -175,17 +159,16 @@ const TermsOfUse: React.FC = () => {
                   non-exclusive and non-transferable license, without right of
                   sublicense, during the Term to access and display on
                   Subscriber's Display Devices within the United States, Canada,
-                  and other countries approved by KAYSE, KAYSE<sup>TM</sup>, and
-                  to permit Authorized Users to use the Service for their
-                  internal operations, subject to the terms and conditions of
-                  this Agreement. All rights in the Service not expressly
-                  granted hereunder are expressly reserved to Licensor. The
-                  Software and Services are licensed, not sold. Licensor retains
-                  all right, title, and interest, including all intellectual
-                  property rights, in and to the Software and Services.
-                  Subscriber acknowledges and agrees that this is a{" "}
-                  <strong>non-exclusive</strong> license, and the Licensor may
-                  grant similar licenses to other parties.
+                  and other countries approved by KAYSE, KAYSE TM, and to permit
+                  Authorized Users to use the Service for their internal
+                  operations, subject to the terms and conditions of this
+                  Agreement. All rights in the Service not expressly granted
+                  hereunder are expressly reserved to Licensor. The Software and
+                  Services are licensed, not sold. Licensor retains all right,
+                  title, and interest, including all intellectual property
+                  rights, in and to the Software and Services. Subscriber
+                  acknowledges and agrees that this is a non-exclusive license,
+                  and the Licensor may grant similar licenses to other parties.
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -234,73 +217,64 @@ const TermsOfUse: React.FC = () => {
                   limitation, all copyright and proprietary rights. Subscriber
                   shall not, and shall not permit others to:
                 </p>
-                <ol className="list-[lower-alpha] list-inside text-white/80 mb-3 ml-4">
-                  <li>
-                    reverse engineer, decompile, decode, decrypt, disassemble,
-                    or in any way derive source code from, the software or
-                    Service;
-                  </li>
-                  <li>
-                    modify (in whole or part), translate, adapt, alter, or
-                    create derivative works from the Service;
-                  </li>
-                  <li>
-                    copy (other than one back-up copy), distribute, publicly
-                    display, transmit, sell, rent, lease or otherwise exploit
-                    the Service; or
-                  </li>
-                  <li>
-                    distribute, sublicense, rent, lease, loan (or grant any
-                    third party access to or use of) the Service to any third
-                    party.
-                  </li>
-                  <li>
-                    use our Services for any illegal, harmful, or abusive
-                    activity. For example, you shall not:
-                    <ol className="list-[lower-roman] list-inside ml-6 mt-2">
-                      <li>
-                        use our Services in a way that infringes,
-                        misappropriates or violates anyone's rights.
-                      </li>
-                      <li>
-                        modify, copy, lease, sell or distribute any of our
-                        Services.
-                      </li>
-                      <li>
-                        attempt to or assist anyone to reverse engineer,
-                        decompile, disassemble, or discover the source code or
-                        underlying components of our Services, including our
-                        models, algorithms, or systems.
-                      </li>
-                      <li>
-                        automatically or programmatically extract data or Output
-                        (defined as output from the Services based on input).
-                      </li>
-                      <li>
-                        represent that Output was human-generated when it was
-                        not.
-                      </li>
-                      <li>
-                        interfere with or disrupt our Services, including
-                        circumvent any rate limits or restrictions or bypass any
-                        protective measures or safety mitigations we put on our
-                        Services.
-                      </li>
-                      <li>
-                        use Output to develop models that compete with KAYSE.
-                      </li>
-                      <li>
-                        use the Service to build or assist in building competing
-                        products.
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
+                <p className="text-white/80 mb-3">
+                  reverse engineer, decompile, decode, decrypt, disassemble, or
+                  in any way derive source code from, the software or Service;
+                </p>
+                <p className="text-white/80 mb-3">
+                  modify (in whole or part), translate, adapt, alter, or create
+                  derivative works from the Service;
+                </p>
+                <p className="text-white/80 mb-3">
+                  copy (other than one back-up copy), distribute, publicly
+                  display, transmit, sell, rent, lease or otherwise exploit the
+                  Service; or
+                </p>
+                <p className="text-white/80 mb-3">
+                  distribute, sublicense, rent, lease, loan (or grant any third
+                  party access to or use of) the Service to any third party.
+                </p>
+                <p className="text-white/80 mb-3">
+                  use our Services for any illegal, harmful, or abusive
+                  activity. For example, you shall not:
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  use our Services in a way that infringes, misappropriates or
+                  violates anyone's rights.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  modify, copy, lease, sell or distribute any of our Services.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  attempt to or assist anyone to reverse engineer, decompile,
+                  disassemble, or discover the source code or underlying
+                  components of our Services, including our models, algorithms,
+                  or systems.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  automatically or programmatically extract data or Output
+                  (defined as output from the Services based on input).
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  represent that Output was human-generated when it was not.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  interfere with or disrupt our Services, including circumvent
+                  any rate limits or restrictions or bypass any protective
+                  measures or safety mitigations we put on our Services.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  use Output to develop models that compete with KAYSE.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  use the Service to build or assist in building competing
+                  products.
+                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   1.5 DEFINITIONS
                 </h3>
-                <p className="text-white/80 mb-8">As used herein:</p>
+                <p className="text-white/80 mb-3">As used herein:</p>
                 <p className="text-white/80 mb-2">
                   "Application" shall mean the Licensor-developed application
                   used by Subscriber for the Service under this Agreement;
@@ -472,64 +446,192 @@ const TermsOfUse: React.FC = () => {
                   2.8. Pay-As-You-Go (PAYG) Pricing (Default Option. Does Not
                   Apply to Deferred Pricing)
                 </h3>
-                <p className="text-white/80 mb-4">
+                <p className="text-white/80 mb-3">
                   Subscriber acknowledges that the default pricing model under
                   this Agreement is the Pay-As-You-Go ("PAYG") pricing option.
                 </p>
-                <ol className="list-decimal list-inside text-white/80 mb-4 ml-4">
-                  <li className="mb-3">
-                    <strong>Scope and Pricing:</strong> PAYG pricing is
-                    all-inclusive, incorporating both subscription and usage
-                    fees as set forth in the Pricing Exhibit attached hereto.
-                    All fees are subject to the terms and conditions of this
-                    Agreement.
-                  </li>
-                  <li className="mb-3">
-                    <strong>Payment:</strong> PAYG requires monthly payment via
-                    credit card or ACH authorization, which must be completed
-                    before the Service is activated.
-                  </li>
-                  <li className="mb-3">
-                    <strong>Subscription Term:</strong> PAYG subscriptions are
-                    for the term outlined in Section 5 and renew automatically
-                    in accordance with Section 5 unless terminated earlier
-                    pursuant to this Agreement.
-                  </li>
-                  <li className="mb-3">
-                    <strong>Active and Inactive Cases:</strong>
-                    <ul className="list-disc list-inside mt-2 ml-4">
-                      <li>
-                        Subscriber will be billed monthly for each Active Case
-                        (as defined in Section 1.5) unless such case is marked
-                        inactive within the Kayse dashboard.
-                      </li>
-                      <li>
-                        Inactive cases will not accrue additional monthly
-                        subscription fees, but associated clients will continue
-                        to have access to the Kayse mobile client portal app,
-                        enabling ongoing communication, stronger retention, and
-                        potential remarketing of new cases.
-                      </li>
-                      <li>
-                        Inactive cases will still count toward the Subscriber's
-                        minimum monthly subscription fee unless reactivated as
-                        Active Cases.
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="mb-3">
-                    <strong>Flexibility:</strong> PAYG provides Subscriber with
-                    the ability to control costs by designating which cases are
-                    active or inactive.
+                <p className="text-white/80 mb-3">
+                  1. Scope and Pricing: PAYG pricing is all-inclusive,
+                  incorporating both subscription and usage fees as set forth in
+                  the Pricing Exhibit attached hereto. All fees are subject to
+                  the terms and conditions of this Agreement.
+                </p>
+                <p className="text-white/80 mb-3">
+                  2. Payment: PAYG requires monthly payment via credit card or
+                  ACH authorization, which must be completed before the Service
+                  is activated.
+                </p>
+                <p className="text-white/80 mb-3">
+                  3. Subscription Term: PAYG subscriptions are for the term
+                  outlined in Section 5 and renew automatically in accordance
+                  with Section 5 unless terminated earlier pursuant to this
+                  Agreement.
+                </p>
+                <p className="text-white/80 mb-3">
+                  4. Active and Inactive Cases:
+                  <br />
+                  - Subscriber will be billed monthly for each Active Case (as
+                  defined in Section 1.5) unless such case is marked inactive
+                  within the Kayse dashboard.
+                  <br />
+                  - Inactive cases will not accrue additional monthly
+                  subscription fees, but associated clients will continue to
+                  have access to the Kayse mobile client portal app, enabling
+                  ongoing communication, stronger retention, and potential
+                  remarketing of new cases.
+                  <br />- Inactive cases will still count toward the
+                  Subscriber's minimum monthly subscription fee unless
+                  reactivated as Active Cases.
+                </p>
+                <p className="text-white/80 mb-4">
+                  5. Flexibility: PAYG provides Subscriber with the ability to
+                  control costs by designating which cases are active or
+                  inactive.
+                </p>
+
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  2.8(a) Fair Use Policy for PAYG Unlimited Usage
+                </h3>
+                <p className="text-white/80 mb-4">
+                  The Pay-As-You-Go ("PAYG") model includes unlimited SMS, Voice
+                  AI, and Messaging AI usage per active case, subject to the
+                  following Fair Use Policy. This Policy ensures reliable
+                  service for all customers while protecting against fraud,
+                  abuse, and practices that could harm Kayse's platform or
+                  carrier networks.
+                </p>
+
+                <p className="text-white/80 mb-3">
+                  <strong>1. Definition of Unlimited</strong>
+                  <br />
+                  Unlimited usage means all communications reasonably necessary
+                  to support the lifecycle of an active case. Typical law firm
+                  usage will never be restricted or billed separately.
+                </p>
+
+                <p className="text-white/80 mb-3">
+                  <strong>2. Fair Usage Benchmarks</strong>
+                  <br />
+                  To prevent misuse, Kayse monitors usage patterns. The
+                  following benchmarks apply to PAYG subscriptions:
+                </p>
+
+                <div className="ml-4 mb-3">
+                  <p className="text-white/80 mb-2">
+                    <strong>SMS Messaging</strong>
+                  </p>
+                  <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                    <li>Soft cap: 300 messages per case</li>
+                    <li>
+                      Hard cap (review threshold): 1,000 messages per case
+                    </li>
+                    <li>Per recipient: No more than 10 messages per hour</li>
+                    <li>
+                      Account-wide: Throttled at 1 SMS per second per case
+                    </li>
+                  </ul>
+
+                  <p className="text-white/80 mb-2">
+                    <strong>Voice AI / Calls</strong>
+                  </p>
+                  <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                    <li>Soft cap: 30 minutes per case</li>
+                    <li>Hard cap (review threshold): 120 minutes per case</li>
+                    <li>
+                      Per call: Maximum 4 hours (disconnect and re-dial if
+                      exceeded)
+                    </li>
+                    <li>
+                      Concurrent calls: Limited to 10 concurrent calls per 100
+                      active cases
+                    </li>
+                  </ul>
+
+                  <p className="text-white/80 mb-2">
+                    <strong>Messaging AI (Chatbot / NLP Interactions)</strong>
+                  </p>
+                  <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                    <li>Soft cap: 1,000 AI turns per case</li>
+                    <li>
+                      Hard cap (review threshold): 5,000 AI turns per case
+                    </li>
+                    <li>
+                      Account-wide: Throttled if more than 10 requests per
+                      second
+                    </li>
+                  </ul>
+
+                  <p className="text-white/80 mb-2">
+                    <strong>Account-Level Safeguards</strong>
+                  </p>
+                  <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                    <li>
+                      Abuse Detection: Accounts where more than 80% of traffic
+                      is outbound, marketing-like, or not tied to case workflows
+                      may be flagged
+                    </li>
+                    <li>
+                      Excluded Traffic: Premium-rate, international, and
+                      toll-free communications are billed separately at
+                      passthrough plus margin
+                    </li>
+                  </ul>
+                </div>
+
+                <p className="text-white/80 mb-3">
+                  <strong>3. Enforcement</strong>
+                </p>
+                <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                  <li>
+                    <strong>Notification</strong>: Kayse may contact Subscriber
+                    if usage indicates abnormal or abusive patterns.
                   </li>
                   <li>
-                    <strong>Deferred Eligibility:</strong> Subscriber law firms
-                    managing more than 2,000 Active Cases under PAYG may apply
-                    for the Deferred Payment option described in Section 2.9.
-                    Approval of such option is at Kayse's sole discretion and
-                    requires a written, exclusive invitation from Kayse.
+                    <strong>Overage Charges</strong>: Usage significantly above
+                    benchmarks may incur per-unit charges.
                   </li>
-                </ol>
+                  <li>
+                    <strong>Plan Adjustment</strong>: Consistently high-volume
+                    firms may be moved to an enterprise plan.
+                  </li>
+                  <li>
+                    <strong>Suspension/Termination</strong>: Fraudulent or
+                    abusive usage may result in immediate suspension or
+                    termination.
+                  </li>
+                </ul>
+
+                <p className="text-white/80 mb-3">
+                  <strong>4. Transparency</strong>
+                  <br />
+                  Kayse provides dashboards and alerts to help Subscribers track
+                  usage per case. Benchmarks are designed so that over 95% of
+                  firms will never encounter limits.
+                </p>
+
+                <p className="text-white/80 mb-3">
+                  <strong>5. Applicability</strong>
+                  <br />
+                  This Fair Use Policy applies{" "}
+                  <strong>only to PAYG subscriptions.</strong> Deferred Payment
+                  (Deferral) subscriptions are billed separately for usage and
+                  are not subject to this Policy.
+                </p>
+
+                <p className="text-white/80 mb-3">
+                  5. Flexibility: PAYG provides Subscriber with the ability to
+                  control costs by designating which cases are active or
+                  inactive. Cases must be marked inactive inside the Kayse
+                  system to stop monthly active case billing.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  6. Deferred Eligibility: Subscriber law firms managing more
+                  than 2,000 Active Cases under PAYG may apply for the Deferred
+                  Payment option described in Section 2.9. Approval of such
+                  option is at Kayse's sole discretion and requires a written,
+                  exclusive invitation from Kayse.
+                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   2.9. Deferred Payments and Security Interest (Exclusive
@@ -617,17 +719,15 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-8">
-                  <strong>
-                    For the avoidance of doubt, any Deferral granted under this
-                    Section shall apply broadly to all qualifying client matters
-                    Subscriber chooses to onboard during the covered term.
-                    However, the granting of a Deferral shall not constitute a
-                    course of dealing or create any obligation for KAYSE to
-                    offer such Deferral in the future. Each Deferral must be
-                    expressly agreed to in writing. This provision, and all
-                    related obligations, shall survive the termination or
-                    expiration of this Agreement.
-                  </strong>
+                  For the avoidance of doubt, any Deferral granted under this
+                  Section shall apply broadly to all qualifying client matters
+                  Subscriber chooses to onboard during the covered term.
+                  However, the granting of a Deferral shall not constitute a
+                  course of dealing or create any obligation for KAYSE to offer
+                  such Deferral in the future. Each Deferral must be expressly
+                  agreed to in writing. This provision, and all related
+                  obligations, shall survive the termination or expiration of
+                  this Agreement.
                 </p>
 
                 {/* Service Description */}
@@ -678,120 +778,98 @@ const TermsOfUse: React.FC = () => {
                   your intellectual property rights, please contact us
                   immediately with all relevant information at Case Connect
                   Group LLC, 1400 Old Country Rd Suite 305 Westbury, NY 11590,
-                  or via email at{" "}
-                  <a
-                    href="mailto:support@kayse.ai"
-                    className="text-accent hover:underline"
-                  >
-                    support@kayse.ai
-                  </a>
-                  . Written claims concerning copyright infringement must
-                  include the following information:
+                  or via email at . Written claims concerning copyright
+                  infringement must include the following information:
                 </p>
-                <ul className="list-disc list-inside text-white/80 mb-8 ml-4">
-                  <li>
-                    A physical or electronic signature of the person authorized
-                    to act on behalf of the owner of the copyright interest;
-                  </li>
-                  <li>
-                    A description of the copyrighted work that you claim has
-                    been infringed upon;
-                  </li>
-                  <li>
-                    A description of where the allegedly infringing material is
-                    located on our site so we can find it
-                  </li>
-                  <li>Your address, telephone number, and e-mail address;</li>
-                  <li>
-                    A statement by you that you have a good-faith belief that
-                    the disputed use is not authorized by the copyright owner,
-                    its agent, or the law;
-                  </li>
-                  <li>
-                    A statement by you that the above information in your notice
-                    is accurate and, under penalty of perjury, that you are the
-                    copyright owner or authorized to act on the copyright
-                    owner's behalf.
-                  </li>
-                </ul>
-
-                {/* Term and Termination */}
-                <h2 className="text-2xl font-semibold text-white mb-4">
-                  5. TERM; TERMINATION
-                </h2>
-
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  (a) TERM
-                </h3>
-                <p className="text-white/80 mb-4">
-                  The term of this Agreement will commence on the Effective Date
-                  and will remain in effect for twelve months, whereupon this
-                  Agreement shall automatically extend for successive 12-month
-                  terms unless this Agreement is terminated earlier by either
-                  party in accordance with Section 4(b).
+                <p className="text-white/80 mb-2 ml-4">
+                  A physical or electronic signature of the person authorized to
+                  act on behalf of the owner of the copyright interest;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  A description of the copyrighted work that you claim has been
+                  infringed upon;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  A description of where the allegedly infringing material is
+                  located on our site so we can find it
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Your address, telephone number, and e-mail address;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  A statement by you that you have a good-faith belief that the
+                  disputed use is not authorized by the copyright owner, its
+                  agent, or the law;
+                </p>
+                <p className="text-white/80 mb-8 ml-4">
+                  A statement by you that the above information in your notice
+                  is accurate and, under penalty of perjury, that you are the
+                  copyright owner or authorized to act on the copyright owner's
+                  behalf.
                 </p>
 
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  (b) TERMINATION/SUSPENSION
-                </h3>
-                <ol className="list-decimal list-inside text-white/80 mb-4 ml-4">
-                  <li>
-                    <strong>By KAYSE or Subscriber.</strong> Either party may
-                    terminate this Agreement after the first twelve-month period
-                    with an advanced 30-day notice; otherwise, the agreement
-                    shall renew pursuant to Section 4(a).
-                  </li>
-                  <li>
-                    <strong>By KAYSE Temporarily.</strong> KAYSE may suspend
-                    your access to the KAYSE software and Website, upon email
-                    notice to you, if we determine that: (i) you are in breach
-                    of any of the covenants of this Agreement, including if you
-                    are delinquent on your payment obligations; or, (ii) you
-                    have ceased to operate in the ordinary course, made an
-                    assignment for the benefit of creditors or similar
-                    dissolution of the company's assets, or become the subject
-                    of any bankruptcy, reorganization, liquidation, dissolution,
-                    or similar proceeding.
-                  </li>
-                  <li>
-                    <strong>By KAYSE.</strong> KAYSE may terminate this
-                    Agreement for cause upon 15 days advance notice to the
-                    Subscriber if there is a material breach of default of this
-                    Agreement by the Subscriber, unless Subscriber has cured the
-                    material breach or default within the 15-day notice period.
-                  </li>
-                </ol>
+                <p className="text-white/80 mb-3">
+                  (a) TERM. The term of this Agreement will commence on the
+                  Effective Date and will remain in effect for twelve months,
+                  whereupon this Agreement shall automatically extend for
+                  successive 12-month terms unless this Agreement is terminated
+                  earlier by either party in accordance with Section 4(b).
+                </p>
 
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  (c) EFFECT OF TERMINATION
-                </h3>
+                <p className="text-white/80 mb-3">
+                  (b) TERMINATION/SUSPENSION.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  1. By KAYSE or Subscriber. Either party may terminate this
+                  Agreement after the first twelve-month period with an advanced
+                  30-day notice; otherwise, the agreement shall renew pursuant
+                  to Section 4(a).
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  2. By KAYSE Temporarily. KAYSE may suspend your access to the
+                  KAYSE software and Website, upon email notice to you, if we
+                  determine that: (i) you are in breach of any of the covenants
+                  of this Agreement, including if you are delinquent on your
+                  payment obligations; or, (ii) you have ceased to operate in
+                  the ordinary course, made an assignment for the benefit of
+                  creditors or similar dissolution of the company's assets, or
+                  become the subject of any bankruptcy, reorganization,
+                  liquidation, dissolution, or similar proceeding.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  3. By KAYSE. KAYSE may terminate this Agreement for cause upon
+                  15 days advance notice to the Subscriber if there is a
+                  material breach of default of this Agreement by the
+                  Subscriber, unless Subscriber has cured the material breach or
+                  default within the 15-day notice period.
+                </p>
+
+                <p className="text-white/80 mb-3">(c) EFFECT OF TERMINATION.</p>
                 <p className="text-white/80 mb-3">
                   Upon termination of this Agreement:
                 </p>
-                <ol className="list-decimal list-inside text-white/80 mb-4 ml-4">
-                  <li>
-                    All Subscribers rights under this Agreement immediately
-                    terminate;
-                  </li>
-                  <li>
-                    Subscriber remains responsible for any and all fees and
-                    charges it shall have incurred through the date of
-                    termination;
-                  </li>
-                  <li>
-                    Subscriber is not entitled to a refund of any prepaid fees
-                    under this Agreement which are and shall remain the property
-                    of KAYSE;
-                  </li>
-                  <li>
-                    Sections 4, 7, 8, 9, 10, and 11 will continue to apply in
-                    accordance with their terms.
-                  </li>
-                  <li>
-                    Any additional post-termination assistance from KAYSE is
-                    subject to mutual written agreement by KAYSE and Subscriber.
-                  </li>
-                </ol>
+                <p className="text-white/80 mb-2 ml-4">
+                  1. All Subscribers rights under this Agreement immediately
+                  terminate;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  2. Subscriber remains responsible for any and all fees and
+                  charges it shall have incurred through the date of
+                  termination;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  3. Subscriber is not entitled to a refund of any prepaid fees
+                  under this Agreement which are and shall remain the property
+                  of KAYSE;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  4. Sections 4, 7, 8, 9, 10, and 11 will continue to apply in
+                  accordance with their terms.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  5. Any additional post-termination assistance from KAYSE is
+                  subject to mutual written agreement by KAYSE and Subscriber.
+                </p>
                 <p className="text-white/80 mb-4">
                   KAYSE will not, under any circumstances, issue refunds for
                   early contract cancellation.
@@ -814,33 +892,31 @@ const TermsOfUse: React.FC = () => {
                 <p className="text-white/80 mb-3">
                   In connection with your use of the Service, you agree not to:
                 </p>
-                <ul className="list-disc list-inside text-white/80 mb-4 ml-4">
-                  <li>
-                    Upload or transmit any content that is unlawful, harmful,
-                    threatening, abusive, harassing, defamatory, vulgar,
-                    obscene, or otherwise objectionable.
-                  </li>
-                  <li>
-                    Impersonate any person or entity, including any KAYSE
-                    representative, or falsely state your affiliation with any
-                    person or entity.
-                  </li>
-                  <li>
-                    Upload or transmit any material you do not have the right to
-                    reproduce or display.
-                  </li>
-                  <li>
-                    Upload files containing viruses, malware, or any harmful
-                    software.
-                  </li>
-                  <li>
-                    Upload unsolicited advertising or promotional materials.
-                  </li>
-                  <li>
-                    Violate any applicable law, or upload material infringing on
-                    any third-party rights (e.g., copyright or trademark).
-                  </li>
-                </ul>
+                <p className="text-white/80 mb-2 ml-4">
+                  Upload or transmit any content that is unlawful, harmful,
+                  threatening, abusive, harassing, defamatory, vulgar, obscene,
+                  or otherwise objectionable.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Impersonate any person or entity, including any KAYSE
+                  representative, or falsely state your affiliation with any
+                  person or entity.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Upload or transmit any material you do not have the right to
+                  reproduce or display.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Upload files containing viruses, malware, or any harmful
+                  software.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Upload unsolicited advertising or promotional materials.
+                </p>
+                <p className="text-white/80 mb-3 ml-4">
+                  Violate any applicable law, or upload material infringing on
+                  any third-party rights (e.g., copyright or trademark).
+                </p>
                 <p className="text-white/80 mb-4">
                   Violations of these restrictions may result in the immediate
                   suspension or termination of your access to the Service,
@@ -855,24 +931,22 @@ const TermsOfUse: React.FC = () => {
                   professional use only and that your use shall not include any
                   of the following:
                 </p>
-                <ul className="list-disc list-inside text-white/80 mb-4 ml-4">
-                  <li>
-                    Attempting to break or bypass any security mechanisms of the
-                    Service.
-                  </li>
-                  <li>
-                    Using the Service for unsolicited marketing messages or
-                    broadcasts (i.e., spam).
-                  </li>
-                  <li>
-                    Accessing life-line services or emergency services such as
-                    911 through the Service.
-                  </li>
-                  <li>
-                    Engaging in illegal activities, fraud, or any other
-                    malicious purpose.
-                  </li>
-                </ul>
+                <p className="text-white/80 mb-2 ml-4">
+                  Attempting to break or bypass any security mechanisms of the
+                  Service.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Using the Service for unsolicited marketing messages or
+                  broadcasts (i.e., spam).
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Accessing life-line services or emergency services such as 911
+                  through the Service.
+                </p>
+                <p className="text-white/80 mb-4 ml-4">
+                  Engaging in illegal activities, fraud, or any other malicious
+                  purpose.
+                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   6.3 Right to Monitor
@@ -1010,7 +1084,7 @@ const TermsOfUse: React.FC = () => {
                 <h2 className="text-2xl font-semibold text-white mb-4">
                   10. CONFIDENTIALITY
                 </h2>
-                <p className="text-white/80 mb-8">
+                <p className="text-white/80 mb-4">
                   In the course of performing this Agreement, the parties may
                   disclose to each other Confidential Information. "Confidential
                   Information" shall mean any and all non-public technical and
@@ -1311,44 +1385,43 @@ const TermsOfUse: React.FC = () => {
                 </div>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(a) INFORMAL DISPUTE RESOLUTION.</strong> We would
-                  like to understand and try to address your concerns prior to
-                  formal legal action. Before either of us files a claim against
-                  the other, we both agree to try to resolve the Dispute
-                  informally. You agree to do so by sending us notice. We will
-                  do so by sending you notice to the email address associated
-                  with your account. If we are unable to resolve a Dispute
-                  within 60 days, either of us has the right to initiate
-                  arbitration. We also both agree to attend an individual
-                  settlement conference if either party requests one during this
-                  time. Any statute of limitations will be tolled during this
-                  informal resolution process.
+                  (a) INFORMAL DISPUTE RESOLUTION. We would like to understand
+                  and try to address your concerns prior to formal legal action.
+                  Before either of us files a claim against the other, we both
+                  agree to try to resolve the Dispute informally. You agree to
+                  do so by sending us notice. We will do so by sending you
+                  notice to the email address associated with your account. If
+                  we are unable to resolve a Dispute within 60 days, either of
+                  us has the right to initiate arbitration. We also both agree
+                  to attend an individual settlement conference if either party
+                  requests one during this time. Any statute of limitations will
+                  be tolled during this informal resolution process.
                 </p>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(b) MEDIATION:</strong> Prior to the institution of
-                  any legal action, including Arbitration, the parties agree to
-                  participate, in good faith, in a mediation conference through
-                  the American Arbitration Association (AAA) in accordance with
-                  the AAA's Commercial Arbitration Rules and Mediation
-                  Procedures. The parties shall share the cost of the mediator
-                  equally. The mediation shall be scheduled within 45 days from
-                  the date that either party submits a written notice requesting
-                  the mediation conference to the other party. The mediation
-                  conference shall be conducted in the County of New York, New
-                  York or at another mutually agreed location.
+                  (b) MEDIATION: Prior to the institution of any legal action,
+                  including Arbitration, the parties agree to participate, in
+                  good faith, in a mediation conference through the American
+                  Arbitration Association (AAA) in accordance with the AAA's
+                  Commercial Arbitration Rules and Mediation Procedures. The
+                  parties shall share the cost of the mediator equally. The
+                  mediation shall be scheduled within 45 days from the date that
+                  either party submits a written notice requesting the mediation
+                  conference to the other party. The mediation conference shall
+                  be conducted in the County of New York, New York or at another
+                  mutually agreed location.
                 </p>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(c) BINDING ARBITRATION:</strong> In the event either
-                  party does not agree or fails to participate in a mediation
-                  conference, pursuant to paragraph (a) above, the parties agree
-                  to submit any and all disputes arising out of these by-laws to
-                  binding arbitration to be conducted by National Arbitration
-                  and Mediation ("NAM") under its Comprehensive Dispute
-                  Resolution Rules and Procedures and/or Supplemental Rules for
-                  Mass Arbitration Filings. The arbitration shall be conducted
-                  within 60 days from the date of the impasse of the mediation
+                  (c) BINDING ARBITRATION: In the event either party does not
+                  agree or fails to participate in a mediation conference,
+                  pursuant to paragraph (a) above, the parties agree to submit
+                  any and all disputes arising out of these by-laws to binding
+                  arbitration to be conducted by National Arbitration and
+                  Mediation ("NAM") under its Comprehensive Dispute Resolution
+                  Rules and Procedures and/or Supplemental Rules for Mass
+                  Arbitration Filings. The arbitration shall be conducted within
+                  60 days from the date of the impasse of the mediation
                   conference, or within 60 days from the date either party
                   submits the request through the NAM.
                 </p>
@@ -1367,25 +1440,25 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(d). ENFORCING ARBITRATION</strong>. Notwithstanding
-                  the foregoing, either party may seek an order compelling
-                  arbitration with the County of New York, New York, and waive
-                  the defenses of lack of personal and/or subject matter
-                  jurisdiction and/or forum of non-convenience.
+                  (d). ENFORCING ARBITRATION. Notwithstanding the foregoing,
+                  either party may seek an order compelling arbitration with the
+                  County of New York, New York, and waive the defenses of lack
+                  of personal and/or subject matter jurisdiction and/or forum of
+                  non-convenience.
                 </p>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(e). PREVAILING PARTY ATTORNEYS' FEES:</strong> In the
-                  event the either party obtains a judgment or arbitration
-                  award, the prevailing party shall recover reasonable cost and
-                  attorney's fees from the non-prevailing party including
-                  appellate fees and "fees for fees".
+                  (e). PREVAILING PARTY ATTORNEYS' FEES: In the event the either
+                  party obtains a judgment or arbitration award, the prevailing
+                  party shall recover reasonable cost and attorney's fees from
+                  the non-prevailing party including appellate fees and "fees
+                  for fees".
                 </p>
 
                 <p className="text-white/80 mb-3">
-                  <strong>(f). CLASS AND JURY TRIAL WAIVERS.</strong> Disputes
-                  must be brought on an individual basis only, and may not be
-                  brought as a plaintiff or class member in any purported class,
+                  (f). CLASS AND JURY TRIAL WAIVERS. Disputes must be brought on
+                  an individual basis only, and may not be brought as a
+                  plaintiff or class member in any purported class,
                   consolidated, or representative proceeding. Class
                   arbitrations, class actions, and representative actions are
                   prohibited. Only individual relief is available. The parties
@@ -1398,23 +1471,22 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  <strong>(g). Batch arbitration.</strong> If 25 or more
-                  claimants represented by the same or similar counsel file
-                  demands for arbitration raising substantially similar Disputes
-                  within 90 days of each other, then you and KAYSE agree that
-                  National Arbitration and Mediation ("NAM") under its
-                  Comprehensive Dispute Resolution Rules and Procedures and/or
-                  Supplemental Rules for Mass Arbitration Filings will
-                  administer them in batches of up to 50 claimants each
-                  ("Batch"), unless there are less than 50 claimants in total or
-                  after batching, which will comprise a single Batch. NAM will
-                  administer each Batch as a single consolidated arbitration
-                  with one arbitrator, one set of arbitration fees, and one
-                  hearing held by videoconference or in a location decided by
-                  the arbitrator for each Batch. If any part of this section is
-                  found to be invalid or unenforceable as to a particular
-                  claimant or Batch, it will be severed and arbitrated in
-                  individual proceedings.
+                  (g). Batch arbitration. If 25 or more claimants represented by
+                  the same or similar counsel file demands for arbitration
+                  raising substantially similar Disputes within 90 days of each
+                  other, then you and KAYSE agree that National Arbitration and
+                  Mediation ("NAM") under its Comprehensive Dispute Resolution
+                  Rules and Procedures and/or Supplemental Rules for Mass
+                  Arbitration Filings will administer them in batches of up to
+                  50 claimants each ("Batch"), unless there are less than 50
+                  claimants in total or after batching, which will comprise a
+                  single Batch. NAM will administer each Batch as a single
+                  consolidated arbitration with one arbitrator, one set of
+                  arbitration fees, and one hearing held by videoconference or
+                  in a location decided by the arbitrator for each Batch. If any
+                  part of this section is found to be invalid or unenforceable
+                  as to a particular claimant or Batch, it will be severed and
+                  arbitrated in individual proceedings.
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -1432,30 +1504,27 @@ const TermsOfUse: React.FC = () => {
                   in whole or in part, the legal validity of such subpoena.
                 </p>
 
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  18. Calls and Messages
-                </h3>
                 <p className="text-white/80 mb-8">
-                  The Subscriber voluntarily and expressly authorizes KAYSE to
-                  contact Subscriber at all telephone numbers provided by
-                  Subscriber to KAYSE or used by User by calls placed with an
-                  automatic telephone-dialing system or any system capable of
-                  storing and automatically dialing telephone numbers;
-                  prerecorded, artificial, or ringless-voicemail messages; and
-                  SMS/MMS text messages, for the purpose of delivering
-                  advertisements or telemarketing related to KAYSE's products or
-                  services. Subscriber understands that agreeing to the instant
-                  provision is not a condition of purchasing any goods or
-                  services from KAYSE. Subscriber may complete any transaction
-                  with KAYSE even if Subscriber chooses not to agree to the
-                  instant provision. Subscriber may revoke this consent at any
-                  time and by any reasonable means, including but not limited to
-                  by replying "STOP" to any text message, through the App, or by
-                  any other means provided on KAYSE's website. KAYSE will honor
-                  any revocation within a reasonable time, not to exceed ten
-                  (10) days. Standard carrier message and data rates may apply
-                  for text messages. Message frequency will vary based on
-                  Subscriber engagement. Subscriber agrees that an electronic
+                  Calls and Messages. The Subscriber voluntarily and expressly
+                  authorizes KAYSE to contact Subscriber at all telephone
+                  numbers provided by Subscriber to KAYSE or used by User by
+                  calls placed with an automatic telephone-dialing system or any
+                  system capable of storing and automatically dialing telephone
+                  numbers; prerecorded, artificial, or ringless-voicemail
+                  messages; and SMS/MMS text messages, for the purpose of
+                  delivering advertisements or telemarketing related to KAYSE's
+                  products or services. Subscriber understands that agreeing to
+                  the instant provision is not a condition of purchasing any
+                  goods or services from KAYSE. Subscriber may complete any
+                  transaction with KAYSE even if Subscriber chooses not to agree
+                  to the instant provision. Subscriber may revoke this consent
+                  at any time and by any reasonable means, including but not
+                  limited to by replying "STOP" to any text message, through the
+                  App, or by any other means provided on KAYSE's website. KAYSE
+                  will honor any revocation within a reasonable time, not to
+                  exceed ten (10) days. Standard carrier message and data rates
+                  may apply for text messages. Message frequency will vary based
+                  on Subscriber engagement. Subscriber agrees that an electronic
                   copy of this clause, including any electronic or digital
                   signature, shall be deemed an original and admissible record
                   of Subscriber's consent under the Telephone Consumer
@@ -1470,7 +1539,7 @@ const TermsOfUse: React.FC = () => {
                 </h2>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  12.1 User-Generated Content Policy
+                  12.1 User-Generated Content Policy:
                 </h3>
                 <p className="text-white/80 mb-3">
                   KAYSE may provide opportunities for you to engage in
@@ -1582,33 +1651,29 @@ const TermsOfUse: React.FC = () => {
                 <p className="text-white/80 mb-3">
                   When you use our Services you understand and agree:
                 </p>
-                <ul className="list-disc list-inside text-white/80 mb-4 ml-4">
-                  <li>
-                    Output may not always be accurate. You should not rely on
-                    Output from our Services as a sole source of truth or
-                    factual information, or as a substitute for professional
-                    advice.
-                  </li>
-                  <li>
-                    You must evaluate Output for accuracy and appropriateness
-                    for your use case, including using human review as
-                    appropriate, before using or sharing Output from the
-                    Services.
-                  </li>
-                  <li>
-                    You must not use any Output relating to a person for any
-                    purpose that could have a legal or material impact on that
-                    person, such as making credit, educational, employment,
-                    housing, insurance, legal, medical, or other important
-                    decisions about them.
-                  </li>
-                  <li>
-                    Our Services may provide incomplete, incorrect, or offensive
-                    Output that does not represent KAYSE's views. If Output
-                    references any third party products or services, it doesn't
-                    mean the third party endorses or is affiliated with KAYSE.
-                  </li>
-                </ul>
+                <p className="text-white/80 mb-2 ml-4">
+                  Output may not always be accurate. You should not rely on
+                  Output from our Services as a sole source of truth or factual
+                  information, or as a substitute for professional advice.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  You must evaluate Output for accuracy and appropriateness for
+                  your use case, including using human review as appropriate,
+                  before using or sharing Output from the Services.
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  You must not use any Output relating to a person for any
+                  purpose that could have a legal or material impact on that
+                  person, such as making credit, educational, employment,
+                  housing, insurance, legal, medical, or other important
+                  decisions about them.
+                </p>
+                <p className="text-white/80 mb-4 ml-4">
+                  Our Services may provide incomplete, incorrect, or offensive
+                  Output that does not represent KAYSE's views. If Output
+                  references any third party products or services, it doesn't
+                  mean the third party endorses or is affiliated with KAYSE.
+                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   12.2 Ownership and License of Service Data and Contributions
@@ -1662,17 +1727,17 @@ const TermsOfUse: React.FC = () => {
                 <p className="text-white/80 mb-3">
                   We reserve the right, at our sole discretion, to:
                 </p>
-                <ul className="list-disc list-inside text-white/80 mb-4 ml-4">
-                  <li>Edit, redact, or modify any Contributions;</li>
-                  <li>
-                    Re-categorize Contributions to fit more appropriate sections
-                    on the Service;
-                  </li>
-                  <li>
-                    Pre-screen or delete any Contributions at any time and for
-                    any reason, without prior notice.
-                  </li>
-                </ul>
+                <p className="text-white/80 mb-2 ml-4">
+                  Edit, redact, or modify any Contributions;
+                </p>
+                <p className="text-white/80 mb-2 ml-4">
+                  Re-categorize Contributions to fit more appropriate sections
+                  on the Service;
+                </p>
+                <p className="text-white/80 mb-4 ml-4">
+                  Pre-screen or delete any Contributions at any time and for any
+                  reason, without prior notice.
+                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   12.4 Perpetual License to Use Anonymized Data
@@ -1707,14 +1772,7 @@ const TermsOfUse: React.FC = () => {
                   During the Term and any renewal term of the Agreement,
                   Licensor will make available a technical point of contact for
                   Subscriber technical support inquiries which can be accessed
-                  by emailing{" "}
-                  <a
-                    href="mailto:support@kayse.ai"
-                    className="text-accent hover:underline"
-                  >
-                    support@kayse.ai
-                  </a>
-                  .
+                  by emailing .
                 </p>
 
                 {/* Contact */}
@@ -1723,34 +1781,12 @@ const TermsOfUse: React.FC = () => {
                 </h2>
                 <p className="text-white/80 mb-4">
                   For notices required pursuant to these Terms of Use, please
-                  contact us at:{" "}
-                  <a
-                    href="mailto:support@kayse.ai"
-                    className="text-accent hover:underline"
-                  >
-                    support@kayse.ai
-                  </a>{" "}
-                  or write to us at Case Connect Group LLC, c/o Kayse, 1400 Old
-                  Country Rd, Suite 305, Westbury, NY 11590.
+                  contact us at: or write to us at Case Connect Group LLC, c/o
+                  Kayse, 1400 Old Country Rd, Suite 305, Westbury, NY 11590.
                 </p>
                 <p className="text-white/80 mb-8">
-                  If you would like to learn more about us, please email us at{" "}
-                  <a
-                    href="mailto:sales@kayse.ai"
-                    className="text-accent hover:underline"
-                  >
-                    sales@kayse.ai
-                  </a>
-                  .
+                  If you would like to learn more about us, please email us at .
                 </p>
-
-                {/* Footnote */}
-                <div className="border-t border-white/20 pt-4">
-                  <p className="text-white/60 text-sm">
-                    <sup className="text-accent">1</sup> KAYSE is a registered
-                    trademark of Case Connect.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
