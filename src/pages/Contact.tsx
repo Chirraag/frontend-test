@@ -220,7 +220,7 @@ const Contact: React.FC = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
+        <section className="relative pt-24 sm:pt-24 pb-8 overflow-hidden">
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#000814] via-30% to-[#000a17] to-100%" />
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.15)_0%,_transparent_70%)]" />
@@ -291,7 +291,7 @@ const Contact: React.FC = () => {
 
         {/* Contact Form Section */}
         <section
-          className="relative py-20 bg-black overflow-hidden"
+          className="relative pt-4 pb-20 bg-black overflow-hidden"
           id="contact-form"
         >
           <div className="absolute inset-0">
