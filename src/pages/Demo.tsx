@@ -29,6 +29,11 @@ const Demo: React.FC = () => {
     activeCases: "",
   });
 
+  const [checkboxes, setCheckboxes] = useState({
+    smsConsent: false,
+    termsAccepted: false,
+  });
+
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState({
@@ -42,9 +47,28 @@ const Demo: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async () => {
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setCheckboxes((prev) => ({ ...prev, [name]: checked }));
+  };
+
+  const isSubmitDisabled = !checkboxes.smsConsent || !checkboxes.termsAccepted;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (isSubmitDisabled) {
+      setModalContent({
+        title: "Please Accept Required Terms",
+        message:
+          "You must accept both the SMS consent and Terms of Use & Privacy Policy to proceed.",
+        isSuccess: false,
+      });
+      setShowModal(true);
+      return;
+    }
+
     try {
-      // Map form data to API expected format
       const apiData = {
         full_name: formData.name,
         work_email: formData.email,
@@ -53,6 +77,8 @@ const Demo: React.FC = () => {
         practice_area: formData.practiceArea,
         challenge: formData.challenge,
         average_monthly_active_cases: formData.activeCases,
+        sms_consent: checkboxes.smsConsent,
+        terms_accepted: checkboxes.termsAccepted,
       };
 
       const response = await fetch(
@@ -74,7 +100,6 @@ const Demo: React.FC = () => {
           isSuccess: true,
         });
         setShowModal(true);
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -83,6 +108,10 @@ const Demo: React.FC = () => {
           practiceArea: "",
           challenge: "",
           activeCases: "",
+        });
+        setCheckboxes({
+          smsConsent: false,
+          termsAccepted: false,
         });
       } else {
         setModalContent({
@@ -512,7 +541,8 @@ const Demo: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div
+                <form
+                  onSubmit={handleSubmit}
                   className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
                               bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
                               border border-white/10
@@ -691,80 +721,159 @@ const Demo: React.FC = () => {
                         </option>
                       </select>
                     </div>
-                  
-                  <div>
-                    <label
-                      htmlFor="activeCases"
-                      className="block text-white/80 mb-2 text-sm"
-                    >
-                      Average Monthly Ongoing Active Cases*
-                    </label>
-                    <select
-                      id="activeCases"
-                      name="activeCases"
-                      value={formData.activeCases}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
-                    >
-                      <option value="" className="bg-primary text-white">
-                        Select Case Volume
-                      </option>
-                      <option
-                        value="Under 100"
-                        className="bg-primary text-white"
+
+                    <div>
+                      <label
+                        htmlFor="activeCases"
+                        className="block text-white/80 mb-2 text-sm"
                       >
-                        Under 100
-                      </option>
-                      <option
-                        value="100 – 499"
-                        className="bg-primary text-white"
+                        Average Monthly Ongoing Active Cases*
+                      </label>
+                      <select
+                        id="activeCases"
+                        name="activeCases"
+                        value={formData.activeCases}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
                       >
-                        100 – 499
-                      </option>
-                      <option
-                        value="500 – 1,999"
-                        className="bg-primary text-white"
-                      >
-                        500 – 1,999
-                      </option>
-                      <option
-                        value="2,000 – 4,999"
-                        className="bg-primary text-white"
-                      >
-                        2,000 – 4,999
-                      </option>
-                      <option
-                        value="5,000 – 9,999"
-                        className="bg-primary text-white"
-                      >
-                        5,000 – 9,999
-                      </option>
-                      <option
-                        value="10,000+"
-                        className="bg-primary text-white"
-                      >
-                        10,000+
-                      </option>
-                    </select>
+                        <option value="" className="bg-primary text-white">
+                          Select Case Volume
+                        </option>
+                        <option
+                          value="Under 100"
+                          className="bg-primary text-white"
+                        >
+                          Under 100
+                        </option>
+                        <option
+                          value="100 – 499"
+                          className="bg-primary text-white"
+                        >
+                          100 – 499
+                        </option>
+                        <option
+                          value="500 – 1,999"
+                          className="bg-primary text-white"
+                        >
+                          500 – 1,999
+                        </option>
+                        <option
+                          value="2,000 – 4,999"
+                          className="bg-primary text-white"
+                        >
+                          2,000 – 4,999
+                        </option>
+                        <option
+                          value="5,000 – 9,999"
+                          className="bg-primary text-white"
+                        >
+                          5,000 – 9,999
+                        </option>
+                        <option
+                          value="10,000+"
+                          className="bg-primary text-white"
+                        >
+                          10,000+
+                        </option>
+                      </select>
+                    </div>
                   </div>
-                </div>
+
                   <button
-                    onClick={handleSubmit}
-                    className="w-full mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
-                             bg-gradient-to-r from-blue-500 to-blue-600
-                             shadow-[0_8px_32px_rgba(59,130,246,0.3)]
-                             hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)]
-                             transform hover:scale-[1.02] transition-all duration-300
-                             group relative overflow-hidden"
+                    type="submit"
+                    disabled={isSubmitDisabled}
+                    className={`w-full mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
+                             transition-all duration-300 group relative overflow-hidden
+                             ${
+                               isSubmitDisabled
+                                 ? "bg-gray-600/50 cursor-not-allowed opacity-50"
+                                 : "bg-gradient-to-r from-blue-500 to-blue-600 shadow-[0_8px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] transform hover:scale-[1.02]"
+                             }`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 ${!isSubmitDisabled && "group-hover:opacity-100"} transition-opacity duration-300`}
+                    ></div>
                     <span className="relative text-white">
                       Book My Personalized Demo
                     </span>
-                    <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-200 relative" />
+                    <ArrowRight
+                      className={`w-5 h-5 text-white ${!isSubmitDisabled && "group-hover:translate-x-1"} transition-transform duration-200 relative`}
+                    />
                   </button>
-                </div>
+
+                  {/* Checkboxes */}
+                  <div className="mt-6 space-y-4">
+                    {/* SMS Consent Checkbox */}
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <input
+                          type="checkbox"
+                          id="smsConsent"
+                          name="smsConsent"
+                          checked={checkboxes.smsConsent}
+                          onChange={handleCheckboxChange}
+                          className="w-4 h-4 rounded border border-white/30 bg-white/10
+                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
+                                   cursor-pointer transition-all duration-200 mt-0.5"
+                          style={{ minWidth: "16px", minHeight: "16px" }}
+                        />
+                      </div>
+                      <label
+                        htmlFor="smsConsent"
+                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
+                      >
+                        * By providing your phone number you agree to receive
+                        informational text messages from Kayse. Consent is not a
+                        condition of signup. Message frequency will vary. Msg &
+                        data rates may apply. Reply HELP for help or STOP to
+                        cancel.
+                      </label>
+                    </div>
+
+                    {/* Terms & Privacy Checkbox */}
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <input
+                          type="checkbox"
+                          id="termsAccepted"
+                          name="termsAccepted"
+                          checked={checkboxes.termsAccepted}
+                          onChange={handleCheckboxChange}
+                          className="w-4 h-4 rounded border border-white/30 bg-white/10
+                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
+                                   cursor-pointer transition-all duration-200 mt-0.5"
+                          style={{ minWidth: "16px", minHeight: "16px" }}
+                        />
+                      </div>
+                      <label
+                        htmlFor="termsAccepted"
+                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
+                      >
+                        * I accept the{" "}
+                        <a
+                          href="https://kayse.ai/terms-of-use"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Terms of Use
+                        </a>
+                        {" & "}
+                        <a
+                          href="https://kayse.ai/privacy-policy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Privacy Policy
+                        </a>
+                      </label>
+                    </div>
+                  </div>
+                </form>
               </motion.div>
             </div>
           </div>
