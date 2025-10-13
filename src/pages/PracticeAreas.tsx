@@ -332,7 +332,7 @@ const PracticeAreas: React.FC = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
+        <section className="relative pt-20 pb-16 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#001428] to-[#002451]" />

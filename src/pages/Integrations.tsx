@@ -66,7 +66,7 @@ const Integrations: React.FC = () => {
       <Navbar />
       <main>
         {/* ─────────────────────────── HERO SECTION ─────────────────────────── */}
-        <section className="relative py-24 sm:py-32 pb-0 overflow-hidden">
+        <section className="relative pt-20 pb-0 overflow-hidden">
           {/* ★ Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#001428] to-[#002451]" />
@@ -257,7 +257,7 @@ const Integrations: React.FC = () => {
 
         {/* Zapier Integration Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-16 overflow-hidden"
           id="zapier-integration"
         >
           <div className="absolute inset-0">
@@ -537,7 +537,7 @@ const Integrations: React.FC = () => {
 
         {/* CRM Integration Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-16 overflow-hidden"
           id="crm-integration"
         >
           <div className="absolute inset-0">
@@ -665,7 +665,7 @@ const Integrations: React.FC = () => {
 
         {/* Case Management Integration Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-16 overflow-hidden"
           id="case-management"
         >
           <div className="absolute inset-0">
@@ -795,7 +795,7 @@ const Integrations: React.FC = () => {
         >
           {/* Communication Systems Integration */}
           <section
-            className="relative py-24 sm:py-32 overflow-hidden"
+            className="relative py-16 overflow-hidden"
             id="communication-systems"
           >
             <div className="absolute inset-0 opacity-30">
@@ -900,7 +900,7 @@ const Integrations: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="relative py-24 sm:py-32 overflow-hidden">
+          <section className="relative py-16 overflow-hidden">
             <div className="container mx-auto px-4 md:px-8 relative z-10">
               <motion.div
                 className="relative max-w-5xl mx-auto p-8 md:p-10 rounded-[2.5rem] overflow-hidden backdrop-blur-xl"

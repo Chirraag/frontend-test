@@ -189,7 +189,7 @@ const WhyKayse: React.FC = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section id="hero" className="relative py-24 sm:py-32 overflow-hidden">
+        <section id="hero" className="relative pt-20 pb-16 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#001428] to-[#002451]"></div>
@@ -453,165 +453,172 @@ const WhyKayse: React.FC = () => {
               </TabPanel>
 
               <TabPanel value={value} index={1}>
-  <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
-    {/* Image Section - Fixed width, no zoom, top aligned */}
-    <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
-      <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
-        <img
-          src="/phone1.png"
-          alt="Beyond Call Centers"
-          className="w-full h-auto rounded-xl shadow-2xl"
-          style={{
-            opacity: imagesLoaded ? 1 : 0,
-            transition: "opacity 0.3s ease",
-          }}
-          loading="eager"
-        />
-      </div>
-    </div>
-    {/* Text Section - Enhanced with consistent positioning */}
-    <div className="w-full lg:w-3/5 pt-0">
-      <div className="w-full pl-2 lg:pl-8">
-        <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
-          "We already use a call center for client outreach"
-        </h3>
-        <div className="space-y-6">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Traditional call centers operate on short-term campaigns
-            (typically 2-4 weeks), but legal cases require years of
-            consistent client engagement. Here's why Kayse's approach
-            is fundamentally different:
-          </p>
+                <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
+                  {/* Image Section - Fixed width, no zoom, top aligned */}
+                  <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
+                    <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
+                      <img
+                        src="/phone1.png"
+                        alt="Beyond Call Centers"
+                        className="w-full h-auto rounded-xl shadow-2xl"
+                        style={{
+                          opacity: imagesLoaded ? 1 : 0,
+                          transition: "opacity 0.3s ease",
+                        }}
+                        loading="eager"
+                      />
+                    </div>
+                  </div>
+                  {/* Text Section - Enhanced with consistent positioning */}
+                  <div className="w-full lg:w-3/5 pt-0">
+                    <div className="w-full pl-2 lg:pl-8">
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
+                        "We already use a call center for client outreach"
+                      </h3>
+                      <div className="space-y-6">
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                          Traditional call centers operate on short-term
+                          campaigns (typically 2-4 weeks), but legal cases
+                          require years of consistent client engagement. Here's
+                          why Kayse's approach is fundamentally different:
+                        </p>
 
-          {/* Enhanced Comparison Table with better visibility */}
-          <div className="relative overflow-x-auto rounded-xl border border-gray-300 shadow-sm">
-            <table className="w-full text-base">
-              <thead className="bg-blue-100 border-b border-gray-300">
-                <tr>
-                  <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
-                    Feature
-                  </th>
-                  <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
-                    Kayse
-                  </th>
-                  <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
-                    Call Centers
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="bg-white hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 font-medium text-gray-900">
-                    Client Retention
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-green-600 text-xl">
-                        ✓
-                      </span>
-                      <span className="text-gray-700">
-                        Lifetime engagement
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-600 text-xl">✗</span>
-                      <span className="text-gray-700">
-                        Limited campaigns
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <td className="px-6 py-4 font-medium text-gray-900">
-                    Cost Model
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-green-600 text-xl">
-                        ✓
-                      </span>
-                      <span className="text-gray-700">
-                        All-inclusive pricing
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-600 text-xl">✗</span>
-                      <span className="text-gray-700">
-                        Setup + usage fees
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="bg-white hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 font-medium text-gray-900">
-                    Success Rates
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-green-600 text-xl">
-                        ✓
-                      </span>
-                      <span className="text-gray-700">
-                        40%+ dormant revival
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-600 text-xl">✗</span>
-                      <span className="text-gray-700">
-                        No long-term tracking
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <td className="px-6 py-4 font-medium text-gray-900">
-                    AI Capability
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-green-600 text-xl">
-                        ✓
-                      </span>
-                      <span className="text-gray-700">
-                        Built-in intelligence
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-600 text-xl">✗</span>
-                      <span className="text-gray-700">
-                        Manual scripts only
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                        {/* Enhanced Comparison Table with better visibility */}
+                        <div className="relative overflow-x-auto rounded-xl border border-gray-300 shadow-sm">
+                          <table className="w-full text-base">
+                            <thead className="bg-blue-100 border-b border-gray-300">
+                              <tr>
+                                <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
+                                  Feature
+                                </th>
+                                <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
+                                  Kayse
+                                </th>
+                                <th className="px-6 py-4 font-semibold text-gray-900 text-left uppercase tracking-wider text-sm">
+                                  Call Centers
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                              <tr className="bg-white hover:bg-gray-50 transition-colors">
+                                <td className="px-6 py-4 font-medium text-gray-900">
+                                  Client Retention
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-green-600 text-xl">
+                                      ✓
+                                    </span>
+                                    <span className="text-gray-700">
+                                      Lifetime engagement
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-red-600 text-xl">
+                                      ✗
+                                    </span>
+                                    <span className="text-gray-700">
+                                      Limited campaigns
+                                    </span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
+                                <td className="px-6 py-4 font-medium text-gray-900">
+                                  Cost Model
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-green-600 text-xl">
+                                      ✓
+                                    </span>
+                                    <span className="text-gray-700">
+                                      All-inclusive pricing
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-red-600 text-xl">
+                                      ✗
+                                    </span>
+                                    <span className="text-gray-700">
+                                      Setup + usage fees
+                                    </span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr className="bg-white hover:bg-gray-50 transition-colors">
+                                <td className="px-6 py-4 font-medium text-gray-900">
+                                  Success Rates
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-green-600 text-xl">
+                                      ✓
+                                    </span>
+                                    <span className="text-gray-700">
+                                      40%+ dormant revival
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-red-600 text-xl">
+                                      ✗
+                                    </span>
+                                    <span className="text-gray-700">
+                                      No long-term tracking
+                                    </span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr className="bg-gray-50 hover:bg-gray-100 transition-colors">
+                                <td className="px-6 py-4 font-medium text-gray-900">
+                                  AI Capability
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-green-600 text-xl">
+                                      ✓
+                                    </span>
+                                    <span className="text-gray-700">
+                                      Built-in intelligence
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-red-600 text-xl">
+                                      ✗
+                                    </span>
+                                    <span className="text-gray-700">
+                                      Manual scripts only
+                                    </span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
 
-          <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
-            <p className="text-base text-gray-700 leading-relaxed">
-              <strong className="text-blue-900 font-semibold">
-                Key Difference:
-              </strong>{" "}
-              Call centers are built for short campaigns. Kayse is
-              built for the entire client lifecycle—from intake
-              through resolution.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</TabPanel>
-
+                        <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                          <p className="text-base text-gray-700 leading-relaxed">
+                            <strong className="text-blue-900 font-semibold">
+                              Key Difference:
+                            </strong>{" "}
+                            Call centers are built for short campaigns. Kayse is
+                            built for the entire client lifecycle—from intake
+                            through resolution.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabPanel>
 
               <TabPanel value={value} index={2}>
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
@@ -742,7 +749,11 @@ const WhyKayse: React.FC = () => {
                               Case expense recoverability advantage
                             </strong>
                             <p className="text-gray-700 mt-3 text-base leading-relaxed">
-                              Unlike Salesforce and other CRMs, Kayse can potentially be billed as a recoverable case expense for high-volume contingency firms, making the investment cost-neutral in many cases while also increasing client satisfaction.
+                              Unlike Salesforce and other CRMs, Kayse can
+                              potentially be billed as a recoverable case
+                              expense for high-volume contingency firms, making
+                              the investment cost-neutral in many cases while
+                              also increasing client satisfaction.
                             </p>
                           </div>
                         </li>
@@ -777,10 +788,7 @@ const WhyKayse: React.FC = () => {
 
         {/* Rest of the component continues with other sections... */}
         {/* Technology Section */}
-        <section
-          className="relative py-24 sm:py-32 overflow-hidden"
-          id="technology"
-        >
+        <section className="relative py-16 overflow-hidden" id="technology">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#001020] to-[#001428]"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(147,197,253,0.1)_0%,_transparent_70%)]"></div>
@@ -913,7 +921,7 @@ const WhyKayse: React.FC = () => {
 
         {/* Enterprise Solutions Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-16 overflow-hidden"
           id="enterprise-solutions"
         >
           <div className="absolute inset-0">
@@ -1024,10 +1032,7 @@ const WhyKayse: React.FC = () => {
         </section>
 
         {/* ROI Calculator Section - ENHANCED */}
-        <section
-          className="relative py-24 sm:py-32 overflow-hidden"
-          id="roi-calculator"
-        >
+        <section className="relative py-16 overflow-hidden" id="roi-calculator">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000a17] to-[#000a17]"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.1)_0%,_transparent_70%)]"></div>
@@ -1540,10 +1545,7 @@ const WhyKayse: React.FC = () => {
         </section>
 
         {/* Different Testimonial Section to avoid duplicate */}
-        <section
-          id="testimonial"
-          className="relative py-24 sm:py-32 overflow-hidden"
-        >
+        <section id="testimonial" className="relative py-16 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000a17] to-[#000a17]"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(147,197,253,0.1)_0%,_transparent_70%)]"></div>

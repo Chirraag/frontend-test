@@ -26,7 +26,7 @@ const Solutions: React.FC = () => {
       </Helmet>
       <Navbar />
       <main>
-        <section className="relative py-24 sm:py-32 overflow-hidden">
+        <section className="relative pt-20 pb-16 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             {/* Base gradient */}
@@ -120,7 +120,7 @@ const Solutions: React.FC = () => {
 
         {/* Voice AI Section - Desktop Version */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden hidden lg:block"
+          className="relative py-16 overflow-hidden hidden lg:block"
           id="voice-ai"
         >
           <div className="absolute inset-0">
@@ -265,7 +265,7 @@ const Solutions: React.FC = () => {
 
         {/* Voice AI Section - Mobile Version */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden lg:hidden"
+          className="relative py-16 overflow-hidden lg:hidden"
           id="voice-ai-mobile"
         >
           <div className="absolute inset-0">
@@ -410,7 +410,7 @@ const Solutions: React.FC = () => {
 
         {/* Sentiment Analysis Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative py-16 overflow-hidden"
           id="sentiment-analysis"
         >
           <div className="absolute inset-0">
@@ -548,10 +548,7 @@ const Solutions: React.FC = () => {
         </section>
 
         {/* Client Portal Section */}
-        <section
-          className="relative py-24 sm:py-32 overflow-hidden"
-          id="client-portal"
-        >
+        <section className="relative py-16 overflow-hidden" id="client-portal">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#001020] to-[#001428]"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.05)_0%,_transparent_70%)]"></div>
@@ -691,7 +688,7 @@ const Solutions: React.FC = () => {
 
         {/* Integrated Approach Section */}
         <section
-          className="relative py-24 sm:py-32 pb-32 overflow-hidden"
+          className="relative py-16 pb-20 overflow-hidden"
           id="integrated-approach"
         >
           <div className="absolute inset-0">
