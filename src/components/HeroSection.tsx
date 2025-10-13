@@ -5,7 +5,7 @@ import RetellWebAgentHero from "./RetellWebAgentHero";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[140svh] flex items-center pt-14 xs:pt-16 sm:pt-20 lg:pt-8 pb-32 overflow-hidden">
+    <section className="relative min-h-[140svh] flex items-center pt-14 xs:pt-16 sm:pt-20 lg:pt-8 pb-8 overflow-hidden">
       {/* Updated Background - Brighter and Lighter */}
       <div className="absolute inset-0 -z-10">
         {/* Brighter gradient background */}

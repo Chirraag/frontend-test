@@ -306,7 +306,7 @@ const Demo: React.FC = () => {
       <Navbar />
       <main>
         {/* ── Hero Section ─────────────────────────────────────────────── */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
+        <section className="relative pt-24 sm:pt-32 pb-8 overflow-hidden">
           {/* Background layers */}
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#000814] via-30% to-[#000a17] to-100%" />
@@ -414,7 +414,7 @@ const Demo: React.FC = () => {
 
         {/* Demo Benefits Section */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative pt-4 pb-24 overflow-hidden"
           id="demo-benefits"
         >
           <div className="absolute inset-0">
@@ -509,10 +509,7 @@ const Demo: React.FC = () => {
         </section>
 
         {/* Demo Request Form */}
-        <section
-          className="relative py-24 sm:py-32 overflow-hidden"
-          id="demo-form"
-        >
+        <section className="relative pt-4 pb-20 overflow-hidden" id="demo-form">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#001428] from-0% via-[#001630] via-50% to-[#001838] to-100%"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(147,197,253,0.1)_0%,_transparent_70%)]"></div>
@@ -881,7 +878,7 @@ const Demo: React.FC = () => {
 
         {/* Success Stories Carousel */}
         <section
-          className="relative py-24 sm:py-32 overflow-hidden"
+          className="relative pt-4 pb-20 overflow-hidden"
           id="success-stories"
         >
           <div className="absolute inset-0">
@@ -1008,7 +1005,7 @@ const Demo: React.FC = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="relative py-24 sm:py-32 overflow-hidden" id="faq">
+        <section className="relative pt-4 pb-20 overflow-hidden" id="faq">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#001c48] from-0% via-[#002050] via-50% to-[#002468] to-100%"></div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_150%_40%_at_50%_25%,_rgba(147,197,253,0.2)_0%,_transparent_40%)]"></div>
@@ -1073,7 +1070,7 @@ const Demo: React.FC = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
+        <section className="relative pt-4 pb-24 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#002468] from-0% via-[#001e50] via-50% to-[#000814] to-100%"></div>
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.1)_0%,_transparent_70%)]"></div>
