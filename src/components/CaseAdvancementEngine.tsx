@@ -75,7 +75,7 @@ const CaseAdvancementEngine: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-4 pb-16 overflow-hidden">
+    <section className="relative pt-0 pb-16 overflow-hidden">
       <div className="absolute inset-0">
         {/* Background gradients */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary via-[#000814] to-[#000a17]"></div>

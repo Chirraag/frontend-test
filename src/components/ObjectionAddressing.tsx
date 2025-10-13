@@ -73,10 +73,7 @@ const ObjectionAddressing: React.FC = () => {
   };
 
   return (
-    <section
-      className="relative py-8 sm:py-16 lg:py-24 overflow-hidden"
-      id="objections"
-    >
+    <section className="relative pt-4 pb-20 overflow-hidden" id="objections">
       {/* ALL GRADIENT TRANSITION HAPPENS HERE - from black to light */}
       <div className="absolute inset-0">
         {/* Full gradient transition from black (matching solution) to light slate */}

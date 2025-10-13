@@ -113,10 +113,7 @@ const ResultsSection: React.FC = () => {
   ];
 
   return (
-    <section
-      className="relative py-24 sm:py-32 overflow-hidden"
-      id="testimonials"
-    >
+    <section className="relative pt-4 pb-20 overflow-hidden" id="testimonials">
       {/* BACKGROUND - transitioning cleanly to pure black */}
       <div className="absolute inset-0">
         {/* Base gradient - transitioning to #000a17 */}

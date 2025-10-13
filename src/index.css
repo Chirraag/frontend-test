@@ -374,3 +374,38 @@ body {
   width: 150%;
   height: 100%;
 }
+
+/* Calendly Widget Styling - Seamless Integration */
+.calendly-inline-widget {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Override Calendly's default styles to match our dark theme */
+.calendly-inline-widget iframe {
+  border-radius: 1rem;
+}
+
+/* Additional styling for better integration */
+.calendly-badge-widget {
+  display: none !important;
+}
+
+/* Smooth scrollbar for Calendly */
+.calendly-inline-widget::-webkit-scrollbar {
+  width: 8px;
+}
+
+.calendly-inline-widget::-webkit-scrollbar-track {
+  background: rgba(0, 20, 40, 0.3);
+  border-radius: 4px;
+}
+
+.calendly-inline-widget::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+.calendly-inline-widget::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}

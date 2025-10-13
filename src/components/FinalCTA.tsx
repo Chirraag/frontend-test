@@ -6,7 +6,7 @@ const FinalCTA: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative py-32 overflow-hidden" id="contact">
+    <section className="relative pt-4 pb-24 overflow-hidden" id="contact">
       {/* PERFECT COLOR MATCH - start with exact Results end color */}
       <div className="absolute inset-0">
         {/* Exact color match with Results section end */}

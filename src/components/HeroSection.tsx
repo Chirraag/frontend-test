@@ -5,7 +5,7 @@ import RetellWebAgentHero from "./RetellWebAgentHero";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[140svh] flex items-center pt-14 xs:pt-16 sm:pt-20 lg:pt-8 pb-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-start pt-16 pb-8 overflow-hidden">
       {/* Updated Background - Brighter and Lighter */}
       <div className="absolute inset-0 -z-10">
         {/* Brighter gradient background */}
@@ -27,7 +27,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start min-h-[77vh]">
           {/* Enhanced Left Side Content - Clean and Minimal */}
-          <div className="text-center lg:text-left relative z-10 space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl mx-auto lg:mx-0 pt-8 lg:pt-4">
+          <div className="text-center lg:text-left relative z-10 space-y-4 sm:space-y-6 md:space-y-8 max-w-2xl mx-auto lg:mx-0">
             {/* Enhanced Title - Gradient Back + Whiter Subtitle */}
             <h1 className="text-[2.2rem] xs:text-[2.75rem] sm:text-[3.4375rem] md:text-[4.125rem] lg:text-[4.84375rem] font-semibold leading-[1.1] tracking-[-0.03em]">
               The AI{" "}
@@ -82,7 +82,6 @@ const HeroSection = () => {
       </div>
 
       {/* Enhanced Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-primary via-primary/80 to-transparent z-10"></div>
     </section>
   );
 };

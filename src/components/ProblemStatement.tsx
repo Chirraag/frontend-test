@@ -116,13 +116,13 @@ const ProblemStatement: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden" id="problems">
+    <section className="relative pt-4 pb-20 overflow-hidden" id="problems">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Smooth transition from ZapierIntegration */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] from-0% via-[#001e45] via-10% to-black to-100%"></div>
       </div>
-      
+
       {/* Content container with rounded corners */}
       <div className="absolute left-[2%] right-[2%] top-16 bottom-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#001e45] via-[#001e45] via-20% to-[#003c8f] to-100% rounded-[2.5rem]"></div>

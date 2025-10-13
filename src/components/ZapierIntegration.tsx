@@ -49,7 +49,7 @@ const ZapierIntegration: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 sm:py-24 overflow-hidden">
+    <section className="relative pt-4 pb-16 overflow-hidden">
       <div className="absolute inset-0">
         {/* Background gradients - matching the flow from CaseAdvancementEngine */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#000a17] via-[#000814] to-[#000a17]"></div>
