@@ -1,126 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Clock, CheckCircle2 } from "lucide-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { ArrowRight, Phone, Clock } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CallHalo from "../components/CallHalo";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    practiceArea: "",
-    challenge: "",
-  });
-
-  const [checkboxes, setCheckboxes] = useState({
-    smsConsent: false,
-    termsAccepted: false,
-  });
-
-  const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState({
-    title: "",
-    message: "",
-    isSuccess: true,
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setCheckboxes((prev) => ({ ...prev, [name]: checked }));
-  };
-
-  const isSubmitDisabled = !checkboxes.smsConsent || !checkboxes.termsAccepted;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Double check that both checkboxes are checked
-    if (isSubmitDisabled) {
-      setModalContent({
-        title: "Please Accept Required Terms",
-        message:
-          "You must accept both the SMS consent and Terms of Use & Privacy Policy to proceed.",
-        isSuccess: false,
-      });
-      setShowModal(true);
-      return;
-    }
-
-    try {
-      const apiData = {
-        full_name: formData.name,
-        work_email: formData.email,
-        phone_number: formData.phone,
-        law_firm_name: formData.company,
-        practice_area: formData.practiceArea,
-        challenge: formData.challenge,
-        sms_consent: checkboxes.smsConsent,
-        terms_accepted: checkboxes.termsAccepted,
-      };
-
-      const response = await fetch(
-        "https://kayse-backend.replit.app/api/zapier/demo",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+  // Initialize Cal.com with enhanced styling
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        theme: "dark",
+        styles: {
+          branding: {
+            brandColor: "#0ea5e9",
+            lightColor: "#38bdf8",
+            lighterColor: "#7dd3fc",
           },
-          body: JSON.stringify(apiData),
         },
-      );
-
-      if (response.ok) {
-        setModalContent({
-          title: "Message Sent Successfully!",
-          message:
-            "Thank you for your message! Our team will contact you shortly.",
-          isSuccess: true,
-        });
-        setShowModal(true);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          practiceArea: "",
-          challenge: "",
-        });
-        setCheckboxes({
-          smsConsent: false,
-          termsAccepted: false,
-        });
-      } else {
-        setModalContent({
-          title: "Submission Failed",
-          message: "There was an error submitting your form. Please try again.",
-          isSuccess: false,
-        });
-        setShowModal(true);
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setModalContent({
-        title: "Connection Error",
-        message:
-          "Unable to connect to our servers. Please check your internet connection and try again.",
-        isSuccess: false,
+        hideEventTypeDetails: false,
+        layout: "month_view",
       });
-      setShowModal(true);
-    }
-  };
+    })();
+  }, []);
 
   return (
     <div className="min-h-screen bg-primary font-manrope">
@@ -131,91 +36,6 @@ const Contact: React.FC = () => {
           content="Get in touch with Kayse's team. Contact us for demos, support, partnerships, or any questions about our AI client retention platform."
         />
       </Helmet>
-      {/* Modal */}
-      {showModal && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          onClick={() => setShowModal(false)}
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
-
-          {/* Modal Content */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative max-w-md w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div
-              className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                          bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
-                          border border-white/20
-                          shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_40px_rgba(0,127,255,0.3)]"
-            >
-              {/* Success/Error Icon */}
-              <div className="flex justify-center mb-6">
-                <div
-                  className={`rounded-full h-20 w-20 flex items-center justify-center
-                               ${
-                                 modalContent.isSuccess
-                                   ? "bg-gradient-to-br from-green-500/20 to-green-600/10 border-green-500/30"
-                                   : "bg-gradient-to-br from-red-500/20 to-red-600/10 border-red-500/30"
-                               }
-                               border shadow-lg`}
-                >
-                  {modalContent.isSuccess ? (
-                    <CheckCircle2 className="w-10 h-10 text-green-500" />
-                  ) : (
-                    <svg
-                      className="w-10 h-10 text-red-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  )}
-                </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-semibold text-white text-center mb-4">
-                {modalContent.title}
-              </h3>
-
-              {/* Message */}
-              <p className="text-white/80 text-center mb-8 leading-relaxed">
-                {modalContent.message}
-              </p>
-
-              {/* Close Button */}
-              <button
-                onClick={() => setShowModal(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-xl
-                         bg-gradient-to-r from-blue-500 to-blue-600
-                         shadow-[0_8px_32px_rgba(59,130,246,0.3)]
-                         hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)]
-                         transform hover:scale-[1.02] transition-all duration-300
-                         group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span className="relative text-white">Got it</span>
-              </button>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
 
       <Navbar />
       <main>
@@ -289,7 +109,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Form Section */}
+        {/* Cal.com Booking Widget Section */}
         <section
           className="relative pt-4 pb-20 bg-black overflow-hidden"
           id="contact-form"
@@ -304,7 +124,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="container mx-auto px-4 md:px-8 relative z-10">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -313,7 +133,16 @@ const Contact: React.FC = () => {
                 className="text-center mb-12"
               >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1] text-white">
-                  Contact Us
+                  <span className="text-white">Schedule a</span>
+                  <span
+                    className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
+                    style={{
+                      backgroundSize: "200% 100%",
+                      backgroundPosition: "60% 0",
+                    }}
+                  >
+                    Meeting
+                  </span>
                 </h2>
 
                 {/* Additional Contact Info */}
@@ -334,310 +163,58 @@ const Contact: React.FC = () => {
                     </span>
                   </div>
                 </div>
+
+                <p className="text-lg text-white/80 leading-relaxed font-light max-w-2xl mx-auto">
+                  Select a time that works best for you, and we'll discuss how
+                  Kayse can help your practice
+                </p>
               </motion.div>
 
-              {/* Form */}
+              {/* Cal.com Widget */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative"
               >
-                <form
-                  onSubmit={handleSubmit}
-                  className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                          bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
-                          border border-white/10
-                          shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]
-                          transform-gpu"
+                {/* Wrapper to match Cal.com widget */}
+                <div
+                  className="relative rounded-[2rem] overflow-hidden
+                             bg-[#1a1a1a] backdrop-blur-xl
+                             border border-white/10
+                             shadow-[0_0_40px_rgba(14,165,233,0.15)]
+                             p-4"
+                  style={{ minHeight: "780px" }}
                 >
-                  <div className="grid grid-cols-1 gap-6 mb-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Full Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white placeholder-white/50
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300"
-                        placeholder="John Doe"
-                      />
-                    </div>
+                  {/* Blue accent glow */}
+                  <div className="absolute -inset-20 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 blur-3xl pointer-events-none" />
 
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Work Email*
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white placeholder-white/50
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Phone Number*
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white placeholder-white/50
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300"
-                        placeholder="(123) 456-7890"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Law Firm Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white placeholder-white/50
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300"
-                        placeholder="Doe & Associates"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="practiceArea"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Primary Practice Area*
-                      </label>
-                      <select
-                        id="practiceArea"
-                        name="practiceArea"
-                        value={formData.practiceArea}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300 appearance-none cursor-pointer"
-                      >
-                        <option value="" className="bg-primary text-white">
-                          Select Practice Area
-                        </option>
-                        <option
-                          value="Mass Tort/Class Action"
-                          className="bg-primary text-white"
-                        >
-                          Mass Tort/Class Action
-                        </option>
-                        <option
-                          value="Personal Injury"
-                          className="bg-primary text-white"
-                        >
-                          Personal Injury
-                        </option>
-                        <option
-                          value="Disability/Social Security"
-                          className="bg-primary text-white"
-                        >
-                          Disability/Social Security
-                        </option>
-                        <option
-                          value="Family/Estate Law"
-                          className="bg-primary text-white"
-                        >
-                          Family/Estate Law
-                        </option>
-                        <option
-                          value="Other Legal Practice"
-                          className="bg-primary text-white"
-                        >
-                          Other Legal Practice
-                        </option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="challenge"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        What's Your Biggest Challenge Managing Client
-                        Communication?*
-                      </label>
-                      <select
-                        id="challenge"
-                        name="challenge"
-                        value={formData.challenge}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl backdrop-blur-sm
-                                 bg-white/10 border border-white/20 text-white
-                                 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50
-                                 transition-all duration-300 appearance-none cursor-pointer"
-                      >
-                        <option value="" className="bg-primary text-white">
-                          Select Challenge
-                        </option>
-                        <option
-                          value="Too many calls"
-                          className="bg-primary text-white"
-                        >
-                          Too many calls
-                        </option>
-                        <option
-                          value="Low engagement"
-                          className="bg-primary text-white"
-                        >
-                          Low engagement
-                        </option>
-                        <option
-                          value="High attrition"
-                          className="bg-primary text-white"
-                        >
-                          High attrition
-                        </option>
-                        <option
-                          value="Poor follow-up visibility"
-                          className="bg-primary text-white"
-                        >
-                          Poor follow-up visibility
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitDisabled}
-                    className={`w-full inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
-                             transition-all duration-300 group relative overflow-hidden
-                             ${
-                               isSubmitDisabled
-                                 ? "bg-gray-600/50 cursor-not-allowed opacity-50"
-                                 : "bg-gradient-to-r from-blue-500 to-blue-600 shadow-[0_8px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] transform hover:scale-[1.02]"
-                             }`}
-                  >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 ${!isSubmitDisabled && "group-hover:opacity-100"} transition-opacity duration-300`}
-                    ></div>
-                    <span className="relative text-white">
-                      Get In Touch With The Team
-                    </span>
-                    <ArrowRight
-                      className={`w-5 h-5 text-white ${!isSubmitDisabled && "group-hover:translate-x-1"} transition-transform duration-200 relative`}
+                  <div className="relative">
+                    <Cal
+                      calLink="kayse/30min"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        minHeight: "750px",
+                      }}
+                      config={{
+                        layout: "month_view",
+                        theme: "dark",
+                        styles: {
+                          branding: {
+                            brandColor: "#0ea5e9",
+                            lightColor: "#38bdf8",
+                            lighterColor: "#7dd3fc",
+                          },
+                        },
+                        metadata: {
+                          source: "contact_page",
+                        },
+                      }}
                     />
-                  </button>
-
-                  {/* Checkboxes */}
-                  <div className="mt-6 space-y-4">
-                    {/* SMS Consent Checkbox */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <input
-                          type="checkbox"
-                          id="smsConsent"
-                          name="smsConsent"
-                          checked={checkboxes.smsConsent}
-                          onChange={handleCheckboxChange}
-                          className="w-4 h-4 rounded border border-white/30 bg-white/10 
-                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
-                                   cursor-pointer transition-all duration-200 mt-0.5"
-                          style={{ minWidth: "16px", minHeight: "16px" }}
-                        />
-                      </div>
-                      <label
-                        htmlFor="smsConsent"
-                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
-                      >
-                        * By providing your phone number you agree to receive
-                        informational text messages from Kayse. Consent is not a
-                        condition of signup. Message frequency will vary. Msg &
-                        data rates may apply. Reply HELP for help or STOP to
-                        cancel.
-                      </label>
-                    </div>
-
-                    {/* Terms & Privacy Checkbox */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <input
-                          type="checkbox"
-                          id="termsAccepted"
-                          name="termsAccepted"
-                          checked={checkboxes.termsAccepted}
-                          onChange={handleCheckboxChange}
-                          className="w-4 h-4 rounded border border-white/30 bg-white/10 
-                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
-                                   cursor-pointer transition-all duration-200 mt-0.5"
-                          style={{ minWidth: "16px", minHeight: "16px" }}
-                        />
-                      </div>
-                      <label
-                        htmlFor="termsAccepted"
-                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
-                      >
-                        * I accept the{" "}
-                        <a
-                          href="https://kayse.ai/terms-of-use"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Terms of Use
-                        </a>
-                        {" & "}
-                        <a
-                          href="https://kayse.ai/privacy-policy"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Privacy Policy
-                        </a>
-                      </label>
-                    </div>
                   </div>
-                </form>
+                </div>
               </motion.div>
             </div>
           </div>
