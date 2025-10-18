@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import {
   ArrowRight,
-  CheckCircle2,
   Star,
-  Users,
-  DollarSign,
-  TrendingUp,
   MessageCircle,
+  TrendingUp,
+  Users,
+  CheckCircle2,
+  DollarSign,
   ChevronDown,
   ChevronUp,
   ChevronLeft,
@@ -19,120 +20,27 @@ import Footer from "../components/Footer";
 import CallHalo from "../components/CallHalo";
 
 const Demo: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    practiceArea: "",
-    challenge: "",
-    activeCases: "",
-  });
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const [checkboxes, setCheckboxes] = useState({
-    smsConsent: false,
-    termsAccepted: false,
-  });
-
-  const [expandedFaq, setExpandedFaq] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState({
-    title: "",
-    message: "",
-    isSuccess: true,
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setCheckboxes((prev) => ({ ...prev, [name]: checked }));
-  };
-
-  const isSubmitDisabled = !checkboxes.smsConsent || !checkboxes.termsAccepted;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (isSubmitDisabled) {
-      setModalContent({
-        title: "Please Accept Required Terms",
-        message:
-          "You must accept both the SMS consent and Terms of Use & Privacy Policy to proceed.",
-        isSuccess: false,
-      });
-      setShowModal(true);
-      return;
-    }
-
-    try {
-      const apiData = {
-        full_name: formData.name,
-        work_email: formData.email,
-        phone_number: formData.phone,
-        law_firm_name: formData.company,
-        practice_area: formData.practiceArea,
-        challenge: formData.challenge,
-        average_monthly_active_cases: formData.activeCases,
-        sms_consent: checkboxes.smsConsent,
-        terms_accepted: checkboxes.termsAccepted,
-      };
-
-      const response = await fetch(
-        "https://kayse-backend.replit.app/api/zapier/demo",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+  // Initialize Cal.com with enhanced styling
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        theme: "dark",
+        styles: {
+          branding: {
+            brandColor: "#0ea5e9",
+            lightColor: "#38bdf8",
+            lighterColor: "#7dd3fc",
           },
-          body: JSON.stringify(apiData),
         },
-      );
-
-      if (response.ok) {
-        setModalContent({
-          title: "Demo Request Submitted!",
-          message:
-            "Thank you for your interest in Kayse. Our team will contact you within 24 hours to schedule your personalized demo.",
-          isSuccess: true,
-        });
-        setShowModal(true);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          practiceArea: "",
-          challenge: "",
-          activeCases: "",
-        });
-        setCheckboxes({
-          smsConsent: false,
-          termsAccepted: false,
-        });
-      } else {
-        setModalContent({
-          title: "Submission Failed",
-          message:
-            "We encountered an error processing your request. Please try again or contact us directly at support@kayse.ai",
-          isSuccess: false,
-        });
-        setShowModal(true);
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setModalContent({
-        title: "Connection Error",
-        message:
-          "Unable to connect to our servers. Please check your internet connection and try again.",
-        isSuccess: false,
+        hideEventTypeDetails: false,
+        layout: "month_view",
       });
-      setShowModal(true);
-    }
-  };
+    })();
+  }, []);
 
   const faqs = [
     {
@@ -172,9 +80,6 @@ const Demo: React.FC = () => {
     },
   ];
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  // Navigation functions for carousel
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
@@ -185,17 +90,17 @@ const Demo: React.FC = () => {
     );
   };
 
-  // Auto-rotate testimonials
-  React.useEffect(() => {
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
-  // Keyboard navigation
-  React.useEffect(() => {
-    const handleKeyDown = (event) => {
+  // Keyboard navigation for testimonials
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowLeft") {
         prevTestimonial();
       } else if (event.key === "ArrowRight") {
@@ -217,102 +122,15 @@ const Demo: React.FC = () => {
         />
       </Helmet>
 
-      {/* Modal */}
-      {showModal && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          onClick={() => setShowModal(false)}
-        >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
-
-          {/* Modal Content */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative max-w-md w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div
-              className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                          bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
-                          border border-white/20
-                          shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_40px_rgba(0,127,255,0.3)]"
-            >
-              {/* Success/Error Icon */}
-              <div className="flex justify-center mb-6">
-                <div
-                  className={`rounded-full h-20 w-20 flex items-center justify-center
-                               ${
-                                 modalContent.isSuccess
-                                   ? "bg-gradient-to-br from-green-500/20 to-green-600/10 border-green-500/30"
-                                   : "bg-gradient-to-br from-red-500/20 to-red-600/10 border-red-500/30"
-                               }
-                               border shadow-lg`}
-                >
-                  {modalContent.isSuccess ? (
-                    <CheckCircle2 className="w-10 h-10 text-green-500" />
-                  ) : (
-                    <svg
-                      className="w-10 h-10 text-red-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  )}
-                </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-semibold text-white text-center mb-4">
-                {modalContent.title}
-              </h3>
-
-              {/* Message */}
-              <p className="text-white/80 text-center mb-8 leading-relaxed">
-                {modalContent.message}
-              </p>
-
-              {/* Close Button */}
-              <button
-                onClick={() => setShowModal(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-xl
-                         bg-gradient-to-r from-blue-500 to-blue-600
-                         shadow-[0_8px_32px_rgba(59,130,246,0.3)]
-                         hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)]
-                         transform hover:scale-[1.02] transition-all duration-300
-                         group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span className="relative text-white">Got it</span>
-              </button>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-
       <Navbar />
       <main>
-        {/* ── Hero Section ─────────────────────────────────────────────── */}
+        {/* Hero Section */}
         <section className="relative pt-24 sm:pt-32 pb-8 overflow-hidden">
-          {/* Background layers */}
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-[#000814] via-30% to-[#000a17] to-100%" />
             <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_rgba(0,127,255,0.15)_0%,_transparent_70%)]" />
 
-            {/* Animated shapes */}
+            {/* Animated gradient blobs */}
             <motion.div
               className="absolute top-20 left-10 w-20 xs:w-24 sm:w-32 md:w-48 lg:w-64 h-20 xs:h-24 sm:h-32 md:h-48 lg:h-64 bg-[#0066ff]/10 rounded-[40%] blur-[100px]"
               animate={{
@@ -337,13 +155,11 @@ const Demo: React.FC = () => {
               }}
             />
 
-            {/* Halo */}
             <div className="absolute inset-0 opacity-40">
               <CallHalo isRinging={false} isCallActive={false} />
             </div>
           </div>
 
-          {/* Foreground content */}
           <div className="container mx-auto px-4 md:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h1
@@ -442,7 +258,7 @@ const Demo: React.FC = () => {
                 </span>
               </h2>
               <p className="text-lg text-white/80 leading-relaxed font-light">
-                During your 30-minute demo, you'll see:
+                During your demo, you'll see:
               </p>
             </div>
 
@@ -508,7 +324,7 @@ const Demo: React.FC = () => {
           </div>
         </section>
 
-        {/* Demo Request Form */}
+        {/* Cal.com Booking Widget Section - ENHANCED */}
         <section className="relative pt-4 pb-20 overflow-hidden" id="demo-form">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-[#001428] from-0% via-[#001630] via-50% to-[#001838] to-100%"></div>
@@ -519,7 +335,7 @@ const Demo: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-[-0.03em] leading-[1.1]">
-                  <span className="text-white">Request Your</span>
+                  <span className="text-white">Book Your</span>
                   <span
                     className="bg-gradient-to-r from-white via-[#3e9dff] via-[#3e9dff] to-white bg-clip-text text-transparent pl-2"
                     style={{
@@ -530,6 +346,10 @@ const Demo: React.FC = () => {
                     Personalized Demo
                   </span>
                 </h2>
+                <p className="text-lg text-white/80 leading-relaxed font-light max-w-2xl mx-auto">
+                  Select a time that works best for you, and we'll walk you
+                  through how Kayse can transform your practice
+                </p>
               </div>
 
               <motion.div
@@ -537,340 +357,45 @@ const Demo: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="relative"
               >
-                <form
-                  onSubmit={handleSubmit}
-                  className="relative p-8 rounded-[2rem] overflow-hidden backdrop-blur-xl
-                              bg-gradient-to-br from-white/10 via-white/[0.07] to-transparent
-                              border border-white/10
-                              shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(0,0,0,0.1)]"
+                {/* Darker wrapper to match Cal.com widget */}
+                <div
+                  className="relative rounded-[2rem] overflow-hidden
+                             bg-[#1a1a1a] backdrop-blur-xl
+                             border border-white/10
+                             shadow-[0_0_40px_rgba(14,165,233,0.15)]
+                             p-4"
+                  style={{ minHeight: "780px" }}
                 >
-                  <div className="space-y-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Full Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
-                        placeholder="John Doe"
-                      />
-                    </div>
+                  {/* Blue accent glow */}
+                  <div className="absolute -inset-20 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 blur-3xl pointer-events-none" />
 
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Work Email*
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Phone Number*
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
-                        placeholder="(123) 456-7890"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Law Firm Name*
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-white/40 transition-all duration-300"
-                        placeholder="Doe & Associates"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="practiceArea"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Primary Practice Area*
-                      </label>
-                      <select
-                        id="practiceArea"
-                        name="practiceArea"
-                        value={formData.practiceArea}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
-                      >
-                        <option value="" className="bg-primary text-white">
-                          Select Practice Area
-                        </option>
-                        <option
-                          value="Mass Tort/Class Action"
-                          className="bg-primary text-white"
-                        >
-                          Mass Tort/Class Action
-                        </option>
-                        <option
-                          value="Personal Injury"
-                          className="bg-primary text-white"
-                        >
-                          Personal Injury
-                        </option>
-                        <option
-                          value="Disability/Social Security"
-                          className="bg-primary text-white"
-                        >
-                          Disability/Social Security
-                        </option>
-                        <option
-                          value="Family/Estate Law"
-                          className="bg-primary text-white"
-                        >
-                          Family/Estate Law
-                        </option>
-                        <option
-                          value="Other Legal Practice"
-                          className="bg-primary text-white"
-                        >
-                          Other Legal Practice
-                        </option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="challenge"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        What's Your Biggest Challenge Managing Client
-                        Communication?*
-                      </label>
-                      <select
-                        id="challenge"
-                        name="challenge"
-                        value={formData.challenge}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
-                      >
-                        <option value="" className="bg-primary text-white">
-                          Select Challenge
-                        </option>
-                        <option
-                          value="Too many calls"
-                          className="bg-primary text-white"
-                        >
-                          Too many calls
-                        </option>
-                        <option
-                          value="Low engagement"
-                          className="bg-primary text-white"
-                        >
-                          Low engagement
-                        </option>
-                        <option
-                          value="High attrition"
-                          className="bg-primary text-white"
-                        >
-                          High attrition
-                        </option>
-                        <option
-                          value="Poor follow-up visibility"
-                          className="bg-primary text-white"
-                        >
-                          Poor follow-up visibility
-                        </option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="activeCases"
-                        className="block text-white/80 mb-2 text-sm"
-                      >
-                        Average Monthly Ongoing Active Cases*
-                      </label>
-                      <select
-                        id="activeCases"
-                        name="activeCases"
-                        value={formData.activeCases}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white transition-all duration-300"
-                      >
-                        <option value="" className="bg-primary text-white">
-                          Select Case Volume
-                        </option>
-                        <option
-                          value="Under 100"
-                          className="bg-primary text-white"
-                        >
-                          Under 100
-                        </option>
-                        <option
-                          value="100 – 499"
-                          className="bg-primary text-white"
-                        >
-                          100 – 499
-                        </option>
-                        <option
-                          value="500 – 1,999"
-                          className="bg-primary text-white"
-                        >
-                          500 – 1,999
-                        </option>
-                        <option
-                          value="2,000 – 4,999"
-                          className="bg-primary text-white"
-                        >
-                          2,000 – 4,999
-                        </option>
-                        <option
-                          value="5,000 – 9,999"
-                          className="bg-primary text-white"
-                        >
-                          5,000 – 9,999
-                        </option>
-                        <option
-                          value="10,000+"
-                          className="bg-primary text-white"
-                        >
-                          10,000+
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitDisabled}
-                    className={`w-full mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl
-                             transition-all duration-300 group relative overflow-hidden
-                             ${
-                               isSubmitDisabled
-                                 ? "bg-gray-600/50 cursor-not-allowed opacity-50"
-                                 : "bg-gradient-to-r from-blue-500 to-blue-600 shadow-[0_8px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] transform hover:scale-[1.02]"
-                             }`}
-                  >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 ${!isSubmitDisabled && "group-hover:opacity-100"} transition-opacity duration-300`}
-                    ></div>
-                    <span className="relative text-white">
-                      Book My Personalized Demo
-                    </span>
-                    <ArrowRight
-                      className={`w-5 h-5 text-white ${!isSubmitDisabled && "group-hover:translate-x-1"} transition-transform duration-200 relative`}
+                  <div className="relative">
+                    <Cal
+                      calLink="kayse/30min"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        minHeight: "750px",
+                      }}
+                      config={{
+                        layout: "month_view",
+                        theme: "dark",
+                        styles: {
+                          branding: {
+                            brandColor: "#0ea5e9",
+                            lightColor: "#38bdf8",
+                            lighterColor: "#7dd3fc",
+                          },
+                        },
+                        metadata: {
+                          source: "demo_page",
+                        },
+                      }}
                     />
-                  </button>
-
-                  {/* Checkboxes */}
-                  <div className="mt-6 space-y-4">
-                    {/* SMS Consent Checkbox */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <input
-                          type="checkbox"
-                          id="smsConsent"
-                          name="smsConsent"
-                          checked={checkboxes.smsConsent}
-                          onChange={handleCheckboxChange}
-                          className="w-4 h-4 rounded border border-white/30 bg-white/10
-                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
-                                   cursor-pointer transition-all duration-200 mt-0.5"
-                          style={{ minWidth: "16px", minHeight: "16px" }}
-                        />
-                      </div>
-                      <label
-                        htmlFor="smsConsent"
-                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
-                      >
-                        * By providing your phone number you agree to receive
-                        informational text messages from Kayse. Consent is not a
-                        condition of signup. Message frequency will vary. Msg &
-                        data rates may apply. Reply HELP for help or STOP to
-                        cancel.
-                      </label>
-                    </div>
-
-                    {/* Terms & Privacy Checkbox */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <input
-                          type="checkbox"
-                          id="termsAccepted"
-                          name="termsAccepted"
-                          checked={checkboxes.termsAccepted}
-                          onChange={handleCheckboxChange}
-                          className="w-4 h-4 rounded border border-white/30 bg-white/10
-                                   text-accent focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
-                                   cursor-pointer transition-all duration-200 mt-0.5"
-                          style={{ minWidth: "16px", minHeight: "16px" }}
-                        />
-                      </div>
-                      <label
-                        htmlFor="termsAccepted"
-                        className="ml-3 text-sm text-white/70 cursor-pointer select-none leading-relaxed"
-                      >
-                        * I accept the{" "}
-                        <a
-                          href="https://kayse.ai/terms-of-use"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Terms of Use
-                        </a>
-                        {" & "}
-                        <a
-                          href="https://kayse.ai/privacy-policy"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-white underline underline-offset-2 transition-colors duration-200"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Privacy Policy
-                        </a>
-                      </label>
-                    </div>
                   </div>
-                </form>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -906,9 +431,8 @@ const Demo: React.FC = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              {/* Testimonial Carousel */}
               <div className="relative">
-                {/* Left Arrow */}
+                {/* Previous Button */}
                 <button
                   onClick={prevTestimonial}
                   className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 xl:-translate-x-12 z-10
@@ -924,7 +448,7 @@ const Demo: React.FC = () => {
                   <ChevronLeft className="w-6 h-6 text-white group-hover:text-accent transition-colors duration-200" />
                 </button>
 
-                {/* Right Arrow */}
+                {/* Next Button */}
                 <button
                   onClick={nextTestimonial}
                   className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 xl:translate-x-12 z-10
@@ -940,6 +464,7 @@ const Demo: React.FC = () => {
                   <ChevronRight className="w-6 h-6 text-white group-hover:text-accent transition-colors duration-200" />
                 </button>
 
+                {/* Testimonial Card */}
                 <motion.div
                   key={currentTestimonial}
                   initial={{ opacity: 0, x: 20 }}
@@ -996,6 +521,7 @@ const Demo: React.FC = () => {
                           ? "w-8 bg-accent"
                           : "bg-white/30 hover:bg-white/50"
                       }`}
+                      aria-label={`Go to testimonial ${index + 1}`}
                     />
                   ))}
                 </div>
@@ -1052,15 +578,21 @@ const Demo: React.FC = () => {
                     >
                       <h3 className="text-lg font-semibold">{faq.question}</h3>
                       {expandedFaq === index ? (
-                        <ChevronUp className="w-5 h-5 text-accent" />
+                        <ChevronUp className="w-5 h-5 text-accent flex-shrink-0" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-accent" />
+                        <ChevronDown className="w-5 h-5 text-accent flex-shrink-0" />
                       )}
                     </button>
                     {expandedFaq === index && (
-                      <div className="px-6 pb-4">
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-6 pb-4"
+                      >
                         <p className="text-white/80">{faq.answer}</p>
-                      </div>
+                      </motion.div>
                     )}
                   </motion.div>
                 ))}

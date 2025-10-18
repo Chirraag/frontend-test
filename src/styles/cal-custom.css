@@ -1,0 +1,410 @@
+/* Enhanced Cal.com Styling to Match Kayse Theme */
+
+/* Hide Cal.com branding at bottom */
+.cal-embed iframe {
+  border-radius: 2rem !important;
+}
+
+/* Main container styling */
+[class*="cal-"] [class*="booker"] {
+  background: transparent !important;
+  font-family: 'Manrope', -apple-system, sans-serif !important;
+}
+
+/* Override all backgrounds to match Kayse dark blue */
+[class*="cal-"] [class*="booker"] > div,
+[class*="cal-"] [class*="main"],
+[class*="cal-"] [class*="container"] {
+  background: transparent !important;
+}
+
+/* Left sidebar (event details) styling */
+[class*="cal-"] [class*="sidebar"],
+[class*="cal-"] [class*="event-meta"] {
+  background: rgba(10, 25, 41, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 2rem !important;
+}
+
+/* Right side (calendar and form) */
+[class*="cal-"] [class*="main-content"],
+[class*="cal-"] [class*="calendar-container"] {
+  background: transparent !important;
+}
+
+/* Text colors to match Kayse */
+[class*="cal-"] h1,
+[class*="cal-"] h2,
+[class*="cal-"] h3,
+[class*="cal-"] h4,
+[class*="cal-"] [class*="title"],
+[class*="cal-"] [class*="heading"] {
+  color: white !important;
+}
+
+[class*="cal-"] p,
+[class*="cal-"] span,
+[class*="cal-"] label,
+[class*="cal-"] [class*="text"] {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Input fields - Match your form styling */
+[class*="cal-"] input[type="text"],
+[class*="cal-"] input[type="email"],
+[class*="cal-"] input[type="tel"],
+[class*="cal-"] input[type="number"],
+[class*="cal-"] textarea,
+[class*="cal-"] select {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem 1rem !important;
+  color: white !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="cal-"] input::placeholder,
+[class*="cal-"] textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[class*="cal-"] input:focus,
+[class*="cal-"] textarea:focus,
+[class*="cal-"] select:focus {
+  outline: none !important;
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Calendar styling */
+[class*="cal-"] [class*="calendar"] {
+  background: rgba(10, 25, 41, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1.5rem !important;
+}
+
+/* Calendar header */
+[class*="cal-"] [class*="calendar-header"],
+[class*="cal-"] [class*="month-nav"] {
+  color: white !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Calendar navigation buttons */
+[class*="cal-"] [class*="nav-button"],
+[class*="cal-"] button[aria-label*="Previous"],
+[class*="cal-"] button[aria-label*="Next"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0.5rem !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="cal-"] [class*="nav-button"]:hover,
+[class*="cal-"] button[aria-label*="Previous"]:hover,
+[class*="cal-"] button[aria-label*="Next"]:hover {
+  background: rgba(14, 165, 233, 0.2) !important;
+  border-color: #0ea5e9 !important;
+}
+
+/* Day names (Mon, Tue, etc) */
+[class*="cal-"] [class*="weekday"],
+[class*="cal-"] [class*="day-name"] {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+}
+
+/* Individual date buttons */
+[class*="cal-"] [class*="day"],
+[class*="cal-"] button[class*="date"] {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.5rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  min-height: 40px !important;
+}
+
+/* Hover state for dates */
+[class*="cal-"] [class*="day"]:hover:not([disabled]),
+[class*="cal-"] button[class*="date"]:hover:not([disabled]) {
+  background: rgba(14, 165, 233, 0.2) !important;
+  border-color: #0ea5e9 !important;
+  color: white !important;
+  transform: scale(1.05) !important;
+}
+
+/* Selected date */
+[class*="cal-"] [class*="day"][data-selected="true"],
+[class*="cal-"] [class*="day"][aria-pressed="true"],
+[class*="cal-"] button[class*="selected"] {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+  border-color: #0ea5e9 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4) !important;
+}
+
+/* Today's date indicator */
+[class*="cal-"] [class*="today"],
+[class*="cal-"] button[class*="today"]:not([data-selected="true"]) {
+  border: 2px solid #0ea5e9 !important;
+  color: #0ea5e9 !important;
+  font-weight: 600 !important;
+}
+
+/* Disabled/unavailable dates */
+[class*="cal-"] [class*="day"][disabled],
+[class*="cal-"] button[class*="date"][disabled] {
+  color: rgba(255, 255, 255, 0.3) !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+}
+
+/* Time slots container */
+[class*="cal-"] [class*="time-slots"],
+[class*="cal-"] [class*="slots-container"] {
+  display: grid !important;
+  gap: 0.5rem !important;
+  padding: 1rem 0 !important;
+}
+
+/* Individual time slot buttons */
+[class*="cal-"] [class*="time-slot"],
+[class*="cal-"] button[class*="slot"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.75rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+}
+
+[class*="cal-"] [class*="time-slot"]:hover:not([disabled]),
+[class*="cal-"] button[class*="slot"]:hover:not([disabled]) {
+  background: rgba(14, 165, 233, 0.2) !important;
+  border-color: #0ea5e9 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* Selected time slot */
+[class*="cal-"] [class*="time-slot"][data-selected="true"],
+[class*="cal-"] [class*="time-slot"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+  border-color: #0ea5e9 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4) !important;
+}
+
+/* Confirm/Submit Button - Match your CTA style */
+[class*="cal-"] button[type="submit"],
+[class*="cal-"] button[class*="confirm"],
+[class*="cal-"] button[class*="book"],
+[class*="cal-"] button[class*="primary"] {
+  background: linear-gradient(to right, #3b82f6, #2563eb) !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  padding: 1rem 2rem !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3) !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  margin-top: 1rem !important;
+}
+
+[class*="cal-"] button[type="submit"]:hover,
+[class*="cal-"] button[class*="confirm"]:hover,
+[class*="cal-"] button[class*="book"]:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4) !important;
+  transform: scale(1.02) !important;
+}
+
+[class*="cal-"] button[type="submit"]:active {
+  transform: scale(0.98) !important;
+}
+
+/* Back button */
+[class*="cal-"] button[class*="back"],
+[class*="cal-"] button[class*="secondary"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 1rem !important;
+  padding: 1rem 2rem !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="cal-"] button[class*="back"]:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Select/Dropdown styling */
+[class*="cal-"] select {
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e0e7ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-position: right 0.75rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.5em 1.5em !important;
+  padding-right: 2.5rem !important;
+}
+
+/* Checkbox styling */
+[class*="cal-"] input[type="checkbox"] {
+  appearance: none !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 0.25rem !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
+}
+
+[class*="cal-"] input[type="checkbox"]:checked {
+  background: #0ea5e9 !important;
+  border-color: #0ea5e9 !important;
+}
+
+[class*="cal-"] input[type="checkbox"]:checked::after {
+  content: "✓" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white !important;
+  font-size: 0.875rem !important;
+  font-weight: bold !important;
+}
+
+/* Loading spinner */
+[class*="cal-"] [class*="spinner"],
+[class*="cal-"] [class*="loading"] {
+  border-color: rgba(14, 165, 233, 0.2) !important;
+  border-top-color: #0ea5e9 !important;
+}
+
+/* Success message */
+[class*="cal-"] [class*="success"],
+[class*="cal-"] [class*="confirmation"] {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  border-radius: 1rem !important;
+  padding: 1.5rem !important;
+  color: #4ade80 !important;
+}
+
+/* Error message */
+[class*="cal-"] [class*="error"],
+[class*="cal-"] [class*="alert-error"] {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  border-radius: 1rem !important;
+  padding: 1rem !important;
+  color: #f87171 !important;
+}
+
+/* Timezone selector */
+[class*="cal-"] [class*="timezone"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Scrollbar styling */
+[class*="cal-"] ::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+[class*="cal-"] ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 4px !important;
+}
+
+[class*="cal-"] ::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.5) !important;
+  border-radius: 4px !important;
+}
+
+[class*="cal-"] ::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9 !important;
+}
+
+/* Links styling */
+[class*="cal-"] a {
+  color: #0ea5e9 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+[class*="cal-"] a:hover {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  [class*="cal-"] [class*="sidebar"],
+  [class*="cal-"] [class*="event-meta"] {
+    border-radius: 1rem !important;
+    padding: 1.5rem !important;
+  }
+
+  [class*="cal-"] input,
+  [class*="cal-"] textarea,
+  [class*="cal-"] select {
+    font-size: 16px !important; /* Prevents iOS zoom */
+  }
+
+  [class*="cal-"] button[type="submit"] {
+    padding: 0.875rem 1.5rem !important;
+  }
+}
+
+/* Animation for smooth transitions */
+[class*="cal-"] * {
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease, transform 0.2s ease !important;
+}
+
+/* Remove any white backgrounds that might appear */
+[class*="cal-"] div[style*="background: white"],
+[class*="cal-"] div[style*="background-color: white"],
+[class*="cal-"] div[style*="background: rgb(255, 255, 255)"] {
+  background: transparent !important;
+}
+
+/* Fix for Cal.com footer branding */
+[class*="cal-"] [class*="powered-by"],
+[class*="cal-"] [class*="branding"] {
+  opacity: 0.5 !important;
+  margin-top: 2rem !important;
+}
+
+[class*="cal-"] [class*="powered-by"] a {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 0.75rem !important;
+}
