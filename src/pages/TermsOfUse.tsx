@@ -30,7 +30,7 @@ const TermsOfUse: React.FC = () => {
               >
                 Terms of Use
               </motion.h1>
-              <p className="text-white/60 mb-0">Updated 9/16/25</p>
+              <p className="text-white/60 mb-0">Updated 10/24/25</p>
             </div>
           </div>
         </section>
@@ -59,7 +59,8 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  "Site" refers to and , the web application located at kayse.ai
+                  "Site" refers to https://www.kayseapp.com and
+                  http://www.kayse.ai, the web application located at kayse.ai
                   and kayseapp.com, the mobile application, and all associated
                   white label accounts. The Site contains text, pictures,
                   graphics, videos, logos, images, works of authorship, computer
@@ -483,11 +484,6 @@ const TermsOfUse: React.FC = () => {
                   Subscriber's minimum monthly subscription fee unless
                   reactivated as Active Cases.
                 </p>
-                <p className="text-white/80 mb-4">
-                  5. Flexibility: PAYG provides Subscriber with the ability to
-                  control costs by designating which cases are active or
-                  inactive.
-                </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
                   2.8(a) Fair Use Policy for PAYG Unlimited Usage
@@ -634,100 +630,151 @@ const TermsOfUse: React.FC = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  2.9. Deferred Payments and Security Interest (Exclusive
-                  Option)
+                  2.9. Optional Enterprise Plan/Deferred Billing; Case-Level
+                  Pass-Through; Access & Audit (Firm-Level Program)
                 </h3>
+
                 <p className="text-white/80 mb-4">
-                  The Deferred Payment arrangement ("Deferral") described herein
-                  is not generally available and shall only apply if Subscriber
-                  receives a written, exclusive invitation from Kayse, subject
-                  to review and approval. Unless such invitation is extended and
-                  accepted in writing, all Subscribers shall remain on the
-                  default PAYG pricing option under Section 2.8.
+                  (a) <strong>Optional Deferral</strong>. In KAYSE's discretion,
+                  Subscriber may enroll in a Deferred Billing program (a
+                  "Deferral"), under which fees for eligible Services tied to
+                  identified matters are deferred and passed through to those
+                  matters upon a resolution event (each a "Settlement Event,"
+                  including settlement, judgment, award, or other monetary
+                  recovery payable to the client and/or firm).
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  In some cases, and in KAYSE's sole and absolute discretion,
-                  KAYSE may offer a deferred payment arrangement (a "Deferral")
-                  to a Subscriber law firm under which Subscriber may onboard an
-                  unlimited number of client matters, including but not limited
-                  to mass tort or other qualified practice areas, without
-                  immediate payment for Services. Under such a Deferral,
-                  Subscriber shall not be required to pay fees for Services
-                  rendered until the occurrence of one or more resolution events
-                  related to those client matters, including but not limited to
-                  settlement, judgment, or other monetary recovery (each, a
-                  "Settlement Event").
+                  The Enterprise Plan always requires a minimum of 2,000 active
+                  cases or a downgrade to PAYG will be required upon request, if
+                  not resolved in an amicable way by both parties (Subscriber
+                  and KAYSE).
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  Upon the occurrence of any Settlement Event related to any
-                  client matters covered by the Deferral, Subscriber shall
-                  promptly, and in any case within five (5) days of receipt of
-                  any funds related to such Settlement Event, remit full payment
-                  to KAYSE for all outstanding fees and costs associated with
-                  Services rendered. Notwithstanding the timing or outcome of
-                  any Settlement Event, Subscriber unconditionally guarantees
-                  full payment for all Services rendered by KAYSE under this
-                  Agreement. This obligation is absolute, irrevocable, and
-                  independent of the success or resolution of any particular
-                  claim or case.
+                  (b) <strong>Case-Level Cost Entries (Required)</strong>. To
+                  participate in a Deferral, Subscriber shall create and
+                  maintain a case-level cost entry for the KAYSE charges in its
+                  CRM/LPM for each covered matter within ten (10) days of the
+                  earlier of (i) onboarding the matter or (ii) incurring the
+                  charge. The entry must clearly identify "KAYSE" and the charge
+                  description/amount.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  If no Settlement Event occurs within twenty-four (24) months
-                  from the execution of this Agreement, Subscriber shall remit
-                  full payment of all outstanding fees within thirty (30) days
-                  of the expiration of such period, unless otherwise agreed in
-                  writing by KAYSE.
+                  If a CRM/LPM does not support such entries or an integration
+                  is not enabled, Subscriber will upload a monthly spreadsheet
+                  (CSV or XLSX) by the 10th calendar day of each month that
+                  lists each covered matter, client name, matter identifier,
+                  charge description, date, and amount for the prior month (the
+                  "Deferral Register").
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  To secure Subscriber's payment obligations under this
-                  Agreement, Subscriber hereby grants to KAYSE a continuing
-                  security interest and lien in all rights to payment arising
-                  from legal or other services provided by Subscriber to its
-                  clients in the underlying cases covered by the Deferral
-                  (collectively, a "Recovery"), whether existing now or arising
-                  in the future, including any attorney fees, costs, or related
-                  amounts payable to Subscriber. This security interest includes
-                  all proceeds and collections thereof (collectively, the
-                  "Lien"). Subscriber shall not disburse or allow any Recovery
-                  to be diminished unless and until KAYSE acknowledges in
-                  writing that the Lien has been satisfied in full.
+                  (c) <strong>Read-Only Access; Lightweight Audit</strong>. To
+                  minimize status requests and keep the program low-touch,
+                  Subscriber will:
+                </p>
+
+                <p className="text-white/80 mb-2 ml-4">
+                  Provide one read-only user account to KAYSE in Subscriber's
+                  CRM/LPM (or a secure portal export with equivalent fields if
+                  an account is not feasible) for the limited purposes of (A)
+                  viewing covered matters, the Deferral Register, and cost
+                  entries; and (B) confirming Settlement Events and disbursement
+                  status.
+                </p>
+
+                <p className="text-white/80 mb-4 ml-4">
+                  Permit KAYSE, no more than once per calendar quarter (and
+                  additionally upon a good-faith payment discrepancy), to
+                  perform a lightweight audit limited to confirming (A) that
+                  case-level entries exist, and (B) that resolved matters
+                  including a KAYSE entry were remitted per this Section. Audits
+                  will be remote where possible and designed not to disrupt
+                  operations.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  Subscriber represents and warrants that it has the authority
-                  to grant this security interest and agrees to execute further
-                  documents and take any steps KAYSE reasonably requires to
-                  perfect and enforce its rights, including filing financing
-                  statements under the Uniform Commercial Code. Where required
-                  by law or ethical obligations, Subscriber shall obtain any
-                  client consents necessary to grant this security interest and
-                  waives any claim, argument, or defense based on a failure to
-                  do so.
+                  (d) <strong>Invoicing on Settlement; No Lien</strong>. Upon a
+                  Settlement Event for any covered matter, Subscriber shall
+                  remit the associated deferred KAYSE charges from the matter's
+                  gross recovery or firm receipts within five (5) business days
+                  of receipt of funds. For clarity: no lien, UCC filing,
+                  security interest, or similar encumbrance is required or
+                  created by this Section.
                 </p>
 
                 <p className="text-white/80 mb-4">
-                  If Subscriber fails to pay KAYSE following any Settlement
-                  Event, as required herein, KAYSE shall be entitled to final
-                  judgment against Subscriber pursuant to the dispute resolution
-                  procedures set forth in this Agreement. Subscriber waives any
-                  and all defenses to such judgment except for proof of full and
-                  timely payment.
+                  (e) <strong>Monthly Statements; Silence-is-Noticed</strong>.
+                  KAYSE will issue a Monthly Deferral Statement showing (i) new
+                  deferred charges by matter; (ii) cumulative deferred balances
+                  by matter; and (iii) matters marked settled and amounts
+                  remitted. Subscriber shall review and either confirm or
+                  dispute in writing within fifteen (15) days. If no response is
+                  received, the statement is deemed acknowledged for
+                  administrative purposes only (and does not waive Subscriber's
+                  right to raise good-faith errors later).
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (f) <strong>Disbursement Safeguard</strong>. Prior to
+                  disbursing any Settlement Event proceeds to a client or
+                  co-counsel for a covered matter, Subscriber represents it has
+                  checked its CRM/LPM or the current Monthly Deferral Statement
+                  and will remit the corresponding KAYSE amount within the
+                  5-business-day period above.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (g){" "}
+                  <strong>Integration Preference; Spreadsheet Fallback</strong>.
+                  The Parties will reasonably cooperate to (i) enable a direct
+                  CRM/LPM integration to auto-create cost entries and update the
+                  Deferral Register, or (ii) use the monthly spreadsheet
+                  fallback described in subsection (b). Either approach
+                  satisfies the entry requirement as long as it stays current.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (h) <strong>Credit Limits; Pauses</strong>. KAYSE may set or
+                  adjust a firm-level deferral limit and may pause new deferrals
+                  prospectively if (i) remittances on settled matters are more
+                  than fifteen (15) days late after notice, or (ii) the limit is
+                  reached. A pause will not affect non-deferred Services or
+                  already-covered matters.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (i) <strong>Disputes & Corrections</strong>. Any specific
+                  charge may be disputed in writing within sixty (60) days of
+                  statement date. The Parties will cooperate in good faith to
+                  resolve disputes, including by providing reasonable back-up
+                  (dates, matter IDs, and descriptions).
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (j) <strong>Administrative Charges</strong>. Amounts not
+                  remitted within the time frames above may accrue an
+                  administrative charge equal to the lesser of 1.0% per month or
+                  the maximum rate permitted by law, calculated from the due
+                  date until paid. This is not a penalty and is intended to
+                  cover carrying and administration costs.
+                </p>
+
+                <p className="text-white/80 mb-4">
+                  (k) <strong>Relationship-First Approach</strong>. This program
+                  is intended to promote a low-friction partnership. The Parties
+                  will implement it in good faith to avoid manual chasing,
+                  reduce operational overhead, and ensure timely pass-through of
+                  costs at resolution.
                 </p>
 
                 <p className="text-white/80 mb-8">
-                  For the avoidance of doubt, any Deferral granted under this
-                  Section shall apply broadly to all qualifying client matters
-                  Subscriber chooses to onboard during the covered term.
-                  However, the granting of a Deferral shall not constitute a
-                  course of dealing or create any obligation for KAYSE to offer
-                  such Deferral in the future. Each Deferral must be expressly
-                  agreed to in writing. This provision, and all related
-                  obligations, shall survive the termination or expiration of
-                  this Agreement.
+                  (l) <strong>Survival</strong>. This Section survives
+                  termination with respect to covered matters opened prior to
+                  termination and remains in effect until all deferred amounts
+                  for those matters are satisfied.
                 </p>
 
                 {/* Service Description */}
@@ -778,8 +825,8 @@ const TermsOfUse: React.FC = () => {
                   your intellectual property rights, please contact us
                   immediately with all relevant information at Case Connect
                   Group LLC, 1400 Old Country Rd Suite 305 Westbury, NY 11590,
-                  or via email at . Written claims concerning copyright
-                  infringement must include the following information:
+                  or via email at support@kayse.ai. Written claims concerning
+                  copyright infringement must include the following information:
                 </p>
                 <p className="text-white/80 mb-2 ml-4">
                   A physical or electronic signature of the person authorized to
@@ -808,12 +855,17 @@ const TermsOfUse: React.FC = () => {
                   behalf.
                 </p>
 
+                {/* Term and Termination */}
+                <h2 className="text-2xl font-semibold text-white mb-4">
+                  5. TERM; TERMINATION
+                </h2>
+
                 <p className="text-white/80 mb-3">
                   (a) TERM. The term of this Agreement will commence on the
                   Effective Date and will remain in effect for twelve months,
                   whereupon this Agreement shall automatically extend for
                   successive 12-month terms unless this Agreement is terminated
-                  earlier by either party in accordance with Section 4(b).
+                  earlier by either party in accordance with Section 5(b).
                 </p>
 
                 <p className="text-white/80 mb-3">
@@ -823,7 +875,7 @@ const TermsOfUse: React.FC = () => {
                   1. By KAYSE or Subscriber. Either party may terminate this
                   Agreement after the first twelve-month period with an advanced
                   30-day notice; otherwise, the agreement shall renew pursuant
-                  to Section 4(a).
+                  to Section 5(a).
                 </p>
                 <p className="text-white/80 mb-2 ml-4">
                   2. By KAYSE Temporarily. KAYSE may suspend your access to the
@@ -1205,7 +1257,7 @@ const TermsOfUse: React.FC = () => {
                   Subscriber will not assign this Agreement, or delegate or
                   sublicense any of its rights under this Agreement, without
                   KAYSE's prior written consent. Any assignment or transfer in
-                  violation of this Section 13.4 will be void. Subject to the
+                  violation of this Section 11.4 will be void. Subject to the
                   foregoing, this Agreement and all of the provisions hereof
                   shall be binding upon and inure to the benefit of the parties
                   hereto and their respective heirs, legal representatives,
@@ -1772,7 +1824,7 @@ const TermsOfUse: React.FC = () => {
                   During the Term and any renewal term of the Agreement,
                   Licensor will make available a technical point of contact for
                   Subscriber technical support inquiries which can be accessed
-                  by emailing .
+                  by emailing support@kayse.ai.
                 </p>
 
                 {/* Contact */}
@@ -1781,11 +1833,13 @@ const TermsOfUse: React.FC = () => {
                 </h2>
                 <p className="text-white/80 mb-4">
                   For notices required pursuant to these Terms of Use, please
-                  contact us at: or write to us at Case Connect Group LLC, c/o
-                  Kayse, 1400 Old Country Rd, Suite 305, Westbury, NY 11590.
+                  contact us at: support@kayse.ai or write to us at Case Connect
+                  Group LLC, c/o Kayse, 1400 Old Country Rd, Suite 305,
+                  Westbury, NY 11590.
                 </p>
                 <p className="text-white/80 mb-8">
-                  If you would like to learn more about us, please email us at .
+                  If you would like to learn more about us, please email us at
+                  sales@kayse.ai.
                 </p>
               </div>
             </div>
