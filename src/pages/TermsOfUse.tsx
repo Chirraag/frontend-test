@@ -452,11 +452,29 @@ const TermsOfUse: React.FC = () => {
                   this Agreement is the Pay-As-You-Go ("PAYG") pricing option.
                 </p>
                 <p className="text-white/80 mb-3">
-                  1. Scope and Pricing: PAYG pricing is all-inclusive,
-                  incorporating both subscription and usage fees as set forth in
-                  the Pricing Exhibit attached hereto. All fees are subject to
-                  the terms and conditions of this Agreement.
+                  1. Scope and Pricing: PAYG pricing has two different options,
+                  one that is all-inclusive, incorporating both usage and
+                  subscription, and another that is subscription plus requires
+                  separate billing of usage fees as set forth in the Pricing
+                  Exhibit attached hereto. All fees are subject to the terms and
+                  conditions of this Agreement.
                 </p>
+                <p className="text-white/80 mb-3">
+                  There are two different PAYG subscription plans. These are the
+                  key differences for billing purposes:
+                </p>
+                <ul className="list-disc list-inside text-white/80 mb-3 ml-4">
+                  <li>
+                    <strong>PAYG Intake Plan:</strong> Subscription plus
+                    requires separate billing of usage fees as set forth in the
+                    Pricing Exhibit attached hereto.
+                  </li>
+                  <li>
+                    <strong>PAYG Case Management Plan:</strong> Subscription and
+                    Usage are included with "All-In" Pricing with Fair Use
+                    Policy.
+                  </li>
+                </ul>
                 <p className="text-white/80 mb-3">
                   2. Payment: PAYG requires monthly payment via credit card or
                   ACH authorization, which must be completed before the Service
