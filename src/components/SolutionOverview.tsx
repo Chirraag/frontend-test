@@ -54,7 +54,7 @@ const FeatureCard: React.FC<{
 
 const SolutionOverview: React.FC = () => {
   return (
-    <section className="relative pt-4 pb-20 overflow-hidden" id="solutions">
+    <section className="relative pt-24 pb-20 overflow-hidden" id="solutions">
       <div className="absolute inset-0">
         {/* Main background gradient - starts black and transitions smoothly */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black via-50% to-black"></div>
