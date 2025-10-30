@@ -186,11 +186,6 @@ const ObjectionAddressing: React.FC = () => {
                 icon={<Database size={22} />}
                 iconPosition="start"
               />
-              <Tab
-                label="Beyond Salesforce"
-                icon={<Bot size={22} />}
-                iconPosition="start"
-              />
             </Tabs>
           </Box>
           {/* Render all TabPanels to prevent layout jumps */}
@@ -471,101 +466,6 @@ const ObjectionAddressing: React.FC = () => {
                         70%+ portal adoption rate vs. 23% for generic solutions,
                         achieved through personalized, case-specific
                         communication.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start min-h-[500px]">
-              {/* Image Section - Fixed width, no zoom, top aligned */}
-              <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0">
-                <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden w-full">
-                  <img
-                    src="/ipad3.png"
-                    alt="Salesforce Solution"
-                    className="w-full h-auto rounded-xl shadow-2xl"
-                    style={{
-                      opacity: imagesLoaded ? 1 : 0,
-                      transition: "opacity 0.3s ease",
-                    }}
-                    loading="eager"
-                  />
-                </div>
-              </div>
-              {/* Text Section - Enhanced with consistent positioning */}
-              <div className="w-full lg:w-3/5 pt-0">
-                <div className="w-full pl-2 lg:pl-8">
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
-                    "I already have Salesforce"
-                  </h3>
-                  <div className="space-y-6">
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      Unlike Salesforce, which is designed for general business
-                      and sales environments, our solution is purpose-built for
-                      legal client retention:
-                    </p>
-
-                    <div className="space-y-5">
-                      <div className="flex items-start gap-4 p-4 bg-blue-50/50 rounded-lg border border-blue-200/30">
-                        <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="text-base font-medium text-blue-900">
-                            Legal AI Training
-                          </p>
-                          <p className="text-sm text-blue-700 mt-2">
-                            Our voice AI is specifically trained on legal client
-                            conversations and understands discovery,
-                            depositions, settlement negotiations, and trial
-                            timelines.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4 p-4 bg-green-50/50 rounded-lg border border-green-200/30">
-                        <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="text-base font-medium text-green-900">
-                            Legal Sentiment Analysis
-                          </p>
-                          <p className="text-sm text-green-700 mt-2">
-                            Our sentiment analysis recognizes the unique
-                            emotional patterns that precede client
-                            dissatisfaction in long litigation processes.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4 p-4 bg-purple-50/50 rounded-lg border border-purple-200/30">
-                        <CheckCircle2 className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="text-base font-medium text-purple-900">
-                            Purpose-Built Portal
-                          </p>
-                          <p className="text-sm text-purple-700 mt-2">
-                            Our mobile client portal achieves 70%+ adoption
-                            rates because it's designed specifically for clients
-                            who need simplified case tracking, not complex
-                            business processes.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mb-8 p-5 rounded-xl backdrop-blur-xl
-                                bg-gradient-to-br from-green-50/70 to-green-50/50 border border-green-200/30"
-                    >
-                      <p className="text-base text-green-700 leading-relaxed">
-                        <strong className="text-green-800">
-                          Cost Advantage:
-                        </strong>{" "}
-                        Unlike Salesforce and other CRMs, Kayse can potentially
-                        be billed as a recoverable case expense for high-volume
-                        contingency firms, making the investment cost-neutral in
-                        many cases.
                       </p>
                     </div>
                   </div>

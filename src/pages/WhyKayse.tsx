@@ -366,17 +366,6 @@ const WhyKayse: React.FC = () => {
                     <Database size={22} />
                     Generic CRMs with Newsletter
                   </button>
-                  <button
-                    onClick={() => setValue(3)}
-                    className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
-                      value === 3
-                        ? "bg-blue-500/15 text-blue-600 font-semibold"
-                        : "bg-blue-500/8 text-gray-600 hover:bg-blue-500/12"
-                    }`}
-                  >
-                    <Users size={22} />
-                    Salesforce
-                  </button>
                 </div>
               </div>
 
@@ -682,78 +671,6 @@ const WhyKayse: React.FC = () => {
                               Our purpose-built portal achieves dramatically
                               higher client engagement through intuitive design
                               that legal clients actually want to use.
-                            </p>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </TabPanel>
-
-              <TabPanel value={value} index={3}>
-                <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center min-h-[500px]">
-                  {/* Image Section - Fixed sizing, no zoom, centered vertically */}
-                  <div className="w-full lg:w-2/5 lg:max-w-sm mx-auto lg:mx-0 flex-shrink-0 flex items-center">
-                    <div className="relative mb-6 lg:mb-0 rounded-xl overflow-hidden">
-                      <img
-                        src="/ipad3.png"
-                        alt="Salesforce Solution"
-                        className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-2xl"
-                        style={{
-                          opacity: imagesLoaded ? 1 : 0,
-                          transition: "opacity 0.3s ease",
-                        }}
-                        loading="eager"
-                      />
-                    </div>
-                  </div>
-                  {/* Text Section - Enhanced with consistent positioning */}
-                  <div className="w-full lg:w-3/5 flex items-center pt-0">
-                    <div className="w-full pl-2 lg:pl-8">
-                      <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 leading-tight">
-                        Kayse vs. Salesforce
-                      </h3>
-                      <ul className="space-y-6">
-                        <li className="flex items-start gap-4">
-                          <CheckCircle2 className="w-7 h-7 text-blue-500 flex-shrink-0 mt-1" />
-                          <div>
-                            <strong className="text-gray-900 text-lg">
-                              Legal terminology and workflows
-                            </strong>
-                            <p className="text-gray-700 mt-3 text-base leading-relaxed">
-                              Pre-configured for legal practice areas, not
-                              requiring extensive customization. Understands
-                              depositions, mediation, and settlement processes.
-                            </p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-4">
-                          <CheckCircle2 className="w-7 h-7 text-blue-500 flex-shrink-0 mt-1" />
-                          <div>
-                            <strong className="text-gray-900 text-lg">
-                              Implementation cost differences
-                            </strong>
-                            <p className="text-gray-700 mt-3 text-base leading-relaxed">
-                              Weeks vs. months of implementation, with
-                              significantly lower total cost of ownership. No
-                              need for expensive consultants or custom
-                              development.
-                            </p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-4">
-                          <CheckCircle2 className="w-7 h-7 text-blue-500 flex-shrink-0 mt-1" />
-                          <div>
-                            <strong className="text-gray-900 text-lg">
-                              Case expense recoverability advantage
-                            </strong>
-                            <p className="text-gray-700 mt-3 text-base leading-relaxed">
-                              Unlike Salesforce and other CRMs, Kayse can
-                              potentially be billed as a recoverable case
-                              expense for high-volume contingency firms, making
-                              the investment cost-neutral in many cases while
-                              also increasing client satisfaction.
                             </p>
                           </div>
                         </li>
